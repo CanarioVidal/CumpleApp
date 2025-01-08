@@ -1,6 +1,11 @@
-from flask import render_template
-from . import db
+from flask import Flask
 
-# Ruta principal
+app = Flask(__name__)
+
+@app.route('/')
 def home():
-    return render_template('index.html')
+    return "<h1>¡Página principal funcionando!</h1>"
+
+@app.route('/admin')
+def admin():
+    return "<h1>¡Admin funcionando!</h1>"

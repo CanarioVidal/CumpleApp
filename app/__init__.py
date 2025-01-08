@@ -2,25 +2,21 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
 import os
+from settings import Config
 
-# Cargar las variables de entorno desde el archivo .env
+# Cargar variables de entorno
 load_dotenv()
 
-# Inicializar extensiones
 db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
+    app.config.from_object(Config)
 
-    # Configuración de la aplicación
-    # Usamos una variable de entorno para configurar la base de datos
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI', 'sqlite:///default.db')
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Desactiva seguimiento de modificaciones (opcional)
-
-    # Inicializar extensiones
+    # Inicializar base de datos
     db.init_app(app)
 
-    # Registrar las rutas
+    # Registrar rutas manualmente
     with app.app_context():
         from . import routes
         db.create_all()
