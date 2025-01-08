@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Cumpleaños</title>
+</head>
+<body>
+    <h1>Registrá tu Cumpleaños</h1>
+    <form id="registroForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="birthday">Fecha de Nacimiento:</label>
+        <input type="date" id="birthday" name="birthday" required />
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <!-- Mensaje de éxito -->
+    <p id="mensaje" style="color: green; display: none;">¡Se agregó tu cumple!</p>
+
+    <script>
+        // Manejar el envío del formulario con AJAX
+        document.getElementById('registroForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Evitar recargar la página
+
+            // Obtener los datos del formulario
+            const formData = new FormData(this);
+
+            // Enviar los datos con fetch
+            fetch('/agregar-cumple', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('mensaje').style.display = 'block';
+                    this.reset(); // Limpiar el formulario
+                } else {
+                    alert('Hubo un error al registrar el cumpleaños.');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
