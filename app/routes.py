@@ -1,11 +1,12 @@
-from flask import Flask
+from flask import render_template, Blueprint
 
-app = Flask(__name__)
+# Crear el Blueprint
+routes = Blueprint('routes', __name__)
 
-@app.route('/')
+@routes.route('/')
 def home():
-    return "<h1>¡Página principal funcionando!</h1>"
+    return render_template('index.html')
 
-@app.route('/admin')
+@routes.route('/admin')
 def admin():
-    return "<h1>¡Admin funcionando!</h1>"
+    return render_template('admin.html')

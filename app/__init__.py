@@ -16,9 +16,12 @@ def create_app():
     # Inicializar base de datos
     db.init_app(app)
 
-    # Registrar rutas manualmente
+    # Registrar rutas con Blueprint
+    from .routes import routes
+    app.register_blueprint(routes)
+
+    # Crear tablas si no existen
     with app.app_context():
-        from . import routes
         db.create_all()
 
     return app
