@@ -3,48 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Cumpleaños</title>
+    <title>Agregar Cumpleaños</title>
+    <!-- Bootstrap para diseño -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Registrá tu Cumpleaños</h1>
-    <form id="registroForm">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required />
+    <div class="container mt-4">
+        <h1>Agregar Cumpleaños</h1>
+        <form id="form-cumple" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="birthday" class="form-label">Fecha de Cumpleaños</label>
+                <input type="date" class="form-control" id="birthday" name="birthday" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+        </form>
+        <div id="mensaje" class="mt-3"></div>
+    </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="birthday">Fecha de Nacimiento:</label>
-        <input type="date" id="birthday" name="birthday" required />
-
-        <button type="submit">Registrar</button>
-    </form>
-
-    <!-- Mensaje de éxito -->
-    <p id="mensaje" style="color: green; display: none;">¡Se agregó tu cumple!</p>
-
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Manejar el envío del formulario con AJAX
-        document.getElementById('registroForm').addEventListener('submit', function (e) {
-            e.preventDefault(); // Evitar recargar la página
-
-            // Obtener los datos del formulario
+        document.getElementById('form-cumple').addEventListener('submit', function (e) {
+            e.preventDefault();
             const formData = new FormData(this);
-
-            // Enviar los datos con fetch
             fetch('/agregar-cumple', {
                 method: 'POST',
                 body: formData
             })
-            .then(response => {
-                if (response.ok) {
-                    document.getElementById('mensaje').style.display = 'block';
-                    this.reset(); // Limpiar el formulario
+            .then(response => response.json())
+            .then(data => {
+                const mensaje = document.getElementById('mensaje');
+                if (data.success) {
+                    mensaje.innerHTML = '<div class="alert alert-success">Cumpleaños agregado con éxito.</div>';
+                    this.reset();
                 } else {
-                    alert('Hubo un error al registrar el cumpleaños.');
+                    mensaje.innerHTML = '<div class="alert alert-danger">Error al agregar el cumpleaños.</div>';
                 }
-            })
-            .catch(error => console.error('Error:', error));
+            });
         });
     </script>
 </body>

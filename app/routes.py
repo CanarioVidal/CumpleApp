@@ -45,14 +45,9 @@ def home():
     return render_template('index.html')
 
 # Ruta protegida para admin
-@routes.route('/admin')
+@routes.route('/admin', methods=['GET', 'POST'])
 @login_required
 def admin():
-    return render_template('admin.html', logout_url=url_for('routes.logout'))
-
-# Ruta para agregar usuarios con soporte para GET y POST
-@routes.route('/agregar-cumple', methods=['GET', 'POST'])
-def agregar_usuario():
     if request.method == 'POST':
         try:
             # Obtener datos del formulario
@@ -61,19 +56,29 @@ def agregar_usuario():
             fecha_nacimiento = request.form.get('birthday')
             fecha_nacimiento = datetime.strptime(fecha_nacimiento, '%Y-%m-%d').date()
 
+            # Validar que el usuario sea mayor de 18 años
+            hoy = datetime.today().date()
+            edad = hoy.year - fecha_nacimiento.year - ((hoy.month, hoy.day) < (fecha_nacimiento.month, fecha_nacimiento.day))
+            if edad < 18:
+                return jsonify({'success': False, 'error': 'Debe ser mayor de 18 años para registrarse.'}), 400
+
             # Crear nuevo usuario
             nuevo_usuario = User(name=nombre, email=email, birthday=fecha_nacimiento)
             db.session.add(nuevo_usuario)
             db.session.commit()
 
             # Responder a AJAX con éxito
-            return jsonify({'success': True}), 200
+            return jsonify({'success': True, 'message': 'Cumpleaños agregado con éxito.'}), 200
         except Exception as e:
-            # Responder a AJAX con error
+            # Responder a AJAX con error específico
             return jsonify({'success': False, 'error': str(e)}), 400
-    
-    # Si es GET, renderizar el formulario
-    return render_template('registro-cumples.html')
+
+    hoy = datetime.today()
+    cumpleanios_hoy = User.query.filter(
+        db.extract('month', User.birthday) == hoy.month,
+        db.extract('day', User.birthday) == hoy.day
+    ).all()
+    return render_template('admin.html', logout_url=url_for('routes.logout'), cumpleanios_hoy=cumpleanios_hoy)
 
 # Vista temporal de usuarios
 @routes.route('/ver-usuarios')
@@ -81,3 +86,52 @@ def agregar_usuario():
 def ver_usuarios():
     usuarios = User.query.all()
     return render_template('ver_usuarios.html', usuarios=usuarios)
+
+# Ruta para borrar un usuario por ID
+@routes.route('/borrar-usuario/<int:id>', methods=['DELETE'])
+@login_required
+def borrar_usuario(id):
+    try:
+        usuario = User.query.get_or_404(id)
+        db.session.delete(usuario)
+        db.session.commit()
+        return jsonify({'success': True})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+
+# Ruta para borrar múltiples usuarios
+@routes.route('/borrar-usuarios', methods=['POST'])
+@login_required
+def borrar_usuarios():
+    try:
+        data = request.json
+        ids = data.get('ids', [])
+        User.query.filter(User.id.in_(ids)).delete(synchronize_session=False)
+        db.session.commit()
+        return jsonify({'success': True})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+
+# Ruta para actualizar el estado de redención
+@routes.route('/actualizar-redencion/<int:id>', methods=['POST'])
+@login_required
+def actualizar_redencion(id):
+    data = request.json
+    usuario = User.query.get_or_404(id)
+    usuario.redeemed = data.get('redeemed', False)
+    db.session.commit()
+    return jsonify({'success': True})
+
+# Ruta para buscar usuarios
+@routes.route('/buscar-usuarios')
+@login_required
+def buscar_usuarios():
+    query = request.args.get('q', '').strip()
+    if query:
+        usuarios = User.query.filter(
+            (User.name.ilike(f"%{query}%")) | (User.email.ilike(f"%{query}%"))
+        ).all()
+    else:
+        usuarios = []
+    resultados = [{'id': u.id, 'name': u.name, 'email': u.email, 'birthday': u.birthday.strftime('%Y-%m-%d'), 'redeemed': u.redeemed} for u in usuarios]
+    return jsonify(resultados)
