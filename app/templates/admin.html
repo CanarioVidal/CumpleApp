@@ -1,3 +1,4 @@
+<!-- Plantilla Admin v.1.3 -->
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="light">
 <head>
@@ -7,7 +8,6 @@
     <!-- Bootstrap para diseño -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Estilo Material You */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f5f5f5;
@@ -53,15 +53,13 @@
 
         <!-- Contenido de las Tabs -->
         <div class="tab-content">
-            <!-- Tab 1: Cumpleaños del Día v002 -->
+            <!-- Tab 1: Cumpleaños del Día -->
             <div class="tab-pane fade show active" id="cumple" role="tabpanel">
                 <h2 class="mt-4">Cumpleaños de Hoy</h2>
                 <div class="d-flex justify-content-end mb-3">
-                    <button class="btn btn-outline-secondary" id="toggle-view">Vista: Tarjetas</button>
+                    <button class="btn btn-outline-secondary" id="toggle-cumple-view">Vista: Tarjetas</button>
                 </div>
-                <!-- Contenedor de tarjetas -->
-                <div id="cumple-lista" class="row"></div>
-                <!-- Tabla -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div id="cumple-lista" class="row"></div>
                 <table class="table table-striped d-none" id="cumple-tabla">
                     <thead>
                         <tr>
@@ -75,12 +73,15 @@
                 </table>
             </div>
 
-
             <!-- Tab 2: Consulta de Usuarios -->
             <div class="tab-pane fade" id="consulta" role="tabpanel">
                 <h2 class="mt-4">Consulta de Usuarios</h2>
+                <div class="d-flex justify-content-end mb-3">
+                    <button class="btn btn-outline-secondary" id="toggle-consulta-view">Vista: Tarjetas</button>
+                </div>
                 <input type="text" id="busqueda" placeholder="Buscar..." class="form-control mb-3">
-                <table class="table table-striped">
+                <div id="consulta-lista" class="row d-none"></div>
+                <table class="table table-striped" id="consulta-tabla">
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -90,7 +91,7 @@
                             <th>Redimido</th>
                         </tr>
                     </thead>
-                    <tbody id="resultados"></tbody>
+                    <tbody id="consulta-tabla-body"></tbody>
                 </table>
             </div>
 
@@ -117,9 +118,6 @@
                     <button type="submit" class="btn btn-primary">Agregar</button>
                 </form>
                 <div id="mensaje" class="mt-3"></div>
-                
-                <div id="mensaje" class="mt-3"></div>             
-                <div id="mensaje" class="mt-3"></div>
             </div>
         </div>
     </div>
@@ -134,10 +132,25 @@
             document.documentElement.setAttribute("data-bs-theme", newTheme);
         }
 
-        // Alternar vista entre tabla y tarjetas
-        document.getElementById('toggle-view').addEventListener('click', function () {
+        // Alternar vista entre tabla y tarjetas (Cumpleaños del Día)
+        document.getElementById('toggle-cumple-view').addEventListener('click', function () {
             const lista = document.getElementById('cumple-lista');
             const tabla = document.getElementById('cumple-tabla');
+            if (tabla.classList.contains('d-none')) {
+                lista.classList.add('d-none');
+                tabla.classList.remove('d-none');
+                this.textContent = "Vista: Tarjetas";
+            } else {
+                tabla.classList.add('d-none');
+                lista.classList.remove('d-none');
+                this.textContent = "Vista: Tabla";
+            }
+        });
+
+        // Alternar vista entre tabla y tarjetas (Consulta)
+        document.getElementById('toggle-consulta-view').addEventListener('click', function () {
+            const lista = document.getElementById('consulta-lista');
+            const tabla = document.getElementById('consulta-tabla');
             if (tabla.classList.contains('d-none')) {
                 lista.classList.add('d-none');
                 tabla.classList.remove('d-none');
@@ -183,45 +196,69 @@
             })
             .catch(err => console.error('Error al cargar los cumpleaños:', err));
 
-        // Funciones para probar tareas
-        function testRecordatorios() {
-            fetch('/test-recordatorios', { method: 'POST' })
+        // Buscar usuarios y cargar datos en Consulta
+        document.getElementById('busqueda').addEventListener('input', function () {
+            const query = this.value;
+            fetch(`/buscar-usuarios?q=${query}`)
                 .then(response => response.json())
-                .then(data => alert(data.message || 'Prueba de recordatorios completada.'))
-                .catch(err => alert('Error al probar recordatorios.'));
-        }
+                .then(data => {
+                    const lista = document.getElementById('consulta-lista');
+                    const tablaBody = document.getElementById('consulta-tabla-body');
+                    lista.innerHTML = '';
+                    tablaBody.innerHTML = '';
 
-        function testCumpleanos() {
-            fetch('/test-cumpleanos', { method: 'POST' })
-                .then(response => response.json())
-                .then(data => alert(data.message || 'Prueba de cumpleaños completada.'))
-                .catch(err => alert('Error al probar cumpleaños.'));
-        }
+                    data.forEach(usuario => {
+                        // Tarjetas
+                        lista.innerHTML += `
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${usuario.nickname || usuario.name}</h5>
+                                        <p class="card-text">Email: ${usuario.email}</p>
+                                        <p class="card-text">Cumpleaños: ${usuario.birthday}</p>
+                                        <p class="card-text">Redimido: ${usuario.redeemed ? 'Sí' : 'No'}</p>
+                                    </div>
+                                </div>
+                            </div>`;
+
+                        // Tabla
+                        tablaBody.innerHTML += `
+                            <tr>
+                                <td>${usuario.name}</td>
+                                <td>${usuario.nickname || 'N/A'}</td>
+                                <td>${usuario.email}</td>
+                                <td>${usuario.birthday}</td>
+                                <td>${usuario.redeemed ? 'Sí' : 'No'}</td>
+                            </tr>`;
+                    });
+                })
+                .catch(err => console.error('Error al buscar usuarios:', err));
+        });
 
         // manejar mensajes en pantalla
         document.getElementById('form-cumple').addEventListener('submit', function (e) {
-        e.preventDefault(); // Evitar que el formulario recargue la página
-        const formData = new FormData(this);
+            e.preventDefault(); // Evitar que el formulario recargue la página
+            const formData = new FormData(this);
 
-        fetch('/agregar-cumple', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            const mensaje = document.getElementById('mensaje');
-            if (data.success) {
-                mensaje.innerHTML = '<div class="alert alert-success">' + data.message + '</div>';
-                this.reset(); // Resetear el formulario después de éxito
-            } else {
-                mensaje.innerHTML = '<div class="alert alert-danger">Error: ' + data.message + '</div>';
-            }
-        })
-        .catch(error => {
-            const mensaje = document.getElementById('mensaje');
-            mensaje.innerHTML = '<div class="alert alert-danger">Error al procesar la solicitud.</div>';
+            fetch('/agregar-cumple', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const mensaje = document.getElementById('mensaje');
+                if (data.success) {
+                    mensaje.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
+                    this.reset(); // Resetear el formulario después de éxito
+                } else {
+                    mensaje.innerHTML = `<div class="alert alert-danger">Error: ${data.message}</div>`;
+                }
+            })
+            .catch(error => {
+                const mensaje = document.getElementById('mensaje');
+                mensaje.innerHTML = '<div class="alert alert-danger">Error al procesar la solicitud.</div>';
+            });
         });
-    });
     </script>
 </body>
 </html>
