@@ -1,16 +1,42 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="auto">
+<html lang="es" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administración</title>
     <!-- Bootstrap para diseño -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilo Material You */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .card {
+            margin: 10px 0;
+        }
+        .theme-switcher {
+            cursor: pointer;
+        }
+        .tab-content {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-4">
-        <h1>Panel de Administración</h1>
-        <a href="{{ logout_url }}" class="btn btn-danger mb-3">Cerrar Sesión</a>
+        <h1 class="mb-4 text-center">Panel de Administración</h1>
+        <div class="d-flex justify-content-between mb-3">
+            <div>
+                <button class="btn btn-outline-secondary theme-switcher" onclick="toggleTheme()">🌗 Tema</button>
+            </div>
+            <div>
+                <button class="btn btn-outline-success" onclick="testRecordatorios()">Probar Recordatorios</button>
+                <button class="btn btn-outline-info" onclick="testCumpleanos()">Probar Cumpleaños</button>
+                <a href="{{ logout_url }}" class="btn btn-danger">Cerrar Sesión</a>
+            </div>
+        </div>
 
         <!-- Tabs -->
         <ul class="nav nav-tabs" id="adminTabs" role="tablist">
@@ -26,40 +52,36 @@
         </ul>
 
         <!-- Contenido de las Tabs -->
-        <div class="tab-content mt-3">
+        <div class="tab-content">
             <!-- Tab 1: Cumpleaños del Día -->
             <div class="tab-pane fade show active" id="cumple" role="tabpanel">
-                <h2>Cumpleaños de Hoy</h2>
-                <table class="table table-striped">
+                <h2 class="mt-4">Cumpleaños de Hoy</h2>
+                <div class="d-flex justify-content-end mb-3">
+                    <button class="btn btn-outline-secondary" id="toggle-view">Vista: Tarjetas</button>
+                </div>
+                <div id="cumple-lista" class="row"></div>
+                <table class="table table-striped d-none" id="cumple-tabla">
                     <thead>
                         <tr>
                             <th>Nombre</th>
+                            <th>Apodo</th>
                             <th>Email</th>
                             <th>Redimido</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        {% for usuario in cumpleanios_hoy %}
-                        <tr>
-                            <td>{{ usuario.name }}</td>
-                            <td>{{ usuario.email }}</td>
-                            <td>
-                                <input type="checkbox" {% if usuario.redeemed %}checked{% endif %} onchange="actualizarRedencion({{ usuario.id }}, this.checked)">
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
+                    <tbody id="cumple-tabla-body"></tbody>
                 </table>
             </div>
 
             <!-- Tab 2: Consulta de Usuarios -->
             <div class="tab-pane fade" id="consulta" role="tabpanel">
-                <h2>Consulta de Usuarios</h2>
+                <h2 class="mt-4">Consulta de Usuarios</h2>
                 <input type="text" id="busqueda" placeholder="Buscar..." class="form-control mb-3">
                 <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>Nombre</th>
+                            <th>Apodo</th>
                             <th>Email</th>
                             <th>Cumpleaños</th>
                             <th>Redimido</th>
@@ -71,11 +93,15 @@
 
             <!-- Tab 3: Agregar Cumpleaños -->
             <div class="tab-pane fade" id="agregar" role="tabpanel">
-                <h2>Agregar Cumpleaños</h2>
+                <h2 class="mt-4">Agregar Cumpleaños</h2>
                 <form id="form-cumple" method="POST">
                     <div class="mb-3">
                         <label for="name" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nickname" class="form-label">Apodo (opcional)</label>
+                        <input type="text" class="form-control" id="nickname" name="nickname">
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
@@ -95,63 +121,42 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Actualizar redención
-        function actualizarRedencion(id, estado) {
-            fetch(`/actualizar-redencion/${id}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ redeemed: estado })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (!data.success) {
-                    alert('Error al actualizar el estado.');
-                }
-            });
+        // Cambiar tema
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute("data-bs-theme");
+            const newTheme = currentTheme === "light" ? "dark" : "light";
+            document.documentElement.setAttribute("data-bs-theme", newTheme);
         }
 
-        // Buscar usuarios
-        document.getElementById('busqueda').addEventListener('input', function () {
-            const query = this.value;
-            fetch(`/buscar-usuarios?q=${query}`)
-                .then(response => response.json())
-                .then(data => {
-                    const resultados = document.getElementById('resultados');
-                    resultados.innerHTML = '';
-                    data.forEach(usuario => {
-                        resultados.innerHTML += `
-                            <tr>
-                                <td>${usuario.name}</td>
-                                <td>${usuario.email}</td>
-                                <td>${usuario.birthday}</td>
-                                <td>${usuario.redeemed ? 'Sí' : 'No'}</td>
-                            </tr>
-                        `;
-                    });
-                });
+        // Alternar vista entre tabla y tarjetas
+        document.getElementById('toggle-view').addEventListener('click', function () {
+            const lista = document.getElementById('cumple-lista');
+            const tabla = document.getElementById('cumple-tabla');
+            if (tabla.classList.contains('d-none')) {
+                lista.classList.add('d-none');
+                tabla.classList.remove('d-none');
+                this.textContent = "Vista: Tarjetas";
+            } else {
+                tabla.classList.add('d-none');
+                lista.classList.remove('d-none');
+                this.textContent = "Vista: Tabla";
+            }
         });
 
-        // Agregar cumpleaños
-        document.getElementById('form-cumple').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-            fetch('/admin', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                const mensaje = document.getElementById('mensaje');
-                if (data.success) {
-                    mensaje.innerHTML = '<div class="alert alert-success">Cumpleaños agregado con éxito.</div>';
-                    this.reset();
-                } else {
-                    mensaje.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
-                }
-            });
-        });
+        // Funciones para probar tareas
+        function testRecordatorios() {
+            fetch('/test-recordatorios', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => alert(data.message || 'Prueba de recordatorios completada.'))
+                .catch(err => alert('Error al probar recordatorios.'));
+        }
+
+        function testCumpleanos() {
+            fetch('/test-cumpleanos', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => alert(data.message || 'Prueba de cumpleaños completada.'))
+                .catch(err => alert('Error al probar cumpleaños.'));
+        }
     </script>
 </body>
 </html>

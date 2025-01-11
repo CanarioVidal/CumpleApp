@@ -1,11 +1,21 @@
 from flask import render_template, Blueprint, request, redirect, url_for, jsonify, session
 from app import db
 from app.models import User
-from datetime import datetime
+from datetime import datetime, timedelta
 from functools import wraps
+from flask_mail import Message
+from app import create_app
+from flask_mail import Mail
+from apscheduler.schedulers.background import BackgroundScheduler
+import logging
+from flask import current_app
 
 # Crear el Blueprint
 routes = Blueprint('routes', __name__)
+
+# Configurar logs
+logging.basicConfig(filename='email_logs.log', level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Simular credenciales de administrador (se puede mejorar luego)
 ADMIN_USERNAME = "admin"
@@ -45,13 +55,24 @@ def home():
     return render_template('index.html')
 
 # Ruta protegida para admin
-@routes.route('/admin', methods=['GET', 'POST'])
+@routes.route('/admin')
 @login_required
 def admin():
+    hoy = datetime.today()
+    cumpleanios_hoy = User.query.filter(
+        db.extract('month', User.birthday) == hoy.month,
+        db.extract('day', User.birthday) == hoy.day
+    ).all()
+    return render_template('admin.html', logout_url=url_for('routes.logout'), cumpleanios_hoy=cumpleanios_hoy)
+
+# Ruta para agregar usuarios con soporte para GET y POST
+@routes.route('/agregar-cumple', methods=['GET', 'POST'])
+def agregar_usuario():
     if request.method == 'POST':
         try:
             # Obtener datos del formulario
             nombre = request.form.get('name')
+            apodo = request.form.get('nickname')
             email = request.form.get('email')
             fecha_nacimiento = request.form.get('birthday')
             fecha_nacimiento = datetime.strptime(fecha_nacimiento, '%Y-%m-%d').date()
@@ -63,7 +84,12 @@ def admin():
                 return jsonify({'success': False, 'error': 'Debe ser mayor de 18 años para registrarse.'}), 400
 
             # Crear nuevo usuario
-            nuevo_usuario = User(name=nombre, email=email, birthday=fecha_nacimiento)
+            nuevo_usuario = User(
+                name=nombre,
+                nickname=apodo if apodo else None,  # Guardar apodo si fue proporcionado
+                email=email,
+                birthday=fecha_nacimiento
+            )
             db.session.add(nuevo_usuario)
             db.session.commit()
 
@@ -72,13 +98,9 @@ def admin():
         except Exception as e:
             # Responder a AJAX con error específico
             return jsonify({'success': False, 'error': str(e)}), 400
-
-    hoy = datetime.today()
-    cumpleanios_hoy = User.query.filter(
-        db.extract('month', User.birthday) == hoy.month,
-        db.extract('day', User.birthday) == hoy.day
-    ).all()
-    return render_template('admin.html', logout_url=url_for('routes.logout'), cumpleanios_hoy=cumpleanios_hoy)
+    
+    # Si es GET, renderizar el formulario
+    return render_template('registro-cumples.html')
 
 # Vista temporal de usuarios
 @routes.route('/ver-usuarios')
@@ -99,29 +121,6 @@ def borrar_usuario(id):
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
 
-# Ruta para borrar múltiples usuarios
-@routes.route('/borrar-usuarios', methods=['POST'])
-@login_required
-def borrar_usuarios():
-    try:
-        data = request.json
-        ids = data.get('ids', [])
-        User.query.filter(User.id.in_(ids)).delete(synchronize_session=False)
-        db.session.commit()
-        return jsonify({'success': True})
-    except Exception as e:
-        return jsonify({'success': False, 'error': str(e)})
-
-# Ruta para actualizar el estado de redención
-@routes.route('/actualizar-redencion/<int:id>', methods=['POST'])
-@login_required
-def actualizar_redencion(id):
-    data = request.json
-    usuario = User.query.get_or_404(id)
-    usuario.redeemed = data.get('redeemed', False)
-    db.session.commit()
-    return jsonify({'success': True})
-
 # Ruta para buscar usuarios
 @routes.route('/buscar-usuarios')
 @login_required
@@ -129,9 +128,41 @@ def buscar_usuarios():
     query = request.args.get('q', '').strip()
     if query:
         usuarios = User.query.filter(
-            (User.name.ilike(f"%{query}%")) | (User.email.ilike(f"%{query}%"))
+            (User.name.ilike(f"%{query}%")) | 
+            (User.email.ilike(f"%{query}%")) | 
+            (User.nickname.ilike(f"%{query}%"))  # Buscar también por apodo
         ).all()
     else:
         usuarios = []
-    resultados = [{'id': u.id, 'name': u.name, 'email': u.email, 'birthday': u.birthday.strftime('%Y-%m-%d'), 'redeemed': u.redeemed} for u in usuarios]
+    resultados = [
+        {
+            'id': u.id,
+            'name': u.name,
+            'nickname': u.nickname if u.nickname else "",
+            'email': u.email,
+            'birthday': u.birthday.strftime('%Y-%m-%d'),
+            'redeemed': u.redeemed
+        } for u in usuarios
+    ]
     return jsonify(resultados)
+
+# Funciones para envío automático de correos
+def enviar_correo(email, subject, body):
+    try:
+        msg = Message(subject, recipients=[email])
+        msg.body = body
+        with current_app.app_context():
+            mail.send(msg)
+        logging.info(f"Correo enviado a {email}")
+    except Exception as e:
+        logging.error(f"Error al enviar correo a {email}: {str(e)}")
+
+def programar_correos():
+    hoy = datetime.today().date()
+    cumple_hoy = User.query.filter(
+        db.extract('month', User.birthday) == hoy.month,
+        db.extract('day', User.birthday) == hoy.day
+    ).all()
+    for usuario in cumple_hoy:
+        saludo = usuario.nickname if usuario.nickname else usuario.name
+        enviar_correo(usuario.email, "¡Feliz Cumpleaños!", f"Hola {saludo}, ¡Feliz cumpleaños! Ven a redimir tu obsequio.")

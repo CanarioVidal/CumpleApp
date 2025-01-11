@@ -1,0 +1,502 @@
+2025-01-08 19:50:56,822 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 19:50:56,823 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 19:50:56,824 - INFO - Scheduler started
+2025-01-08 19:50:56,838 - WARNING -  * Debugger is active!
+2025-01-08 19:50:56,855 - INFO -  * Debugger PIN: 167-608-493
+2025-01-08 20:39:32,199 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:39:32,199 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:39:32,201 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:39:32,201 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:39:32,201 - INFO - Scheduler started
+2025-01-08 20:39:32,214 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:39:32,214 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:39:32,214 - INFO - Scheduler started
+2025-01-08 20:39:32,249 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.27:5000
+2025-01-08 20:39:32,249 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-08 20:39:32,251 - INFO -  * Restarting with stat
+2025-01-08 20:39:33,066 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:39:33,066 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:39:33,068 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:39:33,068 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:39:33,068 - INFO - Scheduler started
+2025-01-08 20:39:33,081 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:39:33,081 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:39:33,081 - INFO - Scheduler started
+2025-01-08 20:39:33,095 - WARNING -  * Debugger is active!
+2025-01-08 20:39:33,105 - INFO -  * Debugger PIN: 167-608-493
+2025-01-08 20:42:07,501 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:42:07,501 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:42:07,503 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:42:07,503 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:42:07,503 - INFO - Scheduler started
+2025-01-08 20:42:57,311 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:42:57,311 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:42:57,312 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:42:57,312 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:42:57,312 - INFO - Scheduler started
+2025-01-08 20:46:18,997 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:46:18,997 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:46:18,998 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:46:18,998 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:46:18,998 - INFO - Scheduler started
+2025-01-08 20:46:19,005 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:46:19,005 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:46:19,005 - INFO - Scheduler started
+2025-01-08 20:46:19,005 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:46:19,006 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:46:19,006 - INFO - Scheduler started
+2025-01-08 20:46:19,040 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.27:5000
+2025-01-08 20:46:19,040 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-08 20:46:19,043 - INFO -  * Restarting with stat
+2025-01-08 20:46:19,847 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:46:19,847 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:46:19,848 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:46:19,849 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:46:19,849 - INFO - Scheduler started
+2025-01-08 20:46:19,856 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:46:19,856 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:46:19,856 - INFO - Scheduler started
+2025-01-08 20:46:19,856 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:46:19,857 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:46:19,857 - INFO - Scheduler started
+2025-01-08 20:46:19,871 - WARNING -  * Debugger is active!
+2025-01-08 20:46:19,881 - INFO -  * Debugger PIN: 167-608-493
+2025-01-08 20:47:31,602 - INFO - 127.0.0.1 - - [08/Jan/2025 20:47:31] "GET / HTTP/1.1" 200 -
+2025-01-08 20:47:31,622 - INFO - 127.0.0.1 - - [08/Jan/2025 20:47:31] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-08 20:50:08,201 - INFO - 127.0.0.1 - - [08/Jan/2025 20:50:08] "GET /agregar-cumple HTTP/1.1" 200 -
+2025-01-08 20:50:11,380 - INFO - 127.0.0.1 - - [08/Jan/2025 20:50:11] "GET /admin HTTP/1.1" 200 -
+2025-01-08 20:55:50,945 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:55:50,946 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:55:50,947 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:55:50,947 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:55:50,948 - INFO - Scheduler started
+2025-01-08 20:55:50,954 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:55:50,955 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:55:50,955 - INFO - Scheduler started
+2025-01-08 20:55:50,955 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:55:50,955 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:55:50,955 - INFO - Scheduler started
+2025-01-08 20:55:50,984 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.27:5000
+2025-01-08 20:55:50,984 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-08 20:55:50,986 - INFO -  * Restarting with stat
+2025-01-08 20:55:51,810 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:55:51,811 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:55:51,812 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:55:51,812 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:55:51,812 - INFO - Scheduler started
+2025-01-08 20:55:51,819 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:55:51,820 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:55:51,820 - INFO - Scheduler started
+2025-01-08 20:55:51,820 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 20:55:51,820 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 20:55:51,820 - INFO - Scheduler started
+2025-01-08 20:55:51,834 - WARNING -  * Debugger is active!
+2025-01-08 20:55:51,844 - INFO -  * Debugger PIN: 167-608-493
+2025-01-08 20:55:51,892 - INFO - 127.0.0.1 - - [08/Jan/2025 20:55:51] "GET /agregar-cumple HTTP/1.1" 200 -
+2025-01-08 20:55:56,894 - INFO - 127.0.0.1 - - [08/Jan/2025 20:55:56] "GET /agregar-cumple HTTP/1.1" 200 -
+2025-01-08 20:56:02,678 - INFO - 127.0.0.1 - - [08/Jan/2025 20:56:02] "GET /admin HTTP/1.1" 200 -
+2025-01-08 20:56:44,956 - INFO - 127.0.0.1 - - [08/Jan/2025 20:56:44] "GET /admin HTTP/1.1" 200 -
+2025-01-08 20:58:58,483 - INFO - 127.0.0.1 - - [08/Jan/2025 20:58:58] "GET /admin HTTP/1.1" 200 -
+2025-01-08 20:59:23,027 - INFO - 127.0.0.1 - - [08/Jan/2025 20:59:23] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-01-08 20:59:23,040 - INFO - 127.0.0.1 - - [08/Jan/2025 20:59:23] "GET /login HTTP/1.1" 200 -
+2025-01-08 20:59:32,392 - INFO - 127.0.0.1 - - [08/Jan/2025 20:59:32] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-01-08 20:59:32,403 - INFO - 127.0.0.1 - - [08/Jan/2025 20:59:32] "GET /admin HTTP/1.1" 200 -
+2025-01-08 21:03:27,267 - INFO - 127.0.0.1 - - [08/Jan/2025 21:03:27] "GET /admin HTTP/1.1" 200 -
+2025-01-08 21:03:33,683 - INFO - 127.0.0.1 - - [08/Jan/2025 21:03:33] "GET /buscar-usuarios?q=pa HTTP/1.1" 200 -
+2025-01-08 21:03:43,869 - INFO - 127.0.0.1 - - [08/Jan/2025 21:03:43] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-08 21:03:45,835 - INFO - 127.0.0.1 - - [08/Jan/2025 21:03:45] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-08 21:03:46,344 - INFO - 127.0.0.1 - - [08/Jan/2025 21:03:46] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-08 21:03:55,219 - INFO - 127.0.0.1 - - [08/Jan/2025 21:03:55] "GET /agregar-cumple HTTP/1.1" 200 -
+2025-01-08 21:10:03,417 - INFO - 127.0.0.1 - - [08/Jan/2025 21:10:03] "GET /admin HTTP/1.1" 200 -
+2025-01-08 21:10:08,641 - INFO - 127.0.0.1 - - [08/Jan/2025 21:10:08] "GET /buscar-usuarios?q=pa HTTP/1.1" 200 -
+2025-01-08 21:10:26,764 - INFO - 127.0.0.1 - - [08/Jan/2025 21:10:26] "GET /admin HTTP/1.1" 200 -
+2025-01-08 21:10:37,140 - INFO - 127.0.0.1 - - [08/Jan/2025 21:10:37] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-08 21:10:39,440 - INFO - 127.0.0.1 - - [08/Jan/2025 21:10:39] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-08 21:10:58,309 - INFO - 127.0.0.1 - - [08/Jan/2025 21:10:58] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-08 21:11:18,824 - INFO - 127.0.0.1 - - [08/Jan/2025 21:11:18] "GET /admin HTTP/1.1" 200 -
+2025-01-08 21:11:23,613 - INFO - 127.0.0.1 - - [08/Jan/2025 21:11:23] "GET /buscar-usuarios?q=pa HTTP/1.1" 200 -
+2025-01-08 21:12:03,183 - INFO - 127.0.0.1 - - [08/Jan/2025 21:12:03] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-01-08 21:12:03,193 - INFO - 127.0.0.1 - - [08/Jan/2025 21:12:03] "GET /login HTTP/1.1" 200 -
+2025-01-08 21:12:15,729 - INFO - 127.0.0.1 - - [08/Jan/2025 21:12:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-01-08 21:12:15,737 - INFO - 127.0.0.1 - - [08/Jan/2025 21:12:15] "GET /admin HTTP/1.1" 200 -
+2025-01-08 21:22:38,685 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:22:38,686 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:22:38,687 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:22:38,687 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:22:38,687 - INFO - Scheduler started
+2025-01-08 21:22:38,694 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:22:38,694 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:22:38,694 - INFO - Scheduler started
+2025-01-08 21:22:38,695 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:22:38,695 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:22:38,695 - INFO - Scheduler started
+2025-01-08 21:22:38,724 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.27:5000
+2025-01-08 21:22:38,724 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-08 21:22:38,726 - INFO -  * Restarting with stat
+2025-01-08 21:22:39,581 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:22:39,582 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:22:39,583 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:22:39,583 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:22:39,583 - INFO - Scheduler started
+2025-01-08 21:22:39,590 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:22:39,590 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:22:39,590 - INFO - Scheduler started
+2025-01-08 21:22:39,591 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:22:39,591 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:22:39,591 - INFO - Scheduler started
+2025-01-08 21:22:39,605 - WARNING -  * Debugger is active!
+2025-01-08 21:22:39,615 - INFO -  * Debugger PIN: 167-608-493
+2025-01-08 21:22:42,409 - INFO - 127.0.0.1 - - [08/Jan/2025 21:22:42] "GET /admin HTTP/1.1" 200 -
+2025-01-08 21:22:50,032 - ERROR - Error al enviar correo a pablo@print.uy: name 'mail' is not defined
+2025-01-08 21:22:50,033 - ERROR - Error al enviar correo a elgabi@vichadero.com: name 'mail' is not defined
+2025-01-08 21:22:50,034 - ERROR - Error al enviar correo a elChumy@elbarzon.uy: name 'mail' is not defined
+2025-01-08 21:22:50,034 - ERROR - Error al enviar correo a elsoldo@megustangordas.com.uy: name 'mail' is not defined
+2025-01-08 21:22:50,035 - ERROR - Error al enviar correo a soyungalan@theend.uy: name 'mail' is not defined
+2025-01-08 21:22:50,035 - INFO - 127.0.0.1 - - [08/Jan/2025 21:22:50] "POST /ejecutar-tareas-manual HTTP/1.1" 200 -
+2025-01-08 21:23:55,645 - INFO - 127.0.0.1 - - [08/Jan/2025 21:23:55] "GET /admin HTTP/1.1" 200 -
+2025-01-08 21:24:02,746 - INFO - 127.0.0.1 - - [08/Jan/2025 21:24:02] "GET /agregar-cumple HTTP/1.1" 200 -
+2025-01-08 21:24:11,038 - ERROR - Error al enviar correo a pablo@print.uy: name 'mail' is not defined
+2025-01-08 21:24:11,039 - ERROR - Error al enviar correo a elgabi@vichadero.com: name 'mail' is not defined
+2025-01-08 21:24:11,040 - ERROR - Error al enviar correo a elChumy@elbarzon.uy: name 'mail' is not defined
+2025-01-08 21:24:11,040 - ERROR - Error al enviar correo a elsoldo@megustangordas.com.uy: name 'mail' is not defined
+2025-01-08 21:24:11,041 - ERROR - Error al enviar correo a soyungalan@theend.uy: name 'mail' is not defined
+2025-01-08 21:24:11,041 - INFO - 127.0.0.1 - - [08/Jan/2025 21:24:11] "POST /ejecutar-tareas-manual HTTP/1.1" 200 -
+2025-01-08 21:53:45,903 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:53:45,904 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:53:45,905 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:53:45,906 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:53:45,906 - INFO - Scheduler started
+2025-01-08 21:53:45,914 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:53:45,915 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:53:45,915 - INFO - Scheduler started
+2025-01-08 21:53:45,915 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:53:45,916 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:53:45,916 - INFO - Scheduler started
+2025-01-08 21:53:45,953 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.83.76:5000
+2025-01-08 21:53:45,954 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-08 21:53:45,956 - INFO -  * Restarting with stat
+2025-01-08 21:53:46,987 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:53:46,988 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:53:46,989 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:53:46,990 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:53:46,990 - INFO - Scheduler started
+2025-01-08 21:53:46,998 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:53:46,998 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:53:46,998 - INFO - Scheduler started
+2025-01-08 21:53:46,999 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 21:53:46,999 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 21:53:46,999 - INFO - Scheduler started
+2025-01-08 21:53:47,016 - WARNING -  * Debugger is active!
+2025-01-08 21:53:47,030 - INFO -  * Debugger PIN: 167-608-493
+2025-01-08 21:53:52,176 - INFO - 127.0.0.1 - - [08/Jan/2025 21:53:52] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-01-08 21:53:52,186 - INFO - 127.0.0.1 - - [08/Jan/2025 21:53:52] "GET /login HTTP/1.1" 200 -
+2025-01-08 21:56:05,581 - INFO - 127.0.0.1 - - [08/Jan/2025 21:56:05] "[32mDELETE /borrar-usuario/7 HTTP/1.1[0m" 302 -
+2025-01-08 21:56:05,584 - INFO - 127.0.0.1 - - [08/Jan/2025 21:56:05] "[31m[1mDELETE /login HTTP/1.1[0m" 405 -
+2025-01-08 21:56:13,911 - INFO - 127.0.0.1 - - [08/Jan/2025 21:56:13] "[32mDELETE /borrar-usuario/7 HTTP/1.1[0m" 302 -
+2025-01-08 21:56:13,914 - INFO - 127.0.0.1 - - [08/Jan/2025 21:56:13] "[31m[1mDELETE /login HTTP/1.1[0m" 405 -
+2025-01-08 21:56:20,062 - INFO - 127.0.0.1 - - [08/Jan/2025 21:56:20] "[32mPOST /borrar-usuarios HTTP/1.1[0m" 302 -
+2025-01-08 21:56:20,068 - INFO - 127.0.0.1 - - [08/Jan/2025 21:56:20] "GET /login HTTP/1.1" 200 -
+2025-01-08 21:57:40,618 - INFO - 127.0.0.1 - - [08/Jan/2025 21:57:40] "[31m[1mPOST /agregar-cumple HTTP/1.1[0m" 400 -
+2025-01-08 21:58:13,419 - INFO - 127.0.0.1 - - [08/Jan/2025 21:58:13] "POST /agregar-cumple HTTP/1.1" 200 -
+2025-01-08 21:58:20,957 - INFO - 127.0.0.1 - - [08/Jan/2025 21:58:20] "[32mGET /ver-usuarios HTTP/1.1[0m" 302 -
+2025-01-08 21:58:20,963 - INFO - 127.0.0.1 - - [08/Jan/2025 21:58:20] "GET /login HTTP/1.1" 200 -
+2025-01-08 21:58:36,585 - INFO - 127.0.0.1 - - [08/Jan/2025 21:58:36] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-01-08 21:58:36,601 - INFO - 127.0.0.1 - - [08/Jan/2025 21:58:36] "GET /admin HTTP/1.1" 200 -
+2025-01-08 21:58:54,348 - INFO - 127.0.0.1 - - [08/Jan/2025 21:58:54] "GET /buscar-usuarios?q=c HTTP/1.1" 200 -
+2025-01-08 21:58:54,467 - INFO - 127.0.0.1 - - [08/Jan/2025 21:58:54] "GET /buscar-usuarios?q=ca HTTP/1.1" 200 -
+2025-01-08 21:58:54,803 - INFO - 127.0.0.1 - - [08/Jan/2025 21:58:54] "GET /buscar-usuarios?q=cam HTTP/1.1" 200 -
+2025-01-08 21:58:54,943 - INFO - 127.0.0.1 - - [08/Jan/2025 21:58:54] "GET /buscar-usuarios?q=cami HTTP/1.1" 200 -
+2025-01-08 22:00:05,685 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:05] "GET /admin?name=Juli&email=juli@julicom&birthday=1920-05-02 HTTP/1.1" 200 -
+2025-01-08 22:00:20,570 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:20] "GET /buscar-usuarios?q=j HTTP/1.1" 200 -
+2025-01-08 22:00:20,712 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:20] "GET /buscar-usuarios?q=ju HTTP/1.1" 200 -
+2025-01-08 22:00:21,506 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:21] "GET /buscar-usuarios?q=jul HTTP/1.1" 200 -
+2025-01-08 22:00:25,216 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:25] "GET /buscar-usuarios?q=ju HTTP/1.1" 200 -
+2025-01-08 22:00:25,364 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:25] "GET /buscar-usuarios?q=j HTTP/1.1" 200 -
+2025-01-08 22:00:25,530 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:25] "GET /buscar-usuarios?q= HTTP/1.1" 200 -
+2025-01-08 22:00:26,631 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:26] "GET /buscar-usuarios?q=j HTTP/1.1" 200 -
+2025-01-08 22:00:26,763 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:26] "GET /buscar-usuarios?q=ju HTTP/1.1" 200 -
+2025-01-08 22:00:27,968 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:27] "GET /buscar-usuarios?q=jul HTTP/1.1" 200 -
+2025-01-08 22:00:28,273 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:28] "GET /buscar-usuarios?q=juli HTTP/1.1" 200 -
+2025-01-08 22:00:29,726 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:29] "GET /buscar-usuarios?q=jul HTTP/1.1" 200 -
+2025-01-08 22:00:29,858 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:29] "GET /buscar-usuarios?q=ju HTTP/1.1" 200 -
+2025-01-08 22:00:30,010 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:30] "GET /buscar-usuarios?q=j HTTP/1.1" 200 -
+2025-01-08 22:00:30,160 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:30] "GET /buscar-usuarios?q= HTTP/1.1" 200 -
+2025-01-08 22:00:30,438 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:30] "GET /buscar-usuarios?q=c HTTP/1.1" 200 -
+2025-01-08 22:00:30,624 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:30] "GET /buscar-usuarios?q=ca HTTP/1.1" 200 -
+2025-01-08 22:00:31,925 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:31] "GET /buscar-usuarios?q=c HTTP/1.1" 200 -
+2025-01-08 22:00:32,093 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:32] "GET /buscar-usuarios?q= HTTP/1.1" 200 -
+2025-01-08 22:00:33,284 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:33] "GET /buscar-usuarios?q=j HTTP/1.1" 200 -
+2025-01-08 22:00:33,436 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:33] "GET /buscar-usuarios?q=ju HTTP/1.1" 200 -
+2025-01-08 22:00:33,934 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:33] "GET /buscar-usuarios?q=jul HTTP/1.1" 200 -
+2025-01-08 22:00:34,218 - INFO - 127.0.0.1 - - [08/Jan/2025 22:00:34] "GET /buscar-usuarios?q=juli HTTP/1.1" 200 -
+2025-01-08 22:01:36,648 - INFO - 127.0.0.1 - - [08/Jan/2025 22:01:36] "GET /admin?name=juli&email=juli@juli.com&birthday=1990-05-02 HTTP/1.1" 200 -
+2025-01-08 22:01:43,008 - INFO - 127.0.0.1 - - [08/Jan/2025 22:01:43] "GET /buscar-usuarios?q=j HTTP/1.1" 200 -
+2025-01-08 22:01:43,168 - INFO - 127.0.0.1 - - [08/Jan/2025 22:01:43] "GET /buscar-usuarios?q=ju HTTP/1.1" 200 -
+2025-01-08 22:01:43,576 - INFO - 127.0.0.1 - - [08/Jan/2025 22:01:43] "GET /buscar-usuarios?q=jul HTTP/1.1" 200 -
+2025-01-08 22:01:43,797 - INFO - 127.0.0.1 - - [08/Jan/2025 22:01:43] "GET /buscar-usuarios?q=juli HTTP/1.1" 200 -
+2025-01-08 22:01:45,739 - INFO - 127.0.0.1 - - [08/Jan/2025 22:01:45] "GET /buscar-usuarios?q=jul HTTP/1.1" 200 -
+2025-01-08 22:01:45,926 - INFO - 127.0.0.1 - - [08/Jan/2025 22:01:45] "GET /buscar-usuarios?q=ju HTTP/1.1" 200 -
+2025-01-08 22:01:46,084 - INFO - 127.0.0.1 - - [08/Jan/2025 22:01:46] "GET /buscar-usuarios?q=j HTTP/1.1" 200 -
+2025-01-08 22:01:46,235 - INFO - 127.0.0.1 - - [08/Jan/2025 22:01:46] "GET /buscar-usuarios?q= HTTP/1.1" 200 -
+2025-01-08 22:01:50,998 - ERROR - Error al enviar correo a pablo@print.uy: name 'mail' is not defined
+2025-01-08 22:01:50,999 - ERROR - Error al enviar correo a elgabi@vichadero.com: name 'mail' is not defined
+2025-01-08 22:01:51,000 - ERROR - Error al enviar correo a elChumy@elbarzon.uy: name 'mail' is not defined
+2025-01-08 22:01:51,000 - ERROR - Error al enviar correo a elsoldo@megustangordas.com.uy: name 'mail' is not defined
+2025-01-08 22:01:51,001 - ERROR - Error al enviar correo a soyungalan@theend.uy: name 'mail' is not defined
+2025-01-08 22:01:51,001 - INFO - 127.0.0.1 - - [08/Jan/2025 22:01:51] "POST /ejecutar-tareas-manual HTTP/1.1" 200 -
+2025-01-08 22:05:03,205 - INFO - 127.0.0.1 - - [08/Jan/2025 22:05:03] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-08 22:05:14,262 - INFO - 127.0.0.1 - - [08/Jan/2025 22:05:14] "DELETE /borrar-usuario/8 HTTP/1.1" 200 -
+2025-01-08 22:06:04,872 - INFO - 127.0.0.1 - - [08/Jan/2025 22:06:04] "GET /buscar-usuarios?q=g HTTP/1.1" 200 -
+2025-01-08 22:06:04,967 - INFO - 127.0.0.1 - - [08/Jan/2025 22:06:04] "GET /buscar-usuarios?q=ga HTTP/1.1" 200 -
+2025-01-08 22:06:05,426 - INFO - 127.0.0.1 - - [08/Jan/2025 22:06:05] "GET /buscar-usuarios?q=gab HTTP/1.1" 200 -
+2025-01-08 22:06:14,141 - INFO - 127.0.0.1 - - [08/Jan/2025 22:06:14] "GET /buscar-usuarios?q=ga HTTP/1.1" 200 -
+2025-01-08 22:06:14,385 - INFO - 127.0.0.1 - - [08/Jan/2025 22:06:14] "GET /buscar-usuarios?q=g HTTP/1.1" 200 -
+2025-01-08 22:06:14,526 - INFO - 127.0.0.1 - - [08/Jan/2025 22:06:14] "GET /buscar-usuarios?q= HTTP/1.1" 200 -
+2025-01-08 22:10:05,199 - INFO - 127.0.0.1 - - [08/Jan/2025 22:10:05] "POST /borrar-usuarios HTTP/1.1" 200 -
+2025-01-08 22:10:15,456 - INFO - 127.0.0.1 - - [08/Jan/2025 22:10:15] "GET /admin?name=juli&email=juli@juli.com&birthday=1990-05-02 HTTP/1.1" 200 -
+2025-01-08 22:11:22,990 - INFO - 127.0.0.1 - - [08/Jan/2025 22:11:22] "GET /admin?name=juli&email=juli@juli.com&birthday=1990-05-02 HTTP/1.1" 200 -
+2025-01-08 22:12:24,282 - INFO - 127.0.0.1 - - [08/Jan/2025 22:12:24] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
+2025-01-08 22:12:29,292 - INFO - 127.0.0.1 - - [08/Jan/2025 22:12:29] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
+2025-01-08 22:12:30,397 - INFO - 127.0.0.1 - - [08/Jan/2025 22:12:30] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
+2025-01-08 22:12:34,442 - INFO - 127.0.0.1 - - [08/Jan/2025 22:12:34] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
+2025-01-08 22:12:42,956 - INFO - 127.0.0.1 - - [08/Jan/2025 22:12:42] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
+2025-01-08 22:12:44,325 - INFO - 127.0.0.1 - - [08/Jan/2025 22:12:44] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
+2025-01-08 22:12:44,818 - INFO - 127.0.0.1 - - [08/Jan/2025 22:12:44] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
+2025-01-08 22:12:45,008 - INFO - 127.0.0.1 - - [08/Jan/2025 22:12:45] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
+2025-01-08 22:13:10,045 - INFO - 127.0.0.1 - - [08/Jan/2025 22:13:10] "POST /agregar-cumple HTTP/1.1" 200 -
+2025-01-08 22:13:20,699 - INFO - 127.0.0.1 - - [08/Jan/2025 22:13:20] "GET /buscar-usuarios?q=a HTTP/1.1" 200 -
+2025-01-08 22:13:20,861 - INFO - 127.0.0.1 - - [08/Jan/2025 22:13:20] "GET /buscar-usuarios?q=al HTTP/1.1" 200 -
+2025-01-08 22:13:27,614 - INFO - 127.0.0.1 - - [08/Jan/2025 22:13:27] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-08 22:20:34,998 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 22:20:34,999 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 22:20:35,001 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 22:20:35,001 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 22:20:35,001 - INFO - Scheduler started
+2025-01-08 22:20:35,010 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 22:20:35,010 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 22:20:35,010 - INFO - Scheduler started
+2025-01-08 22:20:35,011 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 22:20:35,011 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 22:20:35,011 - INFO - Scheduler started
+2025-01-08 22:20:35,058 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.83.76:5000
+2025-01-08 22:20:35,058 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-08 22:20:35,061 - INFO -  * Restarting with stat
+2025-01-08 22:20:36,166 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 22:20:36,167 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 22:20:36,169 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 22:20:36,169 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 22:20:36,169 - INFO - Scheduler started
+2025-01-08 22:20:36,178 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 22:20:36,178 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 22:20:36,178 - INFO - Scheduler started
+2025-01-08 22:20:36,179 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-08 22:20:36,179 - INFO - Added job "programar_correos" to job store "default"
+2025-01-08 22:20:36,179 - INFO - Scheduler started
+2025-01-08 22:20:36,197 - WARNING -  * Debugger is active!
+2025-01-08 22:20:36,210 - INFO -  * Debugger PIN: 167-608-493
+2025-01-08 22:20:40,128 - INFO - 127.0.0.1 - - [08/Jan/2025 22:20:40] "GET /admin?name=juli&email=juli@juli.com&birthday=1990-05-02 HTTP/1.1" 200 -
+2025-01-08 22:20:44,415 - INFO - 127.0.0.1 - - [08/Jan/2025 22:20:44] "GET /admin?name=juli&email=juli@juli.com&birthday=1990-05-02 HTTP/1.1" 200 -
+2025-01-08 22:20:45,102 - INFO - 127.0.0.1 - - [08/Jan/2025 22:20:45] "GET /admin?name=juli&email=juli@juli.com&birthday=1990-05-02 HTTP/1.1" 200 -
+2025-01-08 22:20:48,907 - INFO - 127.0.0.1 - - [08/Jan/2025 22:20:48] "POST /agregar-cumple HTTP/1.1" 200 -
+2025-01-08 22:20:57,289 - INFO - 127.0.0.1 - - [08/Jan/2025 22:20:57] "GET /admin?name=juli&email=juli@juli.com&birthday=1990-05-02 HTTP/1.1" 200 -
+2025-01-08 22:21:11,785 - INFO - 127.0.0.1 - - [08/Jan/2025 22:21:11] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-08 22:21:38,947 - INFO - 127.0.0.1 - - [08/Jan/2025 22:21:38] "POST /actualizar-redencion/2 HTTP/1.1" 200 -
+2025-01-08 22:21:44,384 - INFO - 127.0.0.1 - - [08/Jan/2025 22:21:44] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-09 07:59:40,156 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-09 07:59:40,157 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-09 07:59:40,161 - INFO - Added job "programar_correos" to job store "default"
+2025-01-09 07:59:40,161 - INFO - Added job "programar_correos" to job store "default"
+2025-01-09 07:59:40,161 - INFO - Scheduler started
+2025-01-09 07:59:40,171 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-09 07:59:40,171 - INFO - Added job "programar_correos" to job store "default"
+2025-01-09 07:59:40,171 - INFO - Scheduler started
+2025-01-09 07:59:40,172 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-09 07:59:40,172 - INFO - Added job "programar_correos" to job store "default"
+2025-01-09 07:59:40,172 - INFO - Scheduler started
+2025-01-09 07:59:40,238 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.104:5000
+2025-01-09 07:59:40,238 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-09 07:59:40,243 - INFO -  * Restarting with stat
+2025-01-09 07:59:41,238 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-09 07:59:41,238 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-09 07:59:41,240 - INFO - Added job "programar_correos" to job store "default"
+2025-01-09 07:59:41,240 - INFO - Added job "programar_correos" to job store "default"
+2025-01-09 07:59:41,240 - INFO - Scheduler started
+2025-01-09 07:59:41,248 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-09 07:59:41,248 - INFO - Added job "programar_correos" to job store "default"
+2025-01-09 07:59:41,248 - INFO - Scheduler started
+2025-01-09 07:59:41,249 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-09 07:59:41,249 - INFO - Added job "programar_correos" to job store "default"
+2025-01-09 07:59:41,250 - INFO - Scheduler started
+2025-01-09 07:59:41,266 - WARNING -  * Debugger is active!
+2025-01-09 07:59:41,279 - INFO -  * Debugger PIN: 167-608-493
+2025-01-09 07:59:48,735 - INFO - 127.0.0.1 - - [09/Jan/2025 07:59:48] "GET /agregar-cumple HTTP/1.1" 200 -
+2025-01-09 07:59:48,846 - INFO - 127.0.0.1 - - [09/Jan/2025 07:59:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-09 07:59:53,689 - INFO - 127.0.0.1 - - [09/Jan/2025 07:59:53] "GET /admin?name=juli&email=juli@juli.com&birthday=1990-05-02 HTTP/1.1" 200 -
+2025-01-09 07:59:57,376 - INFO - 127.0.0.1 - - [09/Jan/2025 07:59:57] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-09 08:00:00,710 - INFO - 127.0.0.1 - - [09/Jan/2025 08:00:00] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-01-09 08:00:00,728 - INFO - 127.0.0.1 - - [09/Jan/2025 08:00:00] "GET /login HTTP/1.1" 200 -
+2025-01-09 08:00:17,118 - INFO - 127.0.0.1 - - [09/Jan/2025 08:00:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-01-09 08:00:17,124 - INFO - 127.0.0.1 - - [09/Jan/2025 08:00:17] "GET /admin HTTP/1.1" 200 -
+2025-01-10 15:32:11,590 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 15:32:11,591 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 15:32:11,592 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 15:32:11,596 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 15:32:11,596 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 15:32:11,597 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 15:32:11,597 - INFO - Scheduler started
+2025-01-10 15:32:11,597 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-10 15:32:11,598 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 15:32:11,598 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 15:32:11,598 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 15:32:11,598 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 15:32:11,598 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 15:32:11,598 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 15:32:11,598 - INFO - Scheduler started
+2025-01-10 15:32:11,599 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-10 15:32:11,673 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.31:5000
+2025-01-10 15:32:11,673 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-10 15:32:11,679 - INFO -  * Restarting with stat
+2025-01-10 15:32:12,591 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 15:32:12,591 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 15:32:12,591 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 15:32:12,592 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 15:32:12,593 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 15:32:12,593 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 15:32:12,593 - INFO - Scheduler started
+2025-01-10 15:32:12,593 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-10 15:32:12,594 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 15:32:12,594 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 15:32:12,594 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 15:32:12,594 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 15:32:12,594 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 15:32:12,594 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 15:32:12,594 - INFO - Scheduler started
+2025-01-10 15:32:12,595 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-10 15:32:12,608 - WARNING -  * Debugger is active!
+2025-01-10 15:32:12,619 - INFO -  * Debugger PIN: 167-608-493
+2025-01-10 15:32:22,693 - INFO - 127.0.0.1 - - [10/Jan/2025 15:32:22] "GET /agregar-cumple HTTP/1.1" 200 -
+2025-01-10 15:33:02,623 - INFO - 127.0.0.1 - - [10/Jan/2025 15:33:02] "[31m[1mPOST /agregar-cumple HTTP/1.1[0m" 400 -
+2025-01-10 15:33:20,995 - INFO - 127.0.0.1 - - [10/Jan/2025 15:33:20] "POST /agregar-cumple HTTP/1.1" 200 -
+2025-01-10 15:33:30,330 - INFO - 127.0.0.1 - - [10/Jan/2025 15:33:30] "GET /admin HTTP/1.1" 200 -
+2025-01-10 15:33:35,157 - INFO - 127.0.0.1 - - [10/Jan/2025 15:33:35] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-10 15:33:36,539 - INFO - 127.0.0.1 - - [10/Jan/2025 15:33:36] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-10 16:09:44,880 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 16:09:44,880 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 16:09:44,880 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 16:09:44,882 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 16:09:44,882 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 16:09:44,882 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 16:09:44,882 - INFO - Scheduler started
+2025-01-10 16:09:44,883 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-10 16:09:44,883 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 16:09:44,883 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 16:09:44,883 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 16:09:44,883 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 16:09:44,883 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 16:09:44,884 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 16:09:44,884 - INFO - Scheduler started
+2025-01-10 16:09:44,884 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-10 16:09:44,920 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.31:5000
+2025-01-10 16:09:44,920 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-10 16:09:44,922 - INFO -  * Restarting with stat
+2025-01-10 16:09:45,820 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 16:09:45,820 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 16:09:45,820 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 16:09:45,822 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 16:09:45,822 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 16:09:45,822 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 16:09:45,822 - INFO - Scheduler started
+2025-01-10 16:09:45,823 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-10 16:09:45,823 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 16:09:45,823 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 16:09:45,823 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-10 16:09:45,823 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 16:09:45,823 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 16:09:45,824 - INFO - Added job "programar_correos" to job store "default"
+2025-01-10 16:09:45,824 - INFO - Scheduler started
+2025-01-10 16:09:45,824 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-10 16:09:45,837 - WARNING -  * Debugger is active!
+2025-01-10 16:09:45,848 - INFO -  * Debugger PIN: 167-608-493
+2025-01-10 16:09:50,419 - INFO - 127.0.0.1 - - [10/Jan/2025 16:09:50] "GET /admin HTTP/1.1" 200 -
+2025-01-10 16:09:55,206 - INFO - 127.0.0.1 - - [10/Jan/2025 16:09:55] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-01-10 16:09:55,222 - INFO - 127.0.0.1 - - [10/Jan/2025 16:09:55] "GET /login HTTP/1.1" 200 -
+2025-01-10 16:10:05,491 - INFO - 127.0.0.1 - - [10/Jan/2025 16:10:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-01-10 16:10:05,499 - INFO - 127.0.0.1 - - [10/Jan/2025 16:10:05] "GET /admin HTTP/1.1" 200 -
+2025-01-10 16:10:18,607 - INFO - 127.0.0.1 - - [10/Jan/2025 16:10:18] "GET /agregar-cumple HTTP/1.1" 200 -
+2025-01-10 16:15:58,054 - INFO - 127.0.0.1 - - [10/Jan/2025 16:15:58] "GET /admin HTTP/1.1" 200 -
+2025-01-10 16:16:15,909 - INFO - 127.0.0.1 - - [10/Jan/2025 16:16:15] "GET /buscar-usuarios?q=pa HTTP/1.1" 200 -
+2025-01-10 16:16:25,968 - INFO - 127.0.0.1 - - [10/Jan/2025 16:16:25] "GET /agregar-cumple HTTP/1.1" 200 -
+2025-01-10 16:19:53,961 - INFO - 127.0.0.1 - - [10/Jan/2025 16:19:53] "GET /admin HTTP/1.1" 200 -
+2025-01-10 16:22:51,103 - INFO - 127.0.0.1 - - [10/Jan/2025 16:22:51] "GET /admin HTTP/1.1" 200 -
+2025-01-10 16:24:55,815 - INFO - 127.0.0.1 - - [10/Jan/2025 16:24:55] "GET /admin HTTP/1.1" 200 -
+2025-01-10 16:24:55,849 - INFO - 127.0.0.1 - - [10/Jan/2025 16:24:55] "[33mGET /cumpleanos-hoy HTTP/1.1[0m" 404 -
+2025-01-10 16:26:31,141 - INFO - 127.0.0.1 - - [10/Jan/2025 16:26:31] "GET /admin HTTP/1.1" 200 -
+2025-01-10 16:27:27,673 - INFO - 127.0.0.1 - - [10/Jan/2025 16:27:27] "GET /buscar-usuarios?q=pa HTTP/1.1" 200 -
+2025-01-10 16:29:56,308 - INFO - 127.0.0.1 - - [10/Jan/2025 16:29:56] "GET /admin HTTP/1.1" 200 -
+2025-01-10 16:30:08,208 - INFO - 127.0.0.1 - - [10/Jan/2025 16:30:08] "GET /admin HTTP/1.1" 200 -
+2025-01-10 16:30:21,130 - INFO - 127.0.0.1 - - [10/Jan/2025 16:30:21] "GET /agregar-cumple HTTP/1.1" 200 -
+2025-01-10 16:30:23,368 - INFO - 127.0.0.1 - - [10/Jan/2025 16:30:23] "GET /admin HTTP/1.1" 200 -
+2025-01-10 16:32:31,985 - INFO - 127.0.0.1 - - [10/Jan/2025 16:32:31] "GET /admin HTTP/1.1" 200 -
+2025-01-10 23:23:53,776 - INFO - 127.0.0.1 - - [10/Jan/2025 23:23:53] "GET /admin HTTP/1.1" 200 -
+2025-01-11 10:09:30,145 - INFO - 127.0.0.1 - - [11/Jan/2025 10:09:30] "[32mGET /admin HTTP/1.1[0m" 302 -
+2025-01-11 10:09:30,157 - INFO - 127.0.0.1 - - [11/Jan/2025 10:09:30] "GET /login HTTP/1.1" 200 -
+2025-01-11 10:09:34,682 - INFO - 127.0.0.1 - - [11/Jan/2025 10:09:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-11 10:09:41,132 - INFO - 127.0.0.1 - - [11/Jan/2025 10:09:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-01-11 10:09:41,138 - INFO - 127.0.0.1 - - [11/Jan/2025 10:09:41] "GET /admin HTTP/1.1" 200 -
+2025-01-11 10:10:42,815 - INFO - 127.0.0.1 - - [11/Jan/2025 10:10:42] "GET /admin HTTP/1.1" 200 -
+2025-01-11 10:11:05,448 - INFO - 127.0.0.1 - - [11/Jan/2025 10:11:05] "GET /admin HTTP/1.1" 200 -
+2025-01-11 10:11:07,096 - INFO - 127.0.0.1 - - [11/Jan/2025 10:11:07] "GET /admin HTTP/1.1" 200 -
+2025-01-11 10:11:34,123 - INFO - 127.0.0.1 - - [11/Jan/2025 10:11:34] "GET /admin HTTP/1.1" 200 -
+2025-01-11 10:11:35,061 - INFO - 127.0.0.1 - - [11/Jan/2025 10:11:35] "GET /admin HTTP/1.1" 200 -
+2025-01-11 10:11:41,451 - INFO - 127.0.0.1 - - [11/Jan/2025 10:11:41] "GET /admin HTTP/1.1" 200 -
+2025-01-11 10:11:41,563 - INFO - 127.0.0.1 - - [11/Jan/2025 10:11:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-11 10:11:42,791 - INFO - 127.0.0.1 - - [11/Jan/2025 10:11:42] "GET /admin HTTP/1.1" 200 -
+2025-01-11 10:11:42,901 - INFO - 127.0.0.1 - - [11/Jan/2025 10:11:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-11 10:12:07,217 - INFO - 127.0.0.1 - - [11/Jan/2025 10:12:07] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-01-11 10:12:07,224 - INFO - 127.0.0.1 - - [11/Jan/2025 10:12:07] "GET /login HTTP/1.1" 200 -
+2025-01-11 10:12:13,904 - INFO - 127.0.0.1 - - [11/Jan/2025 10:12:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-01-11 10:12:13,913 - INFO - 127.0.0.1 - - [11/Jan/2025 10:12:13] "GET /admin HTTP/1.1" 200 -
+2025-01-11 10:12:55,081 - INFO - 127.0.0.1 - - [11/Jan/2025 10:12:55] "[33mPOST /test-recordatorios HTTP/1.1[0m" 404 -
+2025-01-11 10:12:58,857 - INFO - 127.0.0.1 - - [11/Jan/2025 10:12:58] "[33mPOST /test-cumpleanos HTTP/1.1[0m" 404 -
+2025-01-11 10:15:48,236 - INFO - 127.0.0.1 - - [11/Jan/2025 10:15:48] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
+2025-01-11 10:15:53,809 - INFO - 127.0.0.1 - - [11/Jan/2025 10:15:53] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
+2025-01-11 10:16:05,941 - INFO - 127.0.0.1 - - [11/Jan/2025 10:16:05] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
+2025-01-11 10:16:20,520 - INFO - 127.0.0.1 - - [11/Jan/2025 10:16:20] "[33mGET /agregar-usuario HTTP/1.1[0m" 404 -
+2025-01-11 10:16:25,146 - INFO - 127.0.0.1 - - [11/Jan/2025 10:16:25] "[33mGET /agregar-usuario HTTP/1.1[0m" 404 -
+2025-01-11 10:16:30,845 - INFO - 127.0.0.1 - - [11/Jan/2025 10:16:30] "GET /agregar-cumple HTTP/1.1" 200 -
+2025-01-11 10:17:04,956 - INFO - 127.0.0.1 - - [11/Jan/2025 10:17:04] "[31m[1mPOST /agregar-cumple HTTP/1.1[0m" 400 -
+2025-01-11 10:17:14,963 - INFO - 127.0.0.1 - - [11/Jan/2025 10:17:14] "POST /agregar-cumple HTTP/1.1" 200 -
+2025-01-11 10:17:22,083 - INFO - 127.0.0.1 - - [11/Jan/2025 10:17:22] "GET /admin HTTP/1.1" 200 -
+2025-01-11 10:17:23,435 - INFO - 127.0.0.1 - - [11/Jan/2025 10:17:23] "GET /admin HTTP/1.1" 200 -
+2025-01-11 10:17:23,987 - INFO - 127.0.0.1 - - [11/Jan/2025 10:17:23] "GET /admin HTTP/1.1" 200 -
+2025-01-11 10:17:30,065 - INFO - 127.0.0.1 - - [11/Jan/2025 10:17:30] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-11 10:21:47,697 - INFO - 127.0.0.1 - - [11/Jan/2025 10:21:47] "[33mPOST /test-recordatorios HTTP/1.1[0m" 404 -
+2025-01-11 10:21:56,172 - INFO - 127.0.0.1 - - [11/Jan/2025 10:21:56] "[33mPOST /test-cumpleanos HTTP/1.1[0m" 404 -
+2025-01-11 10:23:02,332 - INFO - 127.0.0.1 - - [11/Jan/2025 10:23:02] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
