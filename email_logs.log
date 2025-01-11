@@ -500,3 +500,46 @@
 2025-01-11 10:21:47,697 - INFO - 127.0.0.1 - - [11/Jan/2025 10:21:47] "[33mPOST /test-recordatorios HTTP/1.1[0m" 404 -
 2025-01-11 10:21:56,172 - INFO - 127.0.0.1 - - [11/Jan/2025 10:21:56] "[33mPOST /test-cumpleanos HTTP/1.1[0m" 404 -
 2025-01-11 10:23:02,332 - INFO - 127.0.0.1 - - [11/Jan/2025 10:23:02] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
+2025-01-11 10:36:53,783 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 10:36:53,784 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 10:36:53,784 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 10:36:53,787 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 10:36:53,787 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 10:36:53,787 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 10:36:53,787 - INFO - Scheduler started
+2025-01-11 10:36:53,788 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-11 10:36:53,788 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 10:36:53,788 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 10:36:53,788 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 10:36:53,788 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 10:36:53,789 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 10:36:53,789 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 10:36:53,789 - INFO - Scheduler started
+2025-01-11 10:36:53,789 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-11 10:36:53,845 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2025-01-11 10:36:53,845 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-11 10:36:53,850 - INFO -  * Restarting with stat
+2025-01-11 10:36:54,752 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 10:36:54,753 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 10:36:54,753 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 10:36:54,754 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 10:36:54,755 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 10:36:54,755 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 10:36:54,755 - INFO - Scheduler started
+2025-01-11 10:36:54,755 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-11 10:36:54,756 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 10:36:54,756 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 10:36:54,756 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 10:36:54,756 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 10:36:54,756 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 10:36:54,756 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 10:36:54,757 - INFO - Scheduler started
+2025-01-11 10:36:54,757 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-11 10:36:54,771 - WARNING -  * Debugger is active!
+2025-01-11 10:36:54,782 - INFO -  * Debugger PIN: 167-608-493
+2025-01-11 10:36:57,334 - INFO - 127.0.0.1 - - [11/Jan/2025 10:36:57] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
+2025-01-11 10:37:00,300 - INFO - 127.0.0.1 - - [11/Jan/2025 10:37:00] "[31m[1mPOST /admin HTTP/1.1[0m" 405 -
+2025-01-11 10:37:02,915 - INFO - 127.0.0.1 - - [11/Jan/2025 10:37:02] "GET /admin HTTP/1.1" 200 -
