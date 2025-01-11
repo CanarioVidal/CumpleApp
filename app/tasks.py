@@ -1,3 +1,4 @@
+# Define las tareas programadas con APScheduler v.1.0
 from apscheduler.schedulers.background import BackgroundScheduler
 from app.email_utils import programar_correos  # Importa la lógica de envío de correos
 import logging

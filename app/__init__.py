@@ -1,3 +1,4 @@
+# Configura la app Flask y conecta los módulos necesarios. v.1.0
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail

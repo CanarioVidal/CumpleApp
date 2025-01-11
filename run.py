@@ -1,3 +1,4 @@
+# Iniciador de la app v.1.0
 from app import create_app
 from app.tasks import iniciar_tareas
 

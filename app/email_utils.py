@@ -1,3 +1,4 @@
+# Envío de correos v1.0
 from flask_mail import Message
 from app.models import User
 from flask import current_app

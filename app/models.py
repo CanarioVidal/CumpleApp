@@ -1,3 +1,4 @@
+# Definición db y tablas v.1.0
 from app import db
 
 class User(db.Model):

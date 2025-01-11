@@ -1,3 +1,4 @@
+#Contene las configuraciones de la app v.1.0
 import os
 
 class Config:

@@ -1,3 +1,5 @@
+# Archivo de rutas v.1.0
+
 from flask import render_template, Blueprint, request, redirect, url_for, jsonify, session
 from app import db
 from app.models import User
@@ -97,18 +99,31 @@ def agregar_usuario():
             apodo = request.form.get('nickname')
             email = request.form.get('email')
             fecha_nacimiento = request.form.get('birthday')
-            fecha_nacimiento = datetime.strptime(fecha_nacimiento, '%Y-%m-%d').date()
+
+            # Validar campos obligatorios
+            if not nombre or not email or not fecha_nacimiento:
+                return jsonify({'success': False, 'message': 'Todos los campos obligatorios deben estar completos.'}), 400
+
+            # Validar formato de fecha
+            try:
+                fecha_nacimiento = datetime.strptime(fecha_nacimiento, '%Y-%m-%d').date()
+            except ValueError:
+                return jsonify({'success': False, 'message': 'Formato de fecha no válido.'}), 400
 
             # Validar que el usuario sea mayor de 18 años
             hoy = datetime.today().date()
             edad = hoy.year - fecha_nacimiento.year - ((hoy.month, hoy.day) < (fecha_nacimiento.month, fecha_nacimiento.day))
             if edad < 18:
-                return jsonify({'success': False, 'error': 'Debe ser mayor de 18 años para registrarse.'}), 400
+                return jsonify({'success': False, 'message': 'El usuario debe ser mayor de 18 años.'}), 400
+
+            # Validar que el correo no esté duplicado
+            if User.query.filter_by(email=email).first():
+                return jsonify({'success': False, 'message': 'El correo electrónico ya está registrado.'}), 400
 
             # Crear nuevo usuario
             nuevo_usuario = User(
                 name=nombre,
-                nickname=apodo if apodo else None,  # Guardar apodo si fue proporcionado
+                nickname=apodo if apodo else None,  # Guardar apodo solo si fue proporcionado
                 email=email,
                 birthday=fecha_nacimiento
             )
@@ -118,9 +133,9 @@ def agregar_usuario():
             # Responder a AJAX con éxito
             return jsonify({'success': True, 'message': 'Cumpleaños agregado con éxito.'}), 200
         except Exception as e:
-            # Responder a AJAX con error específico
-            return jsonify({'success': False, 'error': str(e)}), 400
-    
+            # Responder a AJAX con error genérico
+            return jsonify({'success': False, 'message': f'Error inesperado: {str(e)}'}), 500
+
     # Si es GET, renderizar el formulario
     return render_template('registro-cumples.html')
 
