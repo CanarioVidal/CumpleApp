@@ -984,3 +984,62 @@ with app.app_context(). See the documentation for more information.
 2025-01-11 14:04:16,920 - INFO -  * Debugger PIN: 167-608-493
 2025-01-11 14:05:06,182 - INFO -  * Detected change in 'E:\\cumpleapp\\settings.py', reloading
 2025-01-11 14:05:06,294 - INFO -  * Restarting with stat
+2025-01-11 14:05:07,232 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 14:05:07,232 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 14:05:07,232 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 14:05:07,234 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 14:05:07,234 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 14:05:07,234 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 14:05:07,234 - INFO - Scheduler started
+2025-01-11 14:05:07,234 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-11 14:05:07,235 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 14:05:07,235 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 14:05:07,235 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 14:05:07,235 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 14:05:07,235 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 14:05:07,235 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 14:05:07,235 - INFO - Scheduler started
+2025-01-11 14:05:07,236 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-11 14:05:07,251 - WARNING -  * Debugger is active!
+2025-01-11 14:05:07,262 - INFO -  * Debugger PIN: 167-608-493
+2025-01-11 14:22:57,278 - INFO - 127.0.0.1 - - [11/Jan/2025 14:22:57] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-11 14:24:13,568 - INFO - 127.0.0.1 - - [11/Jan/2025 14:24:13] "[33mPOST /borrar-usuarios HTTP/1.1[0m" 404 -
+2025-01-11 14:30:18,824 - INFO - 127.0.0.1 - - [11/Jan/2025 14:30:18] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-11 14:30:29,215 - INFO - 127.0.0.1 - - [11/Jan/2025 14:30:29] "[33mPOST /borrar-usuarios HTTP/1.1[0m" 404 -
+2025-01-11 14:30:52,445 - INFO - 127.0.0.1 - - [11/Jan/2025 14:30:52] "DELETE /borrar-usuario/6 HTTP/1.1" 200 -
+2025-01-11 14:30:54,226 - INFO - 127.0.0.1 - - [11/Jan/2025 14:30:54] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-11 14:31:26,610 - INFO - 127.0.0.1 - - [11/Jan/2025 14:31:26] "DELETE /borrar-usuario/1 HTTP/1.1" 200 -
+2025-01-11 14:31:27,915 - INFO - 127.0.0.1 - - [11/Jan/2025 14:31:27] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-11 14:32:09,926 - INFO - 127.0.0.1 - - [11/Jan/2025 14:32:09] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-11 14:32:12,206 - INFO - 127.0.0.1 - - [11/Jan/2025 14:32:12] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-11 14:32:12,854 - INFO - 127.0.0.1 - - [11/Jan/2025 14:32:12] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-11 14:44:38,159 - INFO - 127.0.0.1 - - [11/Jan/2025 14:44:38] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-11 14:44:38,946 - INFO - 127.0.0.1 - - [11/Jan/2025 14:44:38] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-11 14:44:42,364 - INFO - 127.0.0.1 - - [11/Jan/2025 14:44:42] "[33mPOST /borrar-usuarios HTTP/1.1[0m" 404 -
+2025-01-11 14:44:56,136 - INFO - 127.0.0.1 - - [11/Jan/2025 14:44:56] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-11 14:47:46,914 - INFO -  * Detected change in 'E:\\cumpleapp\\app\\routes.py', reloading
+2025-01-11 14:47:47,053 - INFO -  * Restarting with stat
+2025-01-11 14:47:47,970 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 14:47:47,970 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 14:47:47,970 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 14:47:47,972 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 14:47:47,972 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 14:47:47,972 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 14:47:47,972 - INFO - Scheduler started
+2025-01-11 14:47:47,972 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-11 14:47:47,973 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 14:47:47,973 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 14:47:47,973 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-11 14:47:47,973 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 14:47:47,973 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 14:47:47,973 - INFO - Added job "programar_correos" to job store "default"
+2025-01-11 14:47:47,974 - INFO - Scheduler started
+2025-01-11 14:47:47,974 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-11 14:47:47,988 - WARNING -  * Debugger is active!
+2025-01-11 14:47:47,998 - INFO -  * Debugger PIN: 167-608-493
+2025-01-11 14:47:51,092 - INFO - 127.0.0.1 - - [11/Jan/2025 14:47:51] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-11 14:47:58,546 - INFO - 127.0.0.1 - - [11/Jan/2025 14:47:58] "POST /borrar-usuarios HTTP/1.1" 200 -
+2025-01-11 14:47:59,868 - INFO - 127.0.0.1 - - [11/Jan/2025 14:47:59] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-11 14:48:06,291 - INFO - 127.0.0.1 - - [11/Jan/2025 14:48:06] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-11 15:09:53,641 - INFO -  * Detected change in 'E:\\cumpleapp\\app\\routes.py', reloading
+2025-01-11 15:09:53,759 - INFO -  * Restarting with stat

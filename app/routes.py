@@ -1,4 +1,4 @@
-# Archivo de rutas v.1.0
+# Archivo de rutas v.1.2
 
 from flask import render_template, Blueprint, request, redirect, url_for, jsonify, session
 from app import db
@@ -158,30 +158,23 @@ def borrar_usuario(id):
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
 
-# Ruta para buscar usuarios
-@routes.route('/buscar-usuarios')
+# Ruta para borrar usuarios por batch
+@routes.route('/borrar-usuarios', methods=['POST'])
 @login_required
-def buscar_usuarios():
-    query = request.args.get('q', '').strip()
-    if query:
-        usuarios = User.query.filter(
-            (User.name.ilike(f"%{query}%")) | 
-            (User.email.ilike(f"%{query}%")) | 
-            (User.nickname.ilike(f"%{query}%"))  # Buscar también por apodo
-        ).all()
-    else:
-        usuarios = []
-    resultados = [
-        {
-            'id': u.id,
-            'name': u.name,
-            'nickname': u.nickname if u.nickname else "",
-            'email': u.email,
-            'birthday': u.birthday.strftime('%Y-%m-%d'),
-            'redeemed': u.redeemed
-        } for u in usuarios
-    ]
-    return jsonify(resultados)
+def borrar_usuarios():
+    try:
+        data = request.get_json()  # Recibe JSON
+        ids = data.get('ids', [])  # Lista de IDs a borrar
+
+        if not ids:
+            return jsonify({'success': False, 'error': 'No se proporcionaron IDs para borrar.'}), 400
+
+        # Borrar los usuarios con los IDs especificados
+        User.query.filter(User.id.in_(ids)).delete(synchronize_session=False)
+        db.session.commit()
+        return jsonify({'success': True}), 200
+    except Exception as e:
+        return jsonify({'success': False, 'error': f'Error al borrar usuarios: {str(e)}'}), 500
 
 # Funciones para envío automático de correos
 def enviar_correo(email, subject, body):

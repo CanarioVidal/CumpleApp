@@ -1,99 +1,178 @@
-<!-- Plantilla Manejo de usuarios v.0.9 -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuarios Registrados</title>
-    <!-- Bootstrap para diseño -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container mt-4">
-        <h1>Usuarios Registrados</h1>
-        <button id="borrar-seleccionados" class="btn btn-danger mb-3">Borrar Seleccionados</button>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col"><input type="checkbox" id="select-all"></th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Cumpleaños</th>
-                    <th scope="col">Redimido</th>
-                    <th scope="col">Acciones</th>
-                </tr>
-            </thead>
-            <tbody id="usuarios-lista">
+    <!-- ver_usuarios.html v.1.2 -->
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Usuarios</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            /* Estilos Mobile First */
+            .card {
+                margin: 10px 0;
+            }
+    
+            @media (min-width: 768px) {
+                .table-responsive {
+                    display: block;
+                }
+    
+                .card-view {
+                    display: none;
+                }
+            }
+    
+            @media (max-width: 767px) {
+                .table-responsive {
+                    display: none;
+                }
+    
+                .card-view {
+                    display: block;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-4">
+            <h1 class="mb-4 text-center">Usuarios Registrados</h1>
+            <div class="d-flex justify-content-between mb-3">
+                <button class="btn btn-danger" id="borrar-seleccionados">Borrar Seleccionados</button>
+                <button class="btn btn-outline-secondary" id="toggle-view">Vista: Tabla</button>
+            </div>
+    
+            <!-- Vista en tarjetas -->
+            <div id="card-view" class="row card-view">
                 {% for usuario in usuarios %}
-                <tr id="usuario-{{ usuario.id }}">
-                    <td><input type="checkbox" class="select-usuario" value="{{ usuario.id }}"></td>
-                    <td>{{ usuario.name }}</td>
-                    <td>{{ usuario.email }}</td>
-                    <td>{{ usuario.birthday }}</td>
-                    <td>{% if usuario.redeemed %}Sí{% else %}No{% endif %}</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm borrar-usuario" data-id="{{ usuario.id }}">Borrar</button>
-                    </td>
-                </tr>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ usuario.name }}</h5>
+                            <p class="card-text"><strong>Apodo:</strong> {{ usuario.nickname or 'N/A' }}</p>
+                            <p class="card-text"><strong>Email:</strong> {{ usuario.email }}</p>
+                            <p class="card-text"><strong>Cumpleaños:</strong> {{ usuario.birthday.strftime('%Y-%m-%d') }}</p>
+                            <p class="card-text"><strong>Redimido:</strong> {{ 'Sí' if usuario.redeemed else 'No' }}</p>
+                            <button class="btn btn-sm btn-danger borrar-individual" data-id="{{ usuario.id }}">Borrar</button>
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
-            </tbody>
-        </table>
-    </div>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Borrar un solo usuario
-        document.querySelectorAll('.borrar-usuario').forEach(btn => {
-            btn.addEventListener('click', function () {
-                const id = this.getAttribute('data-id');
-                if (confirm('¿Estás seguro de que deseas borrar este usuario?')) {
-                    fetch(`/borrar-usuario/${id}`, {
-                        method: 'DELETE'
+            </div>
+    
+            <!-- Vista en tabla -->
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="seleccionar-todos"></th>
+                            <th>Nombre</th>
+                            <th>Apodo</th>
+                            <th>Email</th>
+                            <th>Cumpleaños</th>
+                            <th>Redimido</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-usuarios">
+                        {% for usuario in usuarios %}
+                        <tr>
+                            <td><input type="checkbox" class="seleccionar-usuario" data-id="{{ usuario.id }}"></td>
+                            <td>{{ usuario.name }}</td>
+                            <td>{{ usuario.nickname or 'N/A' }}</td>
+                            <td>{{ usuario.email }}</td>
+                            <td>{{ usuario.birthday.strftime('%Y-%m-%d') }}</td>
+                            <td>{{ 'Sí' if usuario.redeemed else 'No' }}</td>
+                            <td>
+                                <button class="btn btn-sm btn-danger borrar-individual" data-id="{{ usuario.id }}">Borrar</button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Alternar entre tabla y tarjetas
+            document.getElementById('toggle-view').addEventListener('click', function () {
+                const table = document.querySelector('.table-responsive');
+                const cards = document.getElementById('card-view');
+    
+                if (table.style.display === 'none') {
+                    table.style.display = 'block';
+                    cards.style.display = 'none';
+                    this.textContent = 'Vista: Tarjetas';
+                } else {
+                    table.style.display = 'none';
+                    cards.style.display = 'flex';
+                    this.textContent = 'Vista: Tabla';
+                }
+            });
+    
+            // Seleccionar/Deseleccionar todos
+            document.getElementById('seleccionar-todos').addEventListener('change', function () {
+                const checkboxes = document.querySelectorAll('.seleccionar-usuario');
+                checkboxes.forEach(checkbox => checkbox.checked = this.checked);
+            });
+    
+            // Borrar usuarios seleccionados
+            document.getElementById('borrar-seleccionados').addEventListener('click', function () {
+                const seleccionados = [];
+                document.querySelectorAll('.seleccionar-usuario:checked').forEach(checkbox => {
+                    seleccionados.push(checkbox.dataset.id);
+                });
+    
+                if (seleccionados.length > 0) {
+                    fetch('/borrar-usuarios', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ ids: seleccionados })
                     })
                     .then(response => response.json())
                     .then(data => {
                         if (data.success) {
-                            document.getElementById(`usuario-${id}`).remove();
+                            alert('Usuarios eliminados con éxito.');
+                            location.reload(); // Recargar la página para actualizar la lista
                         } else {
-                            alert('Error al borrar el usuario.');
+                            alert('Error al eliminar usuarios: ' + data.error);
                         }
+                    })
+                    .catch(error => {
+                        console.error('Error en la solicitud:', error);
+                        alert('Hubo un error al procesar la solicitud.');
                     });
+                } else {
+                    alert('Por favor selecciona al menos un usuario para eliminar.');
                 }
             });
-        });
-
-        // Seleccionar todos los checkboxes
-        document.getElementById('select-all').addEventListener('change', function () {
-            const checkboxes = document.querySelectorAll('.select-usuario');
-            checkboxes.forEach(cb => cb.checked = this.checked);
-        });
-
-        // Borrar múltiples usuarios seleccionados
-        document.getElementById('borrar-seleccionados').addEventListener('click', function () {
-            const seleccionados = Array.from(document.querySelectorAll('.select-usuario:checked'))
-                .map(cb => cb.value);
-
-            if (seleccionados.length > 0 && confirm('¿Estás seguro de que deseas borrar los usuarios seleccionados?')) {
-                fetch('/borrar-usuarios', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ ids: seleccionados })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        seleccionados.forEach(id => {
-                            document.getElementById(`usuario-${id}`).remove();
+    
+            // Borrar individualmente
+            document.querySelectorAll('.borrar-individual').forEach(button => {
+                button.addEventListener('click', function () {
+                    const id = this.dataset.id;
+                    if (confirm('¿Estás seguro de que quieres borrar este usuario?')) {
+                        fetch(`/borrar-usuario/${id}`, {
+                            method: 'DELETE'
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                alert('Usuario eliminado correctamente.');
+                                window.location.reload(); // Recargar la página para actualizar la lista
+                            } else {
+                                alert('Error al borrar usuario: ' + (data.error || 'desconocido.'));
+                            }
+                        })
+                        .catch(error => {
+                            alert('Error al realizar la solicitud: ' + error.message);
                         });
-                    } else {
-                        alert('Error al borrar los usuarios.');
                     }
                 });
-            } else {
-                alert('Selecciona al menos un usuario.');
-            }
-        });
-    </script>
-</body>
-</html>
+            });
+        </script>
+    </body>
+    </html>
+    
