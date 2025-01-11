@@ -53,15 +53,13 @@
 
         <!-- Contenido de las Tabs -->
         <div class="tab-content">
-            <!-- Tab 1: Cumpleaños del Día v002 -->
+            <!-- Tab 1: Cumpleaños del Día -->
             <div class="tab-pane fade show active" id="cumple" role="tabpanel">
                 <h2 class="mt-4">Cumpleaños de Hoy</h2>
                 <div class="d-flex justify-content-end mb-3">
                     <button class="btn btn-outline-secondary" id="toggle-view">Vista: Tarjetas</button>
                 </div>
-                <!-- Contenedor de tarjetas -->
                 <div id="cumple-lista" class="row"></div>
-                <!-- Tabla -->
                 <table class="table table-striped d-none" id="cumple-tabla">
                     <thead>
                         <tr>
@@ -74,7 +72,6 @@
                     <tbody id="cumple-tabla-body"></tbody>
                 </table>
             </div>
-
 
             <!-- Tab 2: Consulta de Usuarios -->
             <div class="tab-pane fade" id="consulta" role="tabpanel">
@@ -97,6 +94,25 @@
             <!-- Tab 3: Agregar Cumpleaños -->
             <div class="tab-pane fade" id="agregar" role="tabpanel">
                 <h2 class="mt-4">Agregar Cumpleaños</h2>
+                <!-- <form id="form-cumple" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nickname" class="form-label">Apodo (opcional)</label>
+                        <input type="text" class="form-control" id="nickname" name="nickname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="birthday" class="form-label">Fecha de Cumpleaños</label>
+                        <input type="date" class="form-control" id="birthday" name="birthday" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                </form> -->
                 <form id="form-cumple" method="POST" action="/agregar-cumple">
                     <div class="mb-3">
                         <label for="name" class="form-label">Nombre</label>
@@ -148,40 +164,6 @@
                 this.textContent = "Vista: Tabla";
             }
         });
-
-        // Cargar datos de cumpleaños del día
-        fetch('/cumpleanios-hoy')
-            .then(response => response.json())
-            .then(data => {
-                const lista = document.getElementById('cumple-lista');
-                const tablaBody = document.getElementById('cumple-tabla-body');
-                lista.innerHTML = '';
-                tablaBody.innerHTML = '';
-
-                data.forEach(usuario => {
-                    // Tarjetas
-                    lista.innerHTML += `
-                        <div class="col-md-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">${usuario.nickname || usuario.name}</h5>
-                                    <p class="card-text">Email: ${usuario.email}</p>
-                                    <p class="card-text">Redimido: ${usuario.redeemed ? 'Sí' : 'No'}</p>
-                                </div>
-                            </div>
-                        </div>`;
-
-                    // Tabla
-                    tablaBody.innerHTML += `
-                        <tr>
-                            <td>${usuario.name}</td>
-                            <td>${usuario.nickname || 'N/A'}</td>
-                            <td>${usuario.email}</td>
-                            <td>${usuario.redeemed ? 'Sí' : 'No'}</td>
-                        </tr>`;
-                });
-            })
-            .catch(err => console.error('Error al cargar los cumpleaños:', err));
 
         // Funciones para probar tareas
         function testRecordatorios() {

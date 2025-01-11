@@ -65,6 +65,28 @@ def admin():
     ).all()
     return render_template('admin.html', logout_url=url_for('routes.logout'), cumpleanios_hoy=cumpleanios_hoy)
 
+# Ruta para obtener los cumpleaños del día en formato JSON
+@routes.route('/cumpleanios-hoy', methods=['GET'])
+@login_required
+def cumpleanios_hoy():
+    hoy = datetime.today()
+    cumpleanios_hoy = User.query.filter(
+        db.extract('month', User.birthday) == hoy.month,
+        db.extract('day', User.birthday) == hoy.day
+    ).all()
+    
+    # Convertir los resultados a JSON
+    resultados = [
+        {
+            "name": usuario.name,
+            "nickname": usuario.nickname or "N/A",
+            "email": usuario.email,
+            "redeemed": usuario.redeemed
+        }
+        for usuario in cumpleanios_hoy
+    ]
+    return jsonify(resultados)
+
 # Ruta para agregar usuarios con soporte para GET y POST
 @routes.route('/agregar-cumple', methods=['GET', 'POST'])
 def agregar_usuario():
