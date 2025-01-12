@@ -1,4 +1,4 @@
-# Configura la app Flask y conecta los módulos necesarios. v.1.0
+# Configura la app Flask y conecta los módulos necesarios. v.1.2
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
@@ -19,7 +19,14 @@ def create_app():
     
     # Cargar configuración desde el archivo settings.py
     app.config.from_object(Config)
-    
+
+    # Validar configuraciones de correo electrónico
+    try:
+        Config.validate_email_config()
+    except ValueError as e:
+        print(f"Error en la configuración de correo: {e}")
+        raise
+
     # Inicializar extensiones con la app
     db.init_app(app)
     mail.init_app(app)

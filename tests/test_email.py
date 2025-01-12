@@ -21,7 +21,7 @@ mail = Mail(app)
 
 with app.app_context():
     try:
-        msg = Message("Prueba de CumpleApp", recipients=["alejandro.caillava@gmail.com"])
+        msg = Message("Prueba de CumpleApp", recipients=["pgvidalm@gmail.com"])
         msg.body = "¡Este es un correo de prueba desde CumpleApp!"
         mail.send(msg)
         print("Correo enviado correctamente.")

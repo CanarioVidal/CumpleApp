@@ -1043,3 +1043,439 @@ with app.app_context(). See the documentation for more information.
 2025-01-11 14:48:06,291 - INFO - 127.0.0.1 - - [11/Jan/2025 14:48:06] "GET /ver-usuarios HTTP/1.1" 200 -
 2025-01-11 15:09:53,641 - INFO -  * Detected change in 'E:\\cumpleapp\\app\\routes.py', reloading
 2025-01-11 15:09:53,759 - INFO -  * Restarting with stat
+2025-01-12 10:53:48,333 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 10:53:48,333 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 10:53:48,334 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 10:53:48,337 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 10:53:48,337 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 10:53:48,337 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 10:53:48,337 - INFO - Scheduler started
+2025-01-12 10:53:48,338 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 10:53:48,338 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 10:53:48,338 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 10:53:48,338 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 10:53:48,338 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 10:53:48,339 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 10:53:48,339 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 10:53:48,339 - INFO - Scheduler started
+2025-01-12 10:53:48,339 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 10:53:48,396 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.6:5000
+2025-01-12 10:53:48,397 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-12 10:53:48,401 - INFO -  * Restarting with stat
+2025-01-12 10:53:49,295 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 10:53:49,295 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 10:53:49,295 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 10:53:49,297 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 10:53:49,297 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 10:53:49,297 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 10:53:49,297 - INFO - Scheduler started
+2025-01-12 10:53:49,297 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 10:53:49,298 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 10:53:49,298 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 10:53:49,298 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 10:53:49,298 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 10:53:49,298 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 10:53:49,298 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 10:53:49,298 - INFO - Scheduler started
+2025-01-12 10:53:49,299 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 10:53:49,312 - WARNING -  * Debugger is active!
+2025-01-12 10:53:49,323 - INFO -  * Debugger PIN: 167-608-493
+2025-01-12 10:53:57,354 - INFO - 127.0.0.1 - - [12/Jan/2025 10:53:57] "GET /admin HTTP/1.1" 200 -
+2025-01-12 10:53:57,427 - INFO - 127.0.0.1 - - [12/Jan/2025 10:53:57] "GET /cumpleanios-hoy HTTP/1.1" 200 -
+2025-01-12 10:53:59,446 - INFO - 127.0.0.1 - - [12/Jan/2025 10:53:59] "GET /agregar-cumple HTTP/1.1" 200 -
+2025-01-12 10:54:01,279 - INFO - 127.0.0.1 - - [12/Jan/2025 10:54:01] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-12 10:56:15,320 - INFO - 127.0.0.1 - - [12/Jan/2025 10:56:15] "[31m[1mPOST /agregar-cumple HTTP/1.1[0m" 400 -
+2025-01-12 10:56:30,529 - INFO - 127.0.0.1 - - [12/Jan/2025 10:56:30] "POST /agregar-cumple HTTP/1.1" 200 -
+2025-01-12 10:56:35,703 - INFO - 127.0.0.1 - - [12/Jan/2025 10:56:35] "GET /admin HTTP/1.1" 200 -
+2025-01-12 10:56:35,735 - INFO - 127.0.0.1 - - [12/Jan/2025 10:56:35] "GET /cumpleanios-hoy HTTP/1.1" 200 -
+2025-01-12 10:58:07,393 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:07] "[33mGET /buscar-usuarios?q=m HTTP/1.1[0m" 404 -
+2025-01-12 10:58:07,518 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:07] "[33mGET /buscar-usuarios?q=ma HTTP/1.1[0m" 404 -
+2025-01-12 10:58:12,402 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:12] "[33mGET /buscar-usuarios?q=m HTTP/1.1[0m" 404 -
+2025-01-12 10:58:12,546 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:12] "[33mGET /buscar-usuarios?q= HTTP/1.1[0m" 404 -
+2025-01-12 10:58:14,489 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:14] "[33mGET /buscar-usuarios?q=m HTTP/1.1[0m" 404 -
+2025-01-12 10:58:14,689 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:14] "[33mGET /buscar-usuarios?q=ma HTTP/1.1[0m" 404 -
+2025-01-12 10:58:15,462 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:15] "[33mGET /buscar-usuarios?q=mau HTTP/1.1[0m" 404 -
+2025-01-12 10:58:15,892 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:15] "[33mGET /buscar-usuarios?q=maur HTTP/1.1[0m" 404 -
+2025-01-12 10:58:21,393 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:21] "GET /admin HTTP/1.1" 200 -
+2025-01-12 10:58:21,427 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:21] "GET /cumpleanios-hoy HTTP/1.1" 200 -
+2025-01-12 10:58:25,660 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:25] "[33mGET /buscar-usuarios?q=m HTTP/1.1[0m" 404 -
+2025-01-12 10:58:25,778 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:25] "[33mGET /buscar-usuarios?q=ma HTTP/1.1[0m" 404 -
+2025-01-12 10:58:27,654 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:27] "[33mGET /buscar-usuarios?q=mau HTTP/1.1[0m" 404 -
+2025-01-12 10:58:27,878 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:27] "[33mGET /buscar-usuarios?q=maur HTTP/1.1[0m" 404 -
+2025-01-12 10:58:28,868 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:28] "[33mGET /buscar-usuarios?q=mau HTTP/1.1[0m" 404 -
+2025-01-12 10:58:28,962 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:28] "[33mGET /buscar-usuarios?q=ma HTTP/1.1[0m" 404 -
+2025-01-12 10:58:29,095 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:29] "[33mGET /buscar-usuarios?q=m HTTP/1.1[0m" 404 -
+2025-01-12 10:58:29,213 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:29] "[33mGET /buscar-usuarios?q= HTTP/1.1[0m" 404 -
+2025-01-12 10:58:30,521 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:30] "[33mGET /buscar-usuarios?q=g HTTP/1.1[0m" 404 -
+2025-01-12 10:58:30,766 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:30] "[33mGET /buscar-usuarios?q=go HTTP/1.1[0m" 404 -
+2025-01-12 10:58:31,626 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:31] "[33mGET /buscar-usuarios?q=g HTTP/1.1[0m" 404 -
+2025-01-12 10:58:31,791 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:31] "[33mGET /buscar-usuarios?q= HTTP/1.1[0m" 404 -
+2025-01-12 10:58:36,039 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:36] "[33mGET /buscar-usuarios?q=p HTTP/1.1[0m" 404 -
+2025-01-12 10:58:36,118 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:36] "[33mGET /buscar-usuarios?q=pa HTTP/1.1[0m" 404 -
+2025-01-12 10:58:37,306 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:37] "[33mGET /buscar-usuarios?q=p HTTP/1.1[0m" 404 -
+2025-01-12 10:58:37,433 - INFO - 127.0.0.1 - - [12/Jan/2025 10:58:37] "[33mGET /buscar-usuarios?q= HTTP/1.1[0m" 404 -
+2025-01-12 10:59:26,641 - INFO - 127.0.0.1 - - [12/Jan/2025 10:59:26] "POST /agregar-cumple HTTP/1.1" 200 -
+2025-01-12 10:59:38,306 - INFO - 127.0.0.1 - - [12/Jan/2025 10:59:38] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-12 10:59:52,254 - INFO - 127.0.0.1 - - [12/Jan/2025 10:59:52] "DELETE /borrar-usuario/2 HTTP/1.1" 200 -
+2025-01-12 10:59:53,396 - INFO - 127.0.0.1 - - [12/Jan/2025 10:59:53] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-12 11:00:00,011 - INFO - Running job "programar_correos (trigger: cron[hour='11'], next run at: 2025-01-12 11:00:00 -03)" (scheduled at 2025-01-12 11:00:00-03:00)
+2025-01-12 11:00:00,011 - INFO - Running job "programar_correos (trigger: cron[hour='11'], next run at: 2025-01-12 11:00:00 -03)" (scheduled at 2025-01-12 11:00:00-03:00)
+2025-01-12 11:00:00,015 - INFO - Running job "programar_correos (trigger: cron[hour='11'], next run at: 2025-01-12 11:00:00 -03)" (scheduled at 2025-01-12 11:00:00-03:00)
+2025-01-12 11:00:00,015 - INFO - Running job "programar_correos (trigger: cron[hour='11'], next run at: 2025-01-12 11:00:00 -03)" (scheduled at 2025-01-12 11:00:00-03:00)
+2025-01-12 11:00:00,039 - ERROR - Job "programar_correos (trigger: cron[hour='11'], next run at: 2025-01-13 11:00:00 -03)" raised an exception
+Traceback (most recent call last):
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "E:\cumpleapp\app\email_utils.py", line 85, in programar_correos
+    enviar_correos_cumpleaños()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\cumpleapp\app\email_utils.py", line 37, in enviar_correos_cumpleaños
+    cumple_hoy = User.query.filter(
+                 ^^^^^^^^^^
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\flask_sqlalchemy\model.py", line 23, in __get__
+    cls, session=cls.__fsa__.session()  # type: ignore[arg-type]
+                 ~~~~~~~~~~~~~~~~~~~^^
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\sqlalchemy\orm\scoping.py", line 220, in __call__
+    sess = self.registry()
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\sqlalchemy\util\_collections.py", line 632, in __call__
+    key = self.scopefunc()
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\flask_sqlalchemy\session.py", line 111, in _app_ctx_id
+    return id(app_ctx._get_current_object())  # type: ignore[attr-defined]
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2025-01-12 11:00:00,043 - ERROR - Job "programar_correos (trigger: cron[hour='11'], next run at: 2025-01-13 11:00:00 -03)" raised an exception
+Traceback (most recent call last):
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "E:\cumpleapp\app\email_utils.py", line 85, in programar_correos
+    enviar_correos_cumpleaños()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\cumpleapp\app\email_utils.py", line 37, in enviar_correos_cumpleaños
+    cumple_hoy = User.query.filter(
+                 ^^^^^^^^^^
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\flask_sqlalchemy\model.py", line 23, in __get__
+    cls, session=cls.__fsa__.session()  # type: ignore[arg-type]
+                 ~~~~~~~~~~~~~~~~~~~^^
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\sqlalchemy\orm\scoping.py", line 220, in __call__
+    sess = self.registry()
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\sqlalchemy\util\_collections.py", line 632, in __call__
+    key = self.scopefunc()
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\flask_sqlalchemy\session.py", line 111, in _app_ctx_id
+    return id(app_ctx._get_current_object())  # type: ignore[attr-defined]
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2025-01-12 11:00:00,046 - ERROR - Job "programar_correos (trigger: cron[hour='11'], next run at: 2025-01-13 11:00:00 -03)" raised an exception
+Traceback (most recent call last):
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "E:\cumpleapp\app\email_utils.py", line 85, in programar_correos
+    enviar_correos_cumpleaños()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\cumpleapp\app\email_utils.py", line 37, in enviar_correos_cumpleaños
+    cumple_hoy = User.query.filter(
+                 ^^^^^^^^^^
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\flask_sqlalchemy\model.py", line 23, in __get__
+    cls, session=cls.__fsa__.session()  # type: ignore[arg-type]
+                 ~~~~~~~~~~~~~~~~~~~^^
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\sqlalchemy\orm\scoping.py", line 220, in __call__
+    sess = self.registry()
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\sqlalchemy\util\_collections.py", line 632, in __call__
+    key = self.scopefunc()
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\flask_sqlalchemy\session.py", line 111, in _app_ctx_id
+    return id(app_ctx._get_current_object())  # type: ignore[attr-defined]
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2025-01-12 11:00:00,046 - ERROR - Job "programar_correos (trigger: cron[hour='11'], next run at: 2025-01-13 11:00:00 -03)" raised an exception
+Traceback (most recent call last):
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "E:\cumpleapp\app\email_utils.py", line 85, in programar_correos
+    enviar_correos_cumpleaños()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\cumpleapp\app\email_utils.py", line 37, in enviar_correos_cumpleaños
+    cumple_hoy = User.query.filter(
+                 ^^^^^^^^^^
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\flask_sqlalchemy\model.py", line 23, in __get__
+    cls, session=cls.__fsa__.session()  # type: ignore[arg-type]
+                 ~~~~~~~~~~~~~~~~~~~^^
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\sqlalchemy\orm\scoping.py", line 220, in __call__
+    sess = self.registry()
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\sqlalchemy\util\_collections.py", line 632, in __call__
+    key = self.scopefunc()
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\flask_sqlalchemy\session.py", line 111, in _app_ctx_id
+    return id(app_ctx._get_current_object())  # type: ignore[attr-defined]
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\cumpleapp\cumpleApp_ent\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2025-01-12 11:00:22,049 - INFO - 127.0.0.1 - - [12/Jan/2025 11:00:22] "[31m[1mPOST /agregar-cumple HTTP/1.1[0m" 400 -
+2025-01-12 11:00:55,909 - INFO - 127.0.0.1 - - [12/Jan/2025 11:00:55] "POST /agregar-cumple HTTP/1.1" 200 -
+2025-01-12 11:01:01,308 - INFO - 127.0.0.1 - - [12/Jan/2025 11:01:01] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-12 11:01:10,092 - INFO - 127.0.0.1 - - [12/Jan/2025 11:01:10] "[33mGET /buscar-usuarios?q=pa HTTP/1.1[0m" 404 -
+2025-01-12 11:01:23,730 - INFO - 127.0.0.1 - - [12/Jan/2025 11:01:23] "GET /admin HTTP/1.1" 200 -
+2025-01-12 11:01:23,770 - INFO - 127.0.0.1 - - [12/Jan/2025 11:01:23] "GET /cumpleanios-hoy HTTP/1.1" 200 -
+2025-01-12 11:53:30,993 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:53:30,993 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:53:30,994 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:53:30,995 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:53:30,995 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:53:30,995 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:53:30,995 - INFO - Scheduler started
+2025-01-12 11:53:30,996 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 11:53:30,996 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:53:30,996 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:53:30,996 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:53:30,996 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:53:30,996 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:53:30,997 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:53:30,997 - INFO - Scheduler started
+2025-01-12 11:53:30,997 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 11:53:31,028 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.6:5000
+2025-01-12 11:53:31,028 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-12 11:53:31,030 - INFO -  * Restarting with stat
+2025-01-12 11:53:31,927 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:53:31,927 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:53:31,927 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:53:31,929 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:53:31,929 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:53:31,929 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:53:31,929 - INFO - Scheduler started
+2025-01-12 11:53:31,929 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 11:53:31,930 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:53:31,930 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:53:31,930 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:53:31,930 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:53:31,930 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:53:31,930 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:53:31,930 - INFO - Scheduler started
+2025-01-12 11:53:31,931 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 11:53:31,944 - WARNING -  * Debugger is active!
+2025-01-12 11:53:31,956 - INFO -  * Debugger PIN: 968-981-899
+2025-01-12 11:54:11,155 - INFO - 127.0.0.1 - - [12/Jan/2025 11:54:11] "GET /agregar-cumple HTTP/1.1" 200 -
+2025-01-12 11:54:14,052 - INFO - 127.0.0.1 - - [12/Jan/2025 11:54:14] "GET /admin HTTP/1.1" 200 -
+2025-01-12 11:54:14,086 - INFO - 127.0.0.1 - - [12/Jan/2025 11:54:14] "GET /cumpleanios-hoy HTTP/1.1" 200 -
+2025-01-12 11:54:22,429 - INFO - 127.0.0.1 - - [12/Jan/2025 11:54:22] "[33mGET /buscar-usuarios?q=m HTTP/1.1[0m" 404 -
+2025-01-12 11:54:22,930 - INFO - 127.0.0.1 - - [12/Jan/2025 11:54:22] "[33mGET /buscar-usuarios?q=md HTTP/1.1[0m" 404 -
+2025-01-12 11:54:23,190 - INFO - 127.0.0.1 - - [12/Jan/2025 11:54:23] "[33mGET /buscar-usuarios?q=mds HTTP/1.1[0m" 404 -
+2025-01-12 11:54:23,390 - INFO - 127.0.0.1 - - [12/Jan/2025 11:54:23] "[33mGET /buscar-usuarios?q=mdss HTTP/1.1[0m" 404 -
+2025-01-12 11:56:29,616 - INFO -  * Detected change in 'E:\\CumpleApp\\run.py', reloading
+2025-01-12 11:56:29,728 - INFO -  * Restarting with stat
+2025-01-12 11:56:30,720 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:56:30,720 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:56:30,720 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:56:30,722 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:56:30,722 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:56:30,722 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:56:30,722 - INFO - Scheduler started
+2025-01-12 11:56:30,722 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 11:56:30,737 - WARNING -  * Debugger is active!
+2025-01-12 11:56:30,750 - INFO -  * Debugger PIN: 968-981-899
+2025-01-12 11:56:45,960 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:56:45,961 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:56:45,961 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:56:45,962 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:56:45,962 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:56:45,963 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:56:45,963 - INFO - Scheduler started
+2025-01-12 11:56:45,963 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 11:56:45,992 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-12 11:56:45,992 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-12 11:56:45,994 - INFO -  * Restarting with stat
+2025-01-12 11:56:46,844 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:56:46,845 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:56:46,845 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 11:56:46,846 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:56:46,846 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:56:46,846 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 11:56:46,847 - INFO - Scheduler started
+2025-01-12 11:56:46,847 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 11:56:46,860 - WARNING -  * Debugger is active!
+2025-01-12 11:56:46,872 - INFO -  * Debugger PIN: 968-981-899
+2025-01-12 12:01:20,502 - INFO -  * Detected change in 'E:\\CumpleApp\\settings.py', reloading
+2025-01-12 12:01:20,616 - INFO -  * Restarting with stat
+2025-01-12 12:01:21,623 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:01:21,623 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:01:21,623 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:01:21,625 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:01:21,625 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:01:21,625 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:01:21,625 - INFO - Scheduler started
+2025-01-12 12:01:21,625 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 12:01:21,640 - WARNING -  * Debugger is active!
+2025-01-12 12:01:21,652 - INFO -  * Debugger PIN: 968-981-899
+2025-01-12 12:08:47,523 - INFO -  * Detected change in 'E:\\CumpleApp\\app\\__init__.py', reloading
+2025-01-12 12:08:47,634 - INFO -  * Restarting with stat
+2025-01-12 12:08:48,586 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:08:48,587 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:08:48,587 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:08:48,588 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:08:48,589 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:08:48,589 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:08:48,589 - INFO - Scheduler started
+2025-01-12 12:08:48,590 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 12:08:48,605 - WARNING -  * Debugger is active!
+2025-01-12 12:08:48,618 - INFO -  * Debugger PIN: 968-981-899
+2025-01-12 12:09:01,497 - INFO -  * Detected change in 'E:\\CumpleApp\\settings.py', reloading
+2025-01-12 12:09:01,620 - INFO -  * Restarting with stat
+2025-01-12 12:09:02,546 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:09:02,547 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:09:02,547 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:09:02,549 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:09:02,549 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:09:02,549 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:09:02,549 - INFO - Scheduler started
+2025-01-12 12:09:02,549 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 12:09:02,564 - WARNING -  * Debugger is active!
+2025-01-12 12:09:02,576 - INFO -  * Debugger PIN: 968-981-899
+2025-01-12 12:09:54,409 - INFO -  * Detected change in 'E:\\CumpleApp\\app\\__init__.py', reloading
+2025-01-12 12:09:54,524 - INFO -  * Restarting with stat
+2025-01-12 12:09:55,487 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:09:55,487 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:09:55,487 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:09:55,489 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:09:55,489 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:09:55,489 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:09:55,489 - INFO - Scheduler started
+2025-01-12 12:09:55,489 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 12:09:55,504 - WARNING -  * Debugger is active!
+2025-01-12 12:09:55,519 - INFO -  * Debugger PIN: 968-981-899
+2025-01-12 12:09:59,862 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:09:59,863 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:09:59,863 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:09:59,865 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:09:59,865 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:09:59,865 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:09:59,865 - INFO - Scheduler started
+2025-01-12 12:09:59,866 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 12:09:59,894 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-12 12:09:59,894 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-12 12:09:59,896 - INFO -  * Restarting with stat
+2025-01-12 12:10:00,738 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:10:00,739 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:10:00,739 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:10:00,740 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:10:00,740 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:10:00,740 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:10:00,740 - INFO - Scheduler started
+2025-01-12 12:10:00,741 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 12:10:00,754 - WARNING -  * Debugger is active!
+2025-01-12 12:10:00,766 - INFO -  * Debugger PIN: 968-981-899
+2025-01-12 12:12:19,988 - INFO -  * Detected change in 'E:\\CumpleApp\\run.py', reloading
+2025-01-12 12:12:20,125 - INFO -  * Restarting with stat
+2025-01-12 12:12:21,191 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:12:21,192 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:12:21,192 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:12:21,194 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:12:21,194 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:12:21,194 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:12:21,194 - INFO - Scheduler started
+2025-01-12 12:12:21,194 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 12:12:21,209 - WARNING -  * Debugger is active!
+2025-01-12 12:12:21,222 - INFO -  * Debugger PIN: 968-981-899
+2025-01-12 12:12:46,444 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:12:46,445 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:12:46,445 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:12:46,446 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:12:46,446 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:12:46,446 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:12:46,446 - INFO - Scheduler started
+2025-01-12 12:12:46,447 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 12:12:46,475 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-12 12:12:46,475 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-12 12:12:46,477 - INFO -  * Restarting with stat
+2025-01-12 12:12:47,330 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:12:47,331 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:12:47,331 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:12:47,332 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:12:47,332 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:12:47,332 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:12:47,332 - INFO - Scheduler started
+2025-01-12 12:12:47,333 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 12:12:47,346 - WARNING -  * Debugger is active!
+2025-01-12 12:12:47,358 - INFO -  * Debugger PIN: 968-981-899
+2025-01-12 12:15:56,630 - INFO - 127.0.0.1 - - [12/Jan/2025 12:15:56] "GET /agregar-cumple HTTP/1.1" 200 -
+2025-01-12 12:15:59,229 - INFO - 127.0.0.1 - - [12/Jan/2025 12:15:59] "GET /admin HTTP/1.1" 200 -
+2025-01-12 12:15:59,259 - INFO - 127.0.0.1 - - [12/Jan/2025 12:15:59] "GET /cumpleanios-hoy HTTP/1.1" 200 -
+2025-01-12 12:16:02,968 - INFO - 127.0.0.1 - - [12/Jan/2025 12:16:02] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-12 12:20:40,843 - INFO -  * Detected change in 'E:\\CumpleApp\\app\\__init__.py', reloading
+2025-01-12 12:20:40,952 - INFO -  * Restarting with stat
+2025-01-12 12:20:41,924 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:20:41,925 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:20:41,925 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:20:41,927 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:20:41,927 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:20:41,927 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:20:41,927 - INFO - Scheduler started
+2025-01-12 12:20:41,927 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 12:20:41,943 - WARNING -  * Debugger is active!
+2025-01-12 12:20:41,955 - INFO -  * Debugger PIN: 968-981-899
+2025-01-12 12:47:24,764 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:47:24,764 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:47:24,765 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:47:24,768 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:47:24,768 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:47:24,768 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:47:24,768 - INFO - Scheduler started
+2025-01-12 12:47:24,769 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 12:47:24,823 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-12 12:47:24,823 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-12 12:47:24,828 - INFO -  * Restarting with stat
+2025-01-12 12:47:25,727 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:47:25,727 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:47:25,728 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:47:25,729 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:47:25,729 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:47:25,729 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:47:25,729 - INFO - Scheduler started
+2025-01-12 12:47:25,730 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 12:47:25,746 - WARNING -  * Debugger is active!
+2025-01-12 12:47:25,758 - INFO -  * Debugger PIN: 968-981-899
+2025-01-12 12:47:59,844 - INFO - 127.0.0.1 - - [12/Jan/2025 12:47:59] "[33mGET /tests/test_email.py HTTP/1.1[0m" 404 -
+2025-01-12 12:48:22,783 - INFO - 127.0.0.1 - - [12/Jan/2025 12:48:22] "[33mGET /tests/test_email.py HTTP/1.1[0m" 404 -
+2025-01-12 12:48:22,814 - INFO - 127.0.0.1 - - [12/Jan/2025 12:48:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-12 12:49:01,909 - INFO - 127.0.0.1 - - [12/Jan/2025 12:49:01] "[33mGET /tests/test_email HTTP/1.1[0m" 404 -
+2025-01-12 12:49:04,849 - INFO - 127.0.0.1 - - [12/Jan/2025 12:49:04] "[33mGET /tests/test_email HTTP/1.1[0m" 404 -
+2025-01-12 12:55:36,742 - INFO -  * Detected change in 'E:\\CumpleApp\\tests\\test_email.py', reloading
+2025-01-12 12:55:36,902 - INFO -  * Restarting with stat
+2025-01-12 12:55:37,910 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:55:37,911 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:55:37,911 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 12:55:37,912 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:55:37,913 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:55:37,913 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 12:55:37,913 - INFO - Scheduler started
+2025-01-12 12:55:37,913 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 12:55:37,927 - WARNING -  * Debugger is active!
+2025-01-12 12:55:37,940 - INFO -  * Debugger PIN: 968-981-899

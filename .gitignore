@@ -1,2 +1,6 @@
+# archivo para ignorar carga a github 1.0
 instance/
-.env
+venv/
+cumpleApp_ent/
+.\.env
+.\settings.py
