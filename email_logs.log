@@ -1479,3 +1479,25 @@ with app.app_context(). See the documentation for more information.
 2025-01-12 12:55:37,913 - INFO - Tareas programadas iniciadas correctamente.
 2025-01-12 12:55:37,927 - WARNING -  * Debugger is active!
 2025-01-12 12:55:37,940 - INFO -  * Debugger PIN: 968-981-899
+2025-01-12 13:02:21,821 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 13:02:21,821 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 13:02:21,822 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 13:02:21,823 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 13:02:21,823 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 13:02:21,823 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 13:02:21,823 - INFO - Scheduler started
+2025-01-12 13:02:21,824 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 13:02:21,854 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-12 13:02:21,855 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-12 13:02:21,857 - INFO -  * Restarting with stat
+2025-01-12 13:02:22,757 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 13:02:22,757 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 13:02:22,757 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 13:02:22,759 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 13:02:22,759 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 13:02:22,759 - INFO - Added job "programar_correos" to job store "default"
+2025-01-12 13:02:22,759 - INFO - Scheduler started
+2025-01-12 13:02:22,759 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 13:02:22,773 - WARNING -  * Debugger is active!
+2025-01-12 13:02:22,785 - INFO -  * Debugger PIN: 968-981-899

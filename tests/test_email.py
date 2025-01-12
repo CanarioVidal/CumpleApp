@@ -1,3 +1,4 @@
+# Prueba de envío de correos manual v.1.0
 from flask import Flask
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
