@@ -297,3 +297,12 @@ El sistema está funcional y preparado para las siguientes etapas:
 **routes.py**
 - v.1.4
     - se agrega una ruta temporal para prueba de envío de correos
+
+**test_task.py**
+- v.1.0
+    - se crea para probar manualmente las tareas de envío de correo
+    - se agrega código para  para ajustar dinámicamente el PYTHONPATH
+- v.1.1
+    - se corrigen las importaciones dede emails_utils,py
+- v.1.2
+    - se agrega la creación de una instancia de la app

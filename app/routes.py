@@ -1,7 +1,7 @@
-# Archivo de rutas v.1.2
+# Archivo de rutas v.1.3
 
 from flask import render_template, Blueprint, request, redirect, url_for, jsonify, session
-from app import db
+from app import db, mail
 from app.models import User
 from datetime import datetime, timedelta
 from functools import wraps
@@ -196,3 +196,18 @@ def programar_correos():
     for usuario in cumple_hoy:
         saludo = usuario.nickname if usuario.nickname else usuario.name
         enviar_correo(usuario.email, "¡Feliz Cumpleaños!", f"Hola {saludo}, ¡Feliz cumpleaños! Ven a redimir tu obsequio.")
+
+@routes.route('./tests/test-email', methods=['GET'])
+@login_required
+def test_email():
+    try:
+        # Crear el mensaje de correo
+        msg = Message(
+            subject="Correo de Prueba",
+            recipients=["correo_destinatario@example.com"],  # Cambiar por un correo real
+            body="Este es un correo de prueba enviado desde CumpleApp."
+        )
+        mail.send(msg)
+        return jsonify({"success": True, "message": "Correo enviado exitosamente."}), 200
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
