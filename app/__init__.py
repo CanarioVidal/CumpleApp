@@ -1,4 +1,4 @@
-# Configura la app Flask y conecta los módulos necesarios. v.1.3
+# Configura la app Flask y conecta los módulos necesarios. v.1.4
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
@@ -39,6 +39,7 @@ def create_app():
     # Configuración de tareas programadas
     with app.app_context():
         # Crear tablas si no existen
+        from app.models import User  # Asegúrate de importar el modelo User
         db.create_all()
 
         # Importar y configurar tareas programadas

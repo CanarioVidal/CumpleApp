@@ -1576,3 +1576,378 @@ with app.app_context(). See the documentation for more information.
 2025-01-12 23:52:52,397 - INFO -  * Debugger PIN: 167-608-493
 2025-01-12 23:53:52,580 - INFO -  * Detected change in 'E:\\cumpleapp\\run.py', reloading
 2025-01-12 23:53:52,723 - INFO -  * Restarting with stat
+2025-01-12 23:53:53,734 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 23:53:53,734 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 23:53:53,736 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-12 23:53:53,736 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-12 23:53:53,736 - INFO - Scheduler started
+2025-01-12 23:53:53,737 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 23:53:53,753 - WARNING -  * Debugger is active!
+2025-01-12 23:53:53,764 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 00:22:00,746 - INFO - 127.0.0.1 - - [13/Jan/2025 00:22:00] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 00:25:10,765 - INFO -  * Detected change in 'E:\\cumpleapp\\app\\routes.py', reloading
+2025-01-13 00:25:10,877 - INFO -  * Restarting with stat
+2025-01-13 00:25:11,859 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:25:11,859 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:25:11,861 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 00:25:11,861 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 00:25:11,861 - INFO - Scheduler started
+2025-01-13 00:25:11,861 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 00:25:11,875 - WARNING -  * Debugger is active!
+2025-01-13 00:25:11,885 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 00:25:23,691 - INFO -  * Detected change in 'E:\\cumpleapp\\app\\routes.py', reloading
+2025-01-13 00:25:23,812 - INFO -  * Restarting with stat
+2025-01-13 00:25:24,767 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:25:24,767 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:25:24,769 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 00:25:24,769 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 00:25:24,769 - INFO - Scheduler started
+2025-01-13 00:25:24,769 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 00:25:24,784 - WARNING -  * Debugger is active!
+2025-01-13 00:25:24,794 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 00:27:48,050 - INFO - 127.0.0.1 - - [13/Jan/2025 00:27:48] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 00:27:52,393 - INFO - 127.0.0.1 - - [13/Jan/2025 00:27:52] "GET /registros-recientes?rango=semana HTTP/1.1" 200 -
+2025-01-13 00:27:55,504 - INFO - 127.0.0.1 - - [13/Jan/2025 00:27:55] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 00:27:57,188 - INFO - 127.0.0.1 - - [13/Jan/2025 00:27:57] "GET /registros-recientes?rango=mes HTTP/1.1" 200 -
+2025-01-13 00:28:07,703 - INFO - 127.0.0.1 - - [13/Jan/2025 00:28:07] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 00:28:07,804 - INFO - 127.0.0.1 - - [13/Jan/2025 00:28:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-13 00:28:13,604 - INFO - 127.0.0.1 - - [13/Jan/2025 00:28:13] "GET /registros-recientes?rango=semana HTTP/1.1" 200 -
+2025-01-13 00:28:16,021 - INFO - 127.0.0.1 - - [13/Jan/2025 00:28:16] "GET /registros-recientes?rango=mes HTTP/1.1" 200 -
+2025-01-13 00:28:32,273 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:28:32,274 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:28:32,275 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 00:28:32,275 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 00:28:32,275 - INFO - Scheduler started
+2025-01-13 00:28:32,276 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 00:28:32,302 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-13 00:28:32,302 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-13 00:28:32,304 - INFO -  * Restarting with stat
+2025-01-13 00:28:33,164 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:28:33,165 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:28:33,166 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 00:28:33,166 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 00:28:33,166 - INFO - Scheduler started
+2025-01-13 00:28:33,167 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 00:28:33,180 - WARNING -  * Debugger is active!
+2025-01-13 00:28:33,190 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 00:28:39,005 - INFO - 127.0.0.1 - - [13/Jan/2025 00:28:39] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 00:28:40,253 - INFO - 127.0.0.1 - - [13/Jan/2025 00:28:40] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 00:29:10,679 - INFO - 127.0.0.1 - - [13/Jan/2025 00:29:10] "GET /registros-recientes?rango=semana HTTP/1.1" 200 -
+2025-01-13 00:29:12,472 - INFO - 127.0.0.1 - - [13/Jan/2025 00:29:12] "GET /registros-recientes?rango=mes HTTP/1.1" 200 -
+2025-01-13 00:29:13,980 - INFO - 127.0.0.1 - - [13/Jan/2025 00:29:13] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 00:34:01,487 - INFO -  * Detected change in 'E:\\cumpleapp\\app\\routes.py', reloading
+2025-01-13 00:34:01,608 - INFO -  * Restarting with stat
+2025-01-13 00:34:02,597 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:34:02,598 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:34:02,599 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 00:34:02,600 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 00:34:02,600 - INFO - Scheduler started
+2025-01-13 00:34:02,600 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 00:34:02,615 - WARNING -  * Debugger is active!
+2025-01-13 00:34:02,625 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 00:35:08,588 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:35:08,588 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:35:08,589 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 00:35:08,589 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 00:35:08,589 - INFO - Scheduler started
+2025-01-13 00:35:08,590 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 00:35:08,616 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-13 00:35:08,616 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-13 00:35:08,618 - INFO -  * Restarting with stat
+2025-01-13 00:35:09,463 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:35:09,463 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:35:09,464 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 00:35:09,464 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 00:35:09,464 - INFO - Scheduler started
+2025-01-13 00:35:09,465 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 00:35:09,478 - WARNING -  * Debugger is active!
+2025-01-13 00:35:09,489 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 00:35:13,187 - INFO - 127.0.0.1 - - [13/Jan/2025 00:35:13] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 00:35:19,086 - INFO - 127.0.0.1 - - [13/Jan/2025 00:35:19] "GET /registros-recientes?rango=semana HTTP/1.1" 200 -
+2025-01-13 00:35:22,397 - INFO - 127.0.0.1 - - [13/Jan/2025 00:35:22] "GET /registros-recientes?rango=mes HTTP/1.1" 200 -
+2025-01-13 00:39:44,007 - INFO -  * Detected change in 'E:\\cumpleapp\\app\\routes.py', reloading
+2025-01-13 00:39:44,126 - INFO -  * Restarting with stat
+2025-01-13 00:39:45,065 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:39:45,065 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:39:45,068 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 00:39:45,068 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 00:39:45,068 - INFO - Scheduler started
+2025-01-13 00:39:45,068 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 00:39:45,083 - WARNING -  * Debugger is active!
+2025-01-13 00:39:45,094 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 00:54:58,978 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:54:58,978 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:54:58,980 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 00:54:58,980 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 00:54:58,980 - INFO - Scheduler started
+2025-01-13 00:54:58,980 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 00:55:35,573 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:55:35,573 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 00:55:35,574 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 00:55:35,574 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 00:55:35,574 - INFO - Scheduler started
+2025-01-13 00:55:35,575 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:02:03,314 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:02:03,314 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:02:03,316 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:02:03,316 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:02:03,316 - INFO - Scheduler started
+2025-01-13 01:02:03,316 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:03:34,939 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:03:34,939 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:03:34,941 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:03:34,941 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:03:34,941 - INFO - Scheduler started
+2025-01-13 01:03:34,941 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:04:02,709 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:04:02,709 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:04:02,711 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:04:02,711 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:04:02,711 - INFO - Scheduler started
+2025-01-13 01:04:02,711 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:11:43,023 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:11:43,023 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:11:43,026 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:11:43,026 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:11:43,026 - INFO - Scheduler started
+2025-01-13 01:11:43,027 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:11:43,047 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-13 01:11:43,047 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-13 01:12:53,734 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:12:53,734 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:12:53,735 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:12:53,735 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:12:53,736 - INFO - Scheduler started
+2025-01-13 01:12:53,736 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:18:39,007 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:18:39,007 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:18:39,009 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:18:39,009 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:18:39,009 - INFO - Scheduler started
+2025-01-13 01:18:39,009 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:18:40,199 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:18:40,200 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:18:40,201 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:18:40,201 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:18:40,201 - INFO - Scheduler started
+2025-01-13 01:18:40,202 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:23:30,152 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:23:30,152 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:23:30,153 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:23:30,154 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:23:30,154 - INFO - Scheduler started
+2025-01-13 01:23:30,154 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:28:23,016 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:28:23,017 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:28:23,018 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:28:23,018 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:28:23,018 - INFO - Scheduler started
+2025-01-13 01:28:23,019 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:29:28,962 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:29:28,963 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:29:28,964 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:29:28,964 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:29:28,964 - INFO - Scheduler started
+2025-01-13 01:29:28,965 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:37:29,883 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:37:29,884 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:37:29,885 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:37:29,885 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:37:29,885 - INFO - Scheduler started
+2025-01-13 01:37:29,886 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:38:36,423 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:38:36,423 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:38:36,424 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:38:36,425 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:38:36,425 - INFO - Scheduler started
+2025-01-13 01:38:36,425 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:42:35,074 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:42:35,074 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:42:35,075 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:42:35,075 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:42:35,075 - INFO - Scheduler started
+2025-01-13 01:42:35,076 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:42:35,123 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-13 01:42:35,123 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-13 01:42:35,127 - INFO -  * Restarting with stat
+2025-01-13 01:42:36,088 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:42:36,089 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:42:36,090 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:42:36,090 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:42:36,090 - INFO - Scheduler started
+2025-01-13 01:42:36,091 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:42:36,105 - WARNING -  * Debugger is active!
+2025-01-13 01:42:36,116 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 01:42:40,403 - INFO - 127.0.0.1 - - [13/Jan/2025 01:42:40] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 01:43:27,294 - INFO - 127.0.0.1 - - [13/Jan/2025 01:43:27] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 01:43:27,420 - INFO - 127.0.0.1 - - [13/Jan/2025 01:43:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-13 01:43:28,428 - INFO - 127.0.0.1 - - [13/Jan/2025 01:43:28] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 01:43:28,525 - INFO - 127.0.0.1 - - [13/Jan/2025 01:43:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-13 01:43:55,101 - INFO - 127.0.0.1 - - [13/Jan/2025 01:43:55] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 01:43:55,525 - INFO - 127.0.0.1 - - [13/Jan/2025 01:43:55] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 01:43:55,818 - INFO - 127.0.0.1 - - [13/Jan/2025 01:43:55] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 01:43:55,999 - INFO - 127.0.0.1 - - [13/Jan/2025 01:43:55] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 01:44:42,171 - INFO - 127.0.0.1 - - [13/Jan/2025 01:44:42] "[31m[1mPOST /agregar-cumple HTTP/1.1[0m" 400 -
+2025-01-13 01:44:42,226 - INFO - 127.0.0.1 - - [13/Jan/2025 01:44:42] "POST /agregar-cumple HTTP/1.1" 200 -
+2025-01-13 01:44:50,495 - INFO - 127.0.0.1 - - [13/Jan/2025 01:44:50] "GET /registros-recientes?rango=semana HTTP/1.1" 200 -
+2025-01-13 01:45:04,011 - INFO - 127.0.0.1 - - [13/Jan/2025 01:45:04] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 01:46:27,344 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:46:27,344 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:46:27,345 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:46:27,346 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:46:27,346 - INFO - Scheduler started
+2025-01-13 01:46:27,346 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:46:27,374 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-13 01:46:27,374 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-13 01:46:27,376 - INFO -  * Restarting with stat
+2025-01-13 01:46:28,368 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:46:28,368 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:46:28,370 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:46:28,370 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:46:28,370 - INFO - Scheduler started
+2025-01-13 01:46:28,371 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:46:28,386 - WARNING -  * Debugger is active!
+2025-01-13 01:46:28,397 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 01:46:40,162 - INFO - 127.0.0.1 - - [13/Jan/2025 01:46:40] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 01:46:45,205 - INFO - 127.0.0.1 - - [13/Jan/2025 01:46:45] "GET /registros-recientes?rango=semana HTTP/1.1" 200 -
+2025-01-13 01:46:46,773 - INFO - 127.0.0.1 - - [13/Jan/2025 01:46:46] "GET /registros-recientes?rango=mes HTTP/1.1" 200 -
+2025-01-13 01:47:12,136 - INFO - 127.0.0.1 - - [13/Jan/2025 01:47:12] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 01:59:39,441 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:59:39,441 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:59:39,442 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:59:39,443 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:59:39,443 - INFO - Scheduler started
+2025-01-13 01:59:39,443 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:59:39,472 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-13 01:59:39,472 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-13 01:59:39,474 - INFO -  * Restarting with stat
+2025-01-13 01:59:40,484 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:59:40,485 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 01:59:40,486 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 01:59:40,486 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 01:59:40,486 - INFO - Scheduler started
+2025-01-13 01:59:40,487 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 01:59:40,502 - WARNING -  * Debugger is active!
+2025-01-13 01:59:40,512 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 01:59:48,258 - INFO - 127.0.0.1 - - [13/Jan/2025 01:59:48] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 01:59:53,772 - INFO - 127.0.0.1 - - [13/Jan/2025 01:59:53] "[35m[1mGET /registros-recientes?rango=semana HTTP/1.1[0m" 500 -
+2025-01-13 02:00:00,370 - INFO - 127.0.0.1 - - [13/Jan/2025 02:00:00] "[35m[1mGET /registros-recientes?rango=mes HTTP/1.1[0m" 500 -
+2025-01-13 02:00:03,972 - INFO - 127.0.0.1 - - [13/Jan/2025 02:00:03] "[35m[1mGET /registros-recientes?rango=dia HTTP/1.1[0m" 500 -
+2025-01-13 02:01:47,406 - INFO -  * Detected change in 'E:\\cumpleapp\\app\\routes.py', reloading
+2025-01-13 02:01:47,536 - INFO -  * Restarting with stat
+2025-01-13 02:01:48,590 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 02:01:48,590 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 02:01:48,592 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 02:01:48,592 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 02:01:48,592 - INFO - Scheduler started
+2025-01-13 02:01:48,592 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 02:01:48,608 - WARNING -  * Debugger is active!
+2025-01-13 02:01:48,619 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 02:02:08,171 - INFO - 127.0.0.1 - - [13/Jan/2025 02:02:08] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:02:11,314 - INFO - 127.0.0.1 - - [13/Jan/2025 02:02:11] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:02:15,030 - INFO - 127.0.0.1 - - [13/Jan/2025 02:02:15] "GET /registros-recientes?rango=semana HTTP/1.1" 200 -
+2025-01-13 02:02:21,112 - INFO - 127.0.0.1 - - [13/Jan/2025 02:02:21] "GET /registros-recientes?rango=mes HTTP/1.1" 200 -
+2025-01-13 02:02:30,261 - INFO - 127.0.0.1 - - [13/Jan/2025 02:02:30] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 02:03:02,183 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 02:03:02,183 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 02:03:02,184 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 02:03:02,184 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 02:03:02,184 - INFO - Scheduler started
+2025-01-13 02:03:02,185 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 02:03:02,212 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-13 02:03:02,212 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-13 02:03:02,214 - INFO -  * Restarting with stat
+2025-01-13 02:03:03,167 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 02:03:03,167 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 02:03:03,169 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 02:03:03,169 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 02:03:03,169 - INFO - Scheduler started
+2025-01-13 02:03:03,169 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 02:03:03,184 - WARNING -  * Debugger is active!
+2025-01-13 02:03:03,195 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 02:03:10,149 - INFO - 127.0.0.1 - - [13/Jan/2025 02:03:10] "GET /registros-recientes?rango=semana HTTP/1.1" 200 -
+2025-01-13 02:03:11,859 - INFO - 127.0.0.1 - - [13/Jan/2025 02:03:11] "GET /registros-recientes?rango=mes HTTP/1.1" 200 -
+2025-01-13 02:03:20,272 - INFO - 127.0.0.1 - - [13/Jan/2025 02:03:20] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:14:09,260 - INFO -  * Detected change in 'E:\\cumpleapp\\app\\routes.py', reloading
+2025-01-13 02:14:09,396 - INFO -  * Restarting with stat
+2025-01-13 02:14:32,838 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 02:14:32,838 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 02:14:32,840 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 02:14:32,840 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 02:14:32,840 - INFO - Scheduler started
+2025-01-13 02:14:32,840 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 02:14:32,855 - WARNING -  * Debugger is active!
+2025-01-13 02:14:32,866 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 02:14:38,476 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 02:14:38,476 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 02:14:38,477 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 02:14:38,477 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 02:14:38,477 - INFO - Scheduler started
+2025-01-13 02:14:38,478 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 02:14:38,506 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-13 02:14:38,506 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-13 02:14:38,508 - INFO -  * Restarting with stat
+2025-01-13 02:14:39,464 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 02:14:39,464 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 02:14:39,465 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 02:14:39,465 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 02:14:39,466 - INFO - Scheduler started
+2025-01-13 02:14:39,466 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 02:14:39,481 - WARNING -  * Debugger is active!
+2025-01-13 02:14:39,491 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 02:14:47,921 - INFO - 127.0.0.1 - - [13/Jan/2025 02:14:47] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:14:55,639 - INFO - 127.0.0.1 - - [13/Jan/2025 02:14:55] "GET /registros-recientes?rango=semana HTTP/1.1" 200 -
+2025-01-13 02:14:58,269 - INFO - 127.0.0.1 - - [13/Jan/2025 02:14:58] "GET /registros-recientes?rango=mes HTTP/1.1" 200 -
+2025-01-13 02:15:00,624 - INFO - 127.0.0.1 - - [13/Jan/2025 02:15:00] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 02:15:06,209 - INFO - 127.0.0.1 - - [13/Jan/2025 02:15:06] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:15:16,387 - INFO - 127.0.0.1 - - [13/Jan/2025 02:15:16] "GET /registros-recientes?rango=mes HTTP/1.1" 200 -
+2025-01-13 02:15:18,140 - INFO - 127.0.0.1 - - [13/Jan/2025 02:15:18] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 02:18:27,236 - INFO - 127.0.0.1 - - [13/Jan/2025 02:18:27] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:18:58,452 - INFO - 127.0.0.1 - - [13/Jan/2025 02:18:58] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:19:01,687 - INFO - 127.0.0.1 - - [13/Jan/2025 02:19:01] "GET /registros-recientes?rango=semana HTTP/1.1" 200 -
+2025-01-13 02:19:03,292 - INFO - 127.0.0.1 - - [13/Jan/2025 02:19:03] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 02:19:04,676 - INFO - 127.0.0.1 - - [13/Jan/2025 02:19:04] "GET /registros-recientes?rango=mes HTTP/1.1" 200 -
+2025-01-13 02:22:56,645 - INFO - 127.0.0.1 - - [13/Jan/2025 02:22:56] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:22:56,676 - INFO - 127.0.0.1 - - [13/Jan/2025 02:22:56] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 02:23:01,289 - INFO - 127.0.0.1 - - [13/Jan/2025 02:23:01] "GET /registros-recientes?rango=semana HTTP/1.1" 200 -
+2025-01-13 02:23:03,854 - INFO - 127.0.0.1 - - [13/Jan/2025 02:23:03] "GET /registros-recientes?rango=mes HTTP/1.1" 200 -
+2025-01-13 02:23:05,610 - INFO - 127.0.0.1 - - [13/Jan/2025 02:23:05] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 02:29:31,131 - INFO - 127.0.0.1 - - [13/Jan/2025 02:29:31] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:29:31,181 - INFO - 127.0.0.1 - - [13/Jan/2025 02:29:31] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 02:29:38,736 - INFO - 127.0.0.1 - - [13/Jan/2025 02:29:38] "POST /borrar-usuarios HTTP/1.1" 200 -
+2025-01-13 02:29:40,231 - INFO - 127.0.0.1 - - [13/Jan/2025 02:29:40] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:29:40,260 - INFO - 127.0.0.1 - - [13/Jan/2025 02:29:40] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 02:33:46,913 - INFO - 127.0.0.1 - - [13/Jan/2025 02:33:46] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:33:46,951 - INFO - 127.0.0.1 - - [13/Jan/2025 02:33:46] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 02:33:50,628 - INFO - 127.0.0.1 - - [13/Jan/2025 02:33:50] "DELETE /borrar-usuario/3 HTTP/1.1" 200 -
+2025-01-13 02:33:51,956 - INFO - 127.0.0.1 - - [13/Jan/2025 02:33:51] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:33:51,989 - INFO - 127.0.0.1 - - [13/Jan/2025 02:33:51] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 02:34:49,719 - INFO - 127.0.0.1 - - [13/Jan/2025 02:34:49] "POST /agregar-cumple HTTP/1.1" 200 -
+2025-01-13 02:36:39,202 - INFO - 127.0.0.1 - - [13/Jan/2025 02:36:39] "POST /agregar-cumple HTTP/1.1" 200 -
+2025-01-13 02:38:11,812 - INFO - 127.0.0.1 - - [13/Jan/2025 02:38:11] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:38:11,843 - INFO - 127.0.0.1 - - [13/Jan/2025 02:38:11] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 02:38:21,860 - INFO - 127.0.0.1 - - [13/Jan/2025 02:38:21] "GET /registros-recientes?rango=semana HTTP/1.1" 200 -
+2025-01-13 02:38:23,571 - INFO - 127.0.0.1 - - [13/Jan/2025 02:38:23] "GET /registros-recientes?rango=mes HTTP/1.1" 200 -
+2025-01-13 02:42:31,810 - INFO - 127.0.0.1 - - [13/Jan/2025 02:42:31] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:42:31,835 - INFO - 127.0.0.1 - - [13/Jan/2025 02:42:31] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 02:50:16,674 - INFO -  * Detected change in 'E:\\cumpleapp\\app\\routes.py', reloading
+2025-01-13 02:50:16,811 - INFO -  * Restarting with stat
+2025-01-13 02:51:41,377 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 02:51:41,377 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-13 02:51:41,379 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-13 02:51:41,379 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-13 02:51:41,379 - INFO - Scheduler started
+2025-01-13 02:51:41,379 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-13 02:51:41,395 - WARNING -  * Debugger is active!
+2025-01-13 02:51:41,406 - INFO -  * Debugger PIN: 167-608-493
+2025-01-13 02:51:41,477 - INFO - 127.0.0.1 - - [13/Jan/2025 02:51:41] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-13 02:51:41,557 - INFO - 127.0.0.1 - - [13/Jan/2025 02:51:41] "GET /registros-recientes?rango=dia HTTP/1.1" 200 -
+2025-01-13 02:51:41,571 - INFO - 127.0.0.1 - - [13/Jan/2025 02:51:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

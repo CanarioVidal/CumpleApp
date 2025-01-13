@@ -1,7 +1,9 @@
-# Iniciador de la app v.1.5
-from app import create_app
+# Iniciador de la app v.1.6
+from app import db, create_app
 from dotenv import load_dotenv, find_dotenv
 import os
+from flask_migrate import Migrate
+
 load_dotenv(find_dotenv())
 
 # Por si necesitamos depurarlo nuevamente en el futuro
@@ -23,6 +25,8 @@ except ValueError as e:
 
 
 app = create_app()
+
+migrate = Migrate(app, db)
 
 if __name__ == '__main__':
     app.run(debug=True)

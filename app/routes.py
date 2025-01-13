@@ -1,9 +1,9 @@
-# Archivo de rutas v.1.5
+# Archivo de rutas v.2.0
 
 from flask import render_template, Blueprint, request, redirect, url_for, jsonify, session
 from app import db, mail
 from app.models import User
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from functools import wraps
 from flask_mail import Message
 from app import create_app
@@ -151,12 +151,40 @@ def agregar_usuario():
     return render_template('registro-cumples.html')
 
 
-# Vista temporal de usuarios
+# Vista de usuarios
 @routes.route('/ver-usuarios')
 @login_required
 def ver_usuarios():
     usuarios = User.query.all()
     return render_template('ver_usuarios.html', usuarios=usuarios)
+
+# Ruta para ordenar usuarios
+@routes.route('/usuarios', methods=['GET'])
+@login_required
+def usuarios():
+    # Obtener el orden desde los parámetros de consulta (por defecto: descendente)
+    orden = request.args.get('orden', 'desc')  # Valores posibles: 'asc' o 'desc'
+    
+    # Definir el orden en función del parámetro recibido
+    if orden == 'asc':
+        usuarios = User.query.order_by(User.fecha_registro.asc()).all()
+    else:
+        usuarios = User.query.order_by(User.fecha_registro.desc()).all()
+
+    # Devolver los usuarios en formato JSON
+    resultado = [
+        {
+            'id': usuario.id,
+            'name': usuario.name,
+            'email': usuario.email,
+            'nickname': usuario.nickname,
+            'birthday': usuario.birthday.strftime('%Y-%m-%d'),
+            'fecha_registro': usuario.fecha_registro.strftime('%Y-%m-%d %H:%M:%S')
+        }
+        for usuario in usuarios
+    ]
+    return jsonify({'success': True, 'data': resultado})
+
 
 # Ruta para borrar un usuario por ID
 @routes.route('/borrar-usuario/<int:id>', methods=['DELETE'])
@@ -223,3 +251,38 @@ def test_email():
         return jsonify({"success": True, "message": "Correo enviado exitosamente."}), 200
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
+
+# Ruta para obtener registros recientes según el rango seleccionado
+@routes.route('/registros-recientes', methods=['GET'])
+def registros_recientes():
+    rango = request.args.get('rango', 'dia')  # Predeterminado a 'dia'
+    hoy = datetime.now(timezone.utc).date()
+
+    # Determinar el rango de búsqueda según el valor recibido o el predeterminado
+    if rango == 'semana':
+        inicio = hoy - timedelta(days=7)
+    elif rango == 'mes':
+        inicio = hoy - timedelta(days=30)
+    elif rango == 'dia':
+        inicio = hoy
+    else:
+        return jsonify({'success': False, 'message': 'Rango no válido'}), 400
+
+    # Consultar registros dentro del rango determinado
+    registros = User.query.filter(User.fecha_registro >= inicio).order_by(User.fecha_registro.desc()).all()
+
+    # Crear la lista de resultados
+    resultado = [
+        {
+            'id': user.id,
+            'name': user.name,
+            'email': user.email,
+            'nickname': user.nickname,
+            'birthday': user.birthday.strftime('%Y-%m-%d'),
+            'fecha_registro': user.fecha_registro.strftime('%Y-%m-%d %H:%M:%S')
+        }
+        for user in registros
+    ]
+
+    return jsonify({'success': True, 'data': resultado})
+

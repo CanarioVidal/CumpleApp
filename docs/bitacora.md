@@ -243,6 +243,7 @@ El sistema está funcional y preparado para las siguientes etapas:
 ## 12-01-2025
 
 ### Chagelog
+
 **__init__.py**
 - v.1.1
     - se crea el objeto Mail
@@ -347,3 +348,35 @@ El sistema está funcional y preparado para las siguientes etapas:
       * Confirmación visual de configuraciones exitosas.
 3. Depuración de variables de entorno:
       * Depuración opcional en modo DEBUG para facilitar el rastreo de errores.
+
+## 12-01-2025
+### Chagelog
+
+**routes.py (v.2.1)**
+   - Ruta para ordenar usuarios según registros más recientes o antiguos.
+   - Mejoras en la lógica de filtrado y manejo de datos.
+**ver_usuarios.html (v.1.7):**
+   - Añadido selector de orden de usuarios.
+   - Scripts para cargar dinámicamente usuarios en orden ascendente o descendente.
+   - Soluciones a botones de borrado, selección múltiple y vistas en tarjetas.
+   - Actualizaciones para sincronización con el selector de orden.
+**models.py (v.1.2):**
+   - Agregada columna fecha_registro con soporte para zona horaria.
+**run.py (v.1.7):**
+   - Integración con Flask-Migrate para manejar cambios en la base de datos.
+**settings.py (v.1.4):**
+   - Ajuste para sincronizar con las herramientas de migración.
+**Nueva Carpeta:**
+**migrations:**
+   - Contiene el historial de cambios aplicados a la base de datos mediante Flask-Migrate.
+   - Generada automáticamente para reflejar las modificaciones de la columna fecha_registro.
+1. Nuevas Funcionalidades:
+      * Orden dinámico de usuarios por fecha de registro.
+      * Selección de múltiples usuarios para borrado.
+      * Botón de borrado individual funcionando correctamente.
+      * Vista en tarjetas sincronizada con datos de usuarios.
+      * Registro automático de la fecha de creación al añadir un nuevo usuario.
+2. Cambios Generales:
+      * Configuración de Flask-Migrate para manejar cambios futuros en la base de datos.
+      * Mejora del flujo de navegación y manejo de errores en las vistas y rutas.
+      * Validación y visualización de datos más robusta en todas las interfaces.
