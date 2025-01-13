@@ -47,14 +47,6 @@ Copiar código
 pip install -r requirements.txt
 Configurar el entorno:
 
-Crear un archivo .env en la raíz del proyecto.
-Añadir la clave secreta y la base de datos:
-makefile
-Copiar código
-SECRET_KEY=mi_clave_secreta_super_segura
-DATABASE_URI=sqlite:///instance/cumpleapp.db
-Iniciar el servidor Flask:
-
 bash
 Copiar código
 python run.py
