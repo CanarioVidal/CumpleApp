@@ -1514,3 +1514,65 @@ with app.app_context(). See the documentation for more information.
 2025-01-12 19:21:52,814 - INFO - Usuarios con cumpleaños hoy: ['mgottero@gmail.com', 'pgvidalm@gmail.com']
 2025-01-12 19:21:55,534 - INFO - Correo enviado a mgottero@gmail.com con asunto '¡Feliz Cumpleaños!'
 2025-01-12 19:21:58,081 - INFO - Correo enviado a pgvidalm@gmail.com con asunto '¡Feliz Cumpleaños!'
+2025-01-12 23:27:11,177 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 23:27:11,177 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 23:27:11,181 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-12 23:27:11,181 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-12 23:27:11,181 - INFO - Scheduler started
+2025-01-12 23:27:11,182 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 23:27:11,235 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-12 23:27:11,236 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-12 23:27:11,241 - INFO -  * Restarting with stat
+2025-01-12 23:27:12,111 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 23:27:12,112 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 23:27:12,113 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-12 23:27:12,113 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-12 23:27:12,113 - INFO - Scheduler started
+2025-01-12 23:27:12,114 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 23:27:12,127 - WARNING -  * Debugger is active!
+2025-01-12 23:27:12,138 - INFO -  * Debugger PIN: 167-608-493
+2025-01-12 23:30:29,901 - INFO -  * Detected change in 'E:\\cumpleapp\\run.py', reloading
+2025-01-12 23:30:30,040 - INFO -  * Restarting with stat
+2025-01-12 23:30:31,020 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 23:30:31,020 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 23:30:31,021 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-12 23:30:31,022 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-12 23:30:31,022 - INFO - Scheduler started
+2025-01-12 23:30:31,022 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 23:30:31,036 - WARNING -  * Debugger is active!
+2025-01-12 23:30:31,047 - INFO -  * Debugger PIN: 167-608-493
+2025-01-12 23:32:42,231 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 23:32:42,231 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 23:32:42,233 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-12 23:32:42,233 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-12 23:32:42,233 - INFO - Scheduler started
+2025-01-12 23:32:42,233 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 23:32:42,259 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-12 23:32:42,259 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-12 23:32:42,261 - INFO -  * Restarting with stat
+2025-01-12 23:32:43,112 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 23:32:43,112 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 23:32:43,114 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-12 23:32:43,114 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-12 23:32:43,114 - INFO - Scheduler started
+2025-01-12 23:32:43,114 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 23:32:43,128 - WARNING -  * Debugger is active!
+2025-01-12 23:32:43,137 - INFO -  * Debugger PIN: 167-608-493
+2025-01-12 23:35:16,231 - INFO - 127.0.0.1 - - [12/Jan/2025 23:35:16] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-12 23:35:25,909 - INFO - 127.0.0.1 - - [12/Jan/2025 23:35:25] "DELETE /borrar-usuario/1 HTTP/1.1" 200 -
+2025-01-12 23:35:28,888 - INFO - 127.0.0.1 - - [12/Jan/2025 23:35:28] "GET /ver-usuarios HTTP/1.1" 200 -
+2025-01-12 23:36:17,893 - INFO - 127.0.0.1 - - [12/Jan/2025 23:36:17] "POST /agregar-cumple HTTP/1.1" 200 -
+2025-01-12 23:52:51,196 - INFO -  * Detected change in 'E:\\cumpleapp\\app\\routes.py', reloading
+2025-01-12 23:52:51,329 - INFO -  * Restarting with stat
+2025-01-12 23:52:52,370 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 23:52:52,370 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 23:52:52,371 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-12 23:52:52,372 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-12 23:52:52,372 - INFO - Scheduler started
+2025-01-12 23:52:52,372 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 23:52:52,386 - WARNING -  * Debugger is active!
+2025-01-12 23:52:52,397 - INFO -  * Debugger PIN: 167-608-493
+2025-01-12 23:53:52,580 - INFO -  * Detected change in 'E:\\cumpleapp\\run.py', reloading
+2025-01-12 23:53:52,723 - INFO -  * Restarting with stat

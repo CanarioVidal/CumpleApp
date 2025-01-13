@@ -1,4 +1,4 @@
-#Contene las configuraciones de la app v.1.3
+#Contene las configuraciones de la app v.1.4
 import os
 
 class Config:
@@ -19,10 +19,15 @@ class Config:
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
     MAIL_DEFAULT_SENDER = os.getenv('MAIL_DEFAULT_SENDER')
 
-    @classmethod
-    def validate_email_config(cls):
-        """Valida que todas las configuraciones de correo estén presentes."""
+    @staticmethod
+    def validate_email_config():
         required_keys = ['MAIL_SERVER', 'MAIL_PORT', 'MAIL_USERNAME', 'MAIL_PASSWORD', 'MAIL_DEFAULT_SENDER']
-        missing = [key for key in required_keys if not getattr(cls, key)]
+        missing = [key for key in required_keys if not os.getenv(key)]
+        
         if missing:
+            # Imprimir todas las variables de correo para debug
+            print("Estado actual de las variables de correo:")
+            for key in required_keys:
+                print(f"{key}: {os.getenv(key)}")
+            
             raise ValueError(f"Faltan configuraciones de correo: {', '.join(missing)}")

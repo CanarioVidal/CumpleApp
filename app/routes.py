@@ -1,4 +1,4 @@
-# Archivo de rutas v.1.3
+# Archivo de rutas v.1.5
 
 from flask import render_template, Blueprint, request, redirect, url_for, jsonify, session
 from app import db, mail
@@ -130,6 +130,17 @@ def agregar_usuario():
             db.session.add(nuevo_usuario)
             db.session.commit()
 
+            # Enviar correo de registro exitoso
+            try:
+                msg = Message(
+                    subject="¡Tu registro fue exitoso!",
+                    recipients=[email],
+                    html=render_template('emails/registrook.html', name=nombre)
+                )
+                mail.send(msg)
+            except Exception as e:
+                return jsonify({'success': True, 'message': 'Usuario registrado, pero el correo no pudo ser enviado.', 'error': str(e)}), 200
+
             # Responder a AJAX con éxito
             return jsonify({'success': True, 'message': 'Cumpleaños agregado con éxito.'}), 200
         except Exception as e:
@@ -138,6 +149,7 @@ def agregar_usuario():
 
     # Si es GET, renderizar el formulario
     return render_template('registro-cumples.html')
+
 
 # Vista temporal de usuarios
 @routes.route('/ver-usuarios')

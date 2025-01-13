@@ -316,3 +316,34 @@ El sistema está funcional y preparado para las siguientes etapas:
 
 
 ## Prueba de tareas programadas de envío de correos EXITOSAS!!!
+
+**routes.py**
+- v.1.5
+   - Añadida lógica para enviar un correo de confirmación al registrar un nuevo usuario.
+   - Uso de la plantilla registrook.html para el correo de registro exitoso.
+
+**run.py**
+- v.1.5
+   - Implementada validación robusta de la configuración de correo con Config.validate_email_config.
+   - Depuración opcional de variables de entorno en modo DEBUG al inicio del archivo.
+   - Confirmación visual de validación exitosa de configuraciones de correo.
+   - settings.py
+- v.1.4
+   - Se mantiene la validación de configuraciones de correo con mensajes detallados para identificar errores rápidamente.
+
+**registrook.html**
+- v.1.0 (NUEVO)
+   - Plantilla HTML para el correo de confirmación de registro exitoso.
+   - Contenido inicial básico para informar al usuario del registro satisfactorio.
+ 
+ ### Tareas realizadas
+   - Envío de correos de confirmación de registro exitoso:
+
+1. Integración en la ruta /agregar-cumple.
+      * Verificación funcional del envío de correos desde el formulario de registro.
+      * Uso de la nueva plantilla registrook.html.
+2. Validación de configuraciones de correo:
+      * Mecanismo robusto para evitar problemas al iniciar la app por configuraciones faltantes.
+      * Confirmación visual de configuraciones exitosas.
+3. Depuración de variables de entorno:
+      * Depuración opcional en modo DEBUG para facilitar el rastreo de errores.

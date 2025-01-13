@@ -1,4 +1,4 @@
-# Configura la app Flask y conecta los módulos necesarios. v.1.2
+# Configura la app Flask y conecta los módulos necesarios. v.1.3
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
@@ -7,7 +7,8 @@ import os
 from settings import Config
 
 # Cargar variables de entorno
-load_dotenv()
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
 
 # Inicializar extensiones
 db = SQLAlchemy()
