@@ -306,3 +306,13 @@ El sistema está funcional y preparado para las siguientes etapas:
     - se corrigen las importaciones dede emails_utils,py
 - v.1.2
     - se agrega la creación de una instancia de la app
+- v.1.3
+    - se agrega un bloque  para confirmar si las variables del archivo .env están siendo cargadas
+    - se agrega dinámicamente el directorio raíz al PYTHONPATH
+
+**task.py**
+- v.1.2 
+   - Se corrige error de importación nombres incorrectos "enviar_recordatorios" y "enviar_saludos_cumpleanios", por "enviar_correos_recordatorio" y "enviar_correos_cumpleaños"
+
+
+## Prueba de tareas programadas de envío de correos EXITOSAS!!!

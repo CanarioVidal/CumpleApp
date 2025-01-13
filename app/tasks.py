@@ -1,6 +1,6 @@
-# Define las tareas programadas con APScheduler v.1.1
+# Define las tareas programadas con APScheduler v.1.2
 from apscheduler.schedulers.background import BackgroundScheduler
-from app.email_utils import enviar_recordatorios, enviar_saludos_cumpleanios  # Nuevas funciones para correos
+from app.email_utils import enviar_correos_recordatorio, enviar_correos_cumpleaños  # Nuevas funciones para correos
 import logging
 
 # Configurar logs para tareas
@@ -17,7 +17,7 @@ def iniciar_tareas():
 
         # Programar recordatorios de cumpleaños (1 semana antes)
         scheduler.add_job(
-            enviar_recordatorios,
+            enviar_correos_recordatorio,
             'cron',
             hour=11,  # Corre todos los días a las 11 AM
             id='recordatorios_diarios',
@@ -26,7 +26,7 @@ def iniciar_tareas():
 
         # Programar saludos de cumpleaños (en el día)
         scheduler.add_job(
-            enviar_saludos_cumpleanios,
+            enviar_correos_cumpleaños,
             'cron',
             hour=12,  # Corre todos los días a las 12 PM
             id='saludos_diarios',

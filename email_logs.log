@@ -1504,3 +1504,13 @@ with app.app_context(). See the documentation for more information.
 2025-01-12 18:29:49,530 - INFO - No es fecha de recordatorio.
 2025-01-12 18:30:28,071 - INFO - No es fecha de recordatorio.
 2025-01-12 18:32:05,764 - INFO - No es fecha de recordatorio.
+2025-01-12 19:21:52,805 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 19:21:52,805 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-01-12 19:21:52,808 - INFO - Added job "enviar_correos_recordatorio" to job store "default"
+2025-01-12 19:21:52,808 - INFO - Added job "enviar_correos_cumpleaños" to job store "default"
+2025-01-12 19:21:52,808 - INFO - Scheduler started
+2025-01-12 19:21:52,809 - INFO - Tareas programadas iniciadas correctamente.
+2025-01-12 19:21:52,809 - INFO - No es fecha de recordatorio.
+2025-01-12 19:21:52,814 - INFO - Usuarios con cumpleaños hoy: ['mgottero@gmail.com', 'pgvidalm@gmail.com']
+2025-01-12 19:21:55,534 - INFO - Correo enviado a mgottero@gmail.com con asunto '¡Feliz Cumpleaños!'
+2025-01-12 19:21:58,081 - INFO - Correo enviado a pgvidalm@gmail.com con asunto '¡Feliz Cumpleaños!'

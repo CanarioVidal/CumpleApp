@@ -197,7 +197,7 @@ def programar_correos():
         saludo = usuario.nickname if usuario.nickname else usuario.name
         enviar_correo(usuario.email, "¡Feliz Cumpleaños!", f"Hola {saludo}, ¡Feliz cumpleaños! Ven a redimir tu obsequio.")
 
-@routes.route('./tests/test-email', methods=['GET'])
+@routes.route('/tests/test-email', methods=['GET'])
 @login_required
 def test_email():
     try:
