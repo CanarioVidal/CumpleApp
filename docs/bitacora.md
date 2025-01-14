@@ -380,3 +380,62 @@ El sistema está funcional y preparado para las siguientes etapas:
       * Configuración de Flask-Migrate para manejar cambios futuros en la base de datos.
       * Mejora del flujo de navegación y manejo de errores en las vistas y rutas.
       * Validación y visualización de datos más robusta en todas las interfaces.
+
+# Bitácora de Desarrollo - CumpleApp
+
+## **Hito Alcanzado: Módulo de Correos (mC) Funcional**  
+**Fecha:** 2025-01-14  
+**Versión:** mC v.1.0.0  
+
+### **Descripción General**
+El módulo de correos (mC) está ahora completamente funcional. Todas las tareas relacionadas con el envío de correos electrónicos han sido configuradas y probadas con éxito, incluyendo correos de prueba, recordatorios y saludos de cumpleaños. Los correos están llegando correctamente a sus destinatarios, marcando un avance significativo en el desarrollo del sistema.
+
+---
+
+### **Cambios Realizados**
+1. **Configuración del Correo:**
+   - Validación y carga correcta de las variables desde el archivo `.env`:
+     - `MAIL_SERVER`, `MAIL_PORT`, `MAIL_USE_TLS`, `MAIL_USE_SSL`
+     - `MAIL_USERNAME`, `MAIL_PASSWORD`, `MAIL_DEFAULT_SENDER`
+   - Comprobación y depuración de la configuración desde `__init__.py`.
+
+2. **Actualización de Tareas Programadas (`tasks.py`):**
+   - Uso explícito del contexto de la aplicación (`app_context`) para las tareas programadas.
+   - Implementación de logs para rastrear próximas ejecuciones y estados de las tareas:
+     - Recordatorios de cumpleaños (enviados 7 días antes).
+     - Saludos de cumpleaños (enviados el día del cumpleaños).
+
+3. **Corrección de Funciones de Envío (`email_utils.py`):**
+   - Ajustes en las funciones `enviar_correos_recordatorio` y `enviar_correos_cumpleaños`:
+     - Validación de usuarios y plantillas antes del envío.
+     - Uso correcto de `MAIL_DEFAULT_SENDER` para evitar errores de remitente.
+
+4. **Pruebas Manuales Realizadas:**
+   - Ejecución de tareas programadas a través de botones de prueba en la interfaz de administración.
+   - Configuración temporal de las tareas para ejecuciones inmediatas, simulando fechas reales.
+   - Confirmación de entrega de correos con los siguientes resultados:
+     - **Correos enviados correctamente:** Los destinatarios recibieron los correos de prueba, recordatorios y saludos.
+     - **Errores menores registrados:** Algunos logs muestran errores relacionados con el remitente (`default@domain.com`), pero los correos llegan correctamente.
+
+---
+
+### **Pendientes/Incidencias Menores**
+1. **Depuración de Logs y Mensajes de Error:**
+   - Los logs actuales incluyen referencias a `default@domain.com` que deben eliminarse.
+   - Refinar los mensajes de error para mejorar el debugging.
+
+2. **Consistencia de Pruebas Manuales y Tareas Programadas:**
+   - Verificar que todas las pruebas sigan el mismo flujo que las tareas programadas.
+   - Validar que las plantillas usadas en los correos estén alineadas con las configuraciones finales.
+
+---
+
+### **Acciones Próximas**
+- Realizar un commit estable con la versión actual del mC.
+- Continuar con la integración del mC con el módulo de Usuarios (mU) si es necesario.
+- Revisar y optimizar otros módulos o funcionalidades relacionadas.
+
+---
+
+**¡Hito logrado!** El sistema cumple con los requisitos funcionales del módulo de correos. Ahora estamos en condiciones de avanzar hacia la mejora de otros módulos o áreas del proyecto.
+

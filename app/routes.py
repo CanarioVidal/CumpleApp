@@ -1,4 +1,4 @@
-# Archivo de rutas v.2.0
+# Archivo de rutas v.2.4
 
 from flask import render_template, Blueprint, request, redirect, url_for, jsonify, session
 from app import db, mail
@@ -11,6 +11,8 @@ from flask_mail import Mail
 from apscheduler.schedulers.background import BackgroundScheduler
 import logging
 from flask import current_app
+from app.tasks import enviar_correos_recordatorio, enviar_correos_cumpleaños
+
 
 # Crear el Blueprint
 routes = Blueprint('routes', __name__)
@@ -285,4 +287,51 @@ def registros_recientes():
     ]
 
     return jsonify({'success': True, 'data': resultado})
+
+# Ruta para probar el envío de recordatorios
+@routes.route('/tests/probar-recordatorios', methods=['GET'])
+@login_required
+def probar_recordatorios():
+    try:
+        # Llama a la lógica de recordatorios
+        enviar_correos_recordatorio()
+        return jsonify({'success': True, 'message': 'Prueba de recordatorios realizada con éxito.'})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+# Ruta para probar el envío de cumpleaños
+@routes.route('/tests/probar-cumpleaños', methods=['GET'])
+@login_required
+def probar_cumpleaños():
+    try:
+        # Llama a la lógica de cumpleaños
+        enviar_correos_cumpleaños()
+        return jsonify({'success': True, 'message': 'Prueba de cumpleaños realizada con éxito.'})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+# Rutas para los botones de prueba
+# botón recordatorio
+@routes.route('/test-recordatorios', methods=['GET'])
+@login_required
+def test_recordatorios():
+    """Probar el envío de recordatorios."""
+    correo_prueba = request.args.get('email')  # Obtener el correo desde los parámetros
+    if not correo_prueba:  # Validar que el correo esté presente
+        return jsonify({'success': False, 'message': 'Correo no especificado para prueba.'}), 400
+    
+    enviar_correos_recordatorio(email_prueba=correo_prueba)
+    return jsonify({'success': True, 'message': f'Correo de prueba enviado a {correo_prueba}'}), 200
+
+# botón cumpleaños
+@routes.route('/test-cumpleanos', methods=['GET'])
+@login_required
+def test_cumpleanos():
+    """Probar el envío de correos de cumpleaños."""
+    correo_prueba = request.args.get('email')  # Obtener el correo desde los parámetros
+    if not correo_prueba:  # Validar que el correo esté presente
+        return jsonify({'success': False, 'message': 'Correo no especificado para prueba.'}), 400
+
+    enviar_correos_cumpleaños(email_prueba=correo_prueba)
+    return jsonify({'success': True, 'message': f'Correo de prueba enviado a {correo_prueba}'}), 200
 

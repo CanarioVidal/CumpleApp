@@ -1,8 +1,8 @@
-# Envío de correos v1.0
+# Envío de correos v1.5.1
 from flask_mail import Message
-from app.models import User
-from flask import current_app
+from flask import current_app, render_template
 from app import mail, db
+from app.models import User
 from datetime import datetime, timedelta
 import logging
 
@@ -21,7 +21,11 @@ def enviar_correo(email, subject, body):
     :param body: Cuerpo del correo
     """
     try:
-        msg = Message(subject, recipients=[email])
+        msg = Message(
+            subject=subject,
+            recipients=[email],
+            sender=current_app.config['MAIL_DEFAULT_SENDER']  # Especificar remitente explícitamente
+        )
         msg.body = body
         with current_app.app_context():
             mail.send(msg)
@@ -29,58 +33,113 @@ def enviar_correo(email, subject, body):
     except Exception as e:
         logging.error(f"Error al enviar correo a {email}: {str(e)}")
 
-def enviar_correos_cumpleaños():
+def enviar_correos_recordatorio(email_prueba=None):
     """
-    Envía correos electrónicos a los usuarios cuyo cumpleaños sea hoy.
+    Envía correos recordatorios a los usuarios cuyo cumpleaños es dentro de 7 días.
+    También soporta el envío de un correo de prueba.
     """
-    hoy = datetime.today().date()
-    cumple_hoy = User.query.filter(
-        db.extract('month', User.birthday) == hoy.month,
-        db.extract('day', User.birthday) == hoy.day
-    ).all()
-
-    if cumple_hoy:
-        logging.info(f"Usuarios con cumpleaños hoy: {[u.email for u in cumple_hoy]}")
-        for usuario in cumple_hoy:
-            enviar_correo(
-                usuario.email,
-                "¡Feliz Cumpleaños!",
-                f"Hola {usuario.name}, ¡Feliz cumpleaños! Ven a redimir tu obsequio."
+    if email_prueba:
+        # Enviar un correo de prueba de recordatorio
+        print(f"Enviando correo de prueba de recordatorio a: {email_prueba}")
+        try:
+            msg = Message(
+                subject="Recordatorio Especial",
+                recipients=[email_prueba],
+                sender=current_app.config['MAIL_DEFAULT_SENDER'],  # Especificar remitente explícitamente
+                html=render_template('emails/recordatorio.html', name="Usuario de Prueba")
             )
-    else:
-        logging.info("No hay cumpleaños para hoy.")
+            mail.send(msg)
+            print(f"Correo de prueba enviado correctamente a: {email_prueba}")
+            return True
+        except Exception as e:
+            print(f"Error al enviar correo de prueba: {str(e)}")
+            return False
 
-def enviar_correos_recordatorio():
-    """
-    Envía correos de recordatorio a usuarios con cumpleaños en los próximos 15 días.
-    """
-    hoy = datetime.today().date()
-    recordatorio_inicio = datetime(hoy.year, hoy.month, 1).date()
-    recordatorio_mitad = datetime(hoy.year, hoy.month, 16).date()
+    # Lógica para enviar recordatorios a usuarios con cumpleaños en 7 días
+    hoy = datetime.now().date()
+    objetivo = hoy + timedelta(days=7)
 
-    if hoy == recordatorio_inicio or hoy == recordatorio_mitad:
-        proximo_periodo = hoy + timedelta(days=15)
-        recordatorio = User.query.filter(
-            db.extract('month', User.birthday) == proximo_periodo.month,
-            db.extract('day', User.birthday) == proximo_periodo.day
+    try:
+        # Consultar usuarios cuyo cumpleaños está en 7 días
+        usuarios = User.query.filter(
+            db.extract('month', User.birthday) == objetivo.month,
+            db.extract('day', User.birthday) == objetivo.day
         ).all()
 
-        if recordatorio:
-            logging.info(f"Usuarios con cumpleaños próximos: {[u.email for u in recordatorio]}")
-            for usuario in recordatorio:
-                enviar_correo(
-                    usuario.email,
-                    "¡Tu cumpleaños se acerca!",
-                    f"Hola {usuario.name}, faltan 15 días para tu cumpleaños."
-                )
-        else:
-            logging.info("No hay cumpleaños próximos para recordatorio.")
-    else:
-        logging.info("No es fecha de recordatorio.")
+        if not usuarios:
+            current_app.logger.info("No hay usuarios con cumpleaños en 7 días.")
+            return
 
-def programar_correos():
+        for usuario in usuarios:
+            try:
+                msg = Message(
+                    subject="¡Tu cumpleaños está cerca!",
+                    recipients=[usuario.email],
+                    sender=current_app.config['MAIL_DEFAULT_SENDER'],  # Especificar remitente explícitamente
+                    html=render_template('emails/recordatorio.html', name=usuario.name)
+                )
+                mail.send(msg)
+                print(f"Recordatorio enviado a: {usuario.email}")
+                current_app.logger.info(f"Recordatorio enviado a: {usuario.email}")
+            except Exception as e:
+                print(f"Error al enviar recordatorio a {usuario.email}: {str(e)}")
+                current_app.logger.error(f"Error al enviar recordatorio a {usuario.email}: {str(e)}")
+
+    except Exception as general_error:
+        print(f"Error general en enviar_correos_recordatorio: {str(general_error)}")
+        current_app.logger.error(f"Error general en enviar_correos_recordatorio: {str(general_error)}")
+
+def enviar_correos_cumpleaños(email_prueba=None):
     """
-    Combina las funciones de correos de cumpleaños y recordatorios.
+    Envía correos de cumpleaños a los usuarios cuyo cumpleaños es hoy.
+    También soporta el envío de un correo de prueba.
     """
-    enviar_correos_cumpleaños()
-    enviar_correos_recordatorio()
+    if email_prueba:
+        # Enviar un correo de prueba de cumpleaños
+        print(f"Enviando correo de prueba de cumpleaños a: {email_prueba}")
+        try:
+            msg = Message(
+                subject="¡Feliz Cumpleaños!",
+                recipients=[email_prueba],
+                sender=current_app.config['MAIL_DEFAULT_SENDER'],  # Especificar remitente explícitamente
+                html=render_template('emails/saludo.html', name="Usuario de Prueba")
+            )
+            mail.send(msg)
+            print(f"Correo de prueba enviado correctamente a: {email_prueba}")
+            return True
+        except Exception as e:
+            print(f"Error al enviar correo de prueba: {str(e)}")
+            return False
+
+    # Lógica para enviar correos de cumpleaños a los usuarios cuyo cumpleaños es hoy
+    hoy = datetime.now().date()
+
+    try:
+        # Consultar usuarios cuyo cumpleaños es hoy
+        usuarios = User.query.filter(
+            db.extract('month', User.birthday) == hoy.month,
+            db.extract('day', User.birthday) == hoy.day
+        ).all()
+
+        if not usuarios:
+            current_app.logger.info("No hay usuarios con cumpleaños hoy.")
+            return
+
+        for usuario in usuarios:
+            try:
+                msg = Message(
+                    subject="¡Feliz Cumpleaños!",
+                    recipients=[usuario.email],
+                    sender=current_app.config['MAIL_DEFAULT_SENDER'],  # Especificar remitente explícitamente
+                    html=render_template('emails/saludo.html', name=usuario.name)
+                )
+                mail.send(msg)
+                print(f"Correo de cumpleaños enviado a: {usuario.email}")
+                current_app.logger.info(f"Correo de cumpleaños enviado a: {usuario.email}")
+            except Exception as e:
+                print(f"Error al enviar correo de cumpleaños a {usuario.email}: {str(e)}")
+                current_app.logger.error(f"Error al enviar correo de cumpleaños a {usuario.email}: {str(e)}")
+
+    except Exception as general_error:
+        print(f"Error general en enviar_correos_cumpleaños: {str(general_error)}")
+        current_app.logger.error(f"Error general en enviar_correos_cumpleaños: {str(general_error)}")
