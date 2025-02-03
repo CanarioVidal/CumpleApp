@@ -1,6 +1,16 @@
-# archivo para ignorar carga a github 1.1
+# archivo para ignorar carga a github 1.2
 venv/
 cumpleApp_ent/
 *.env
 settings.py
 email_logs.log
+
+# Ignorar carpetas y archivos generados automáticamente
+__pycache__/
+*.pyc
+
+# Ignorar configuraciones locales de Visual Studio Code
+.vscode/
+
+# Ignorar la carpeta de instancia (contiene datos locales, como la base de datos)
+instance/
