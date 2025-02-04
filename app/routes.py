@@ -1,4 +1,4 @@
-# Archivo de rutas v.2.6 (Corrección de búsqueda + Mantenimiento de correos)
+# Archivo de rutas v.2.7 (Corrección de rutas eliminadas + Mejoras en búsqueda y correos)
 
 from flask import render_template, Blueprint, request, redirect, url_for, jsonify, session, current_app
 from app import db, mail
@@ -109,6 +109,47 @@ def buscar_usuarios():
         "redeemed": user.redeemed
     } for user in resultados])
 
+### RESTAURACIÓN DE RUTAS ELIMINADAS ###
+
+@routes.route('/agregar-cumple', methods=['GET', 'POST'])
+def agregar_usuario():
+    """Formulario para agregar cumpleaños."""
+    if request.method == 'POST':
+        try:
+            data = request.form
+            nombre = data.get('name')
+            apodo = data.get('nickname')
+            email = data.get('email')
+            fecha_nacimiento = data.get('birthday')
+
+            if not nombre or not email or not fecha_nacimiento:
+                return jsonify({'success': False, 'message': 'Todos los campos obligatorios deben estar completos.'}), 400
+
+            fecha_nacimiento = datetime.strptime(fecha_nacimiento, '%Y-%m-%d').date()
+            edad = (datetime.today().date() - fecha_nacimiento).days // 365
+            if edad < 18:
+                return jsonify({'success': False, 'message': 'El usuario debe ser mayor de 18 años.'}), 400
+
+            if User.query.filter_by(email=email).first():
+                return jsonify({'success': False, 'message': 'El correo electrónico ya está registrado.'}), 400
+
+            nuevo_usuario = User(name=nombre, nickname=apodo, email=email, birthday=fecha_nacimiento)
+            db.session.add(nuevo_usuario)
+            db.session.commit()
+
+            return jsonify({'success': True, 'message': 'Cumpleaños agregado con éxito.'}), 200
+        except Exception as e:
+            return jsonify({'success': False, 'message': f'Error inesperado: {str(e)}'}), 500
+
+    return render_template('registro-cumples.html')
+
+@routes.route('/ver-usuarios')
+@login_required
+def ver_usuarios():
+    """Vista de usuarios registrados."""
+    usuarios = User.query.all()
+    return render_template('ver_usuarios.html', usuarios=usuarios)
+
 ### ENVÍO DE CORREOS (IMPORTANTE: NO BORRAR) ###
 
 @routes.route('/test-recordatorios', methods=['GET'])
@@ -150,5 +191,6 @@ def test_email():
 
 ### CONCLUSIÓN ###
 # - Se corrigió la ruta de búsqueda de usuarios.
+# - Se restauraron las rutas eliminadas: "agregar-cumple" y "ver-usuarios".
 # - Se marcaron claramente las rutas de envío de correos con "IMPORTANTE: NO BORRAR".
 # - Se verificó que todas las funciones esenciales estén presentes y funcionando correctamente.
