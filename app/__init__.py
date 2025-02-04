@@ -25,8 +25,8 @@ def create_app():
     app = Flask(__name__)
     
     # Cargar configuración desde el archivo settings.py
-    app.config.from_object(Config)
-
+    app.config.from_object(Config) 
+    
     # Depuración: imprimir las configuraciones de correo cargadas
     print("=== Configuración de correo cargada ===")
     for key in ['MAIL_SERVER', 'MAIL_PORT', 'MAIL_USE_TLS', 'MAIL_USE_SSL', 'MAIL_USERNAME', 'MAIL_PASSWORD', 'MAIL_DEFAULT_SENDER']:

@@ -1,4 +1,4 @@
-# Archivo de rutas v.2.7 (Corrección de rutas eliminadas + Mejoras en búsqueda y correos)
+# Archivo de rutas v.2.8 
 
 from flask import render_template, Blueprint, request, redirect, url_for, jsonify, session, current_app
 from app import db, mail
@@ -8,7 +8,9 @@ from functools import wraps
 from flask_mail import Message
 from apscheduler.schedulers.background import BackgroundScheduler
 import logging
+import requests
 from app.tasks import enviar_correos_recordatorio, enviar_correos_cumpleaños
+from settings import Config
 
 # Crear el Blueprint
 routes = Blueprint('routes', __name__)
@@ -20,9 +22,9 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-# Simular credenciales de administrador (esto debería cambiarse en el futuro a un sistema seguro)
-ADMIN_USERNAME = "admin"
-ADMIN_PASSWORD = "1234"
+# ✅ Usamos Config para obtener los valores
+ADMIN_USERNAME = Config.ADMIN_USERNAME
+ADMIN_PASSWORD = Config.ADMIN_PASSWORD
 
 # Decorador para proteger rutas de administración
 def login_required(f):
@@ -37,15 +39,28 @@ def login_required(f):
 
 @routes.route('/login', methods=['GET', 'POST'])
 def login():
+    """Maneja el inicio de sesión con reCAPTCHA."""
     error = None
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        if username == ADMIN_USERNAME and password == ADMIN_PASSWORD:
+        recaptcha_response = request.form.get('g-recaptcha-response')
+
+        # Validar reCAPTCHA con Google
+        recaptcha_secret = current_app.config['RECAPTCHA_SECRET_KEY']
+        recaptcha_verify_url = "https://www.google.com/recaptcha/api/siteverify"
+        recaptcha_data = {"secret": recaptcha_secret, "response": recaptcha_response}
+        recaptcha_result = requests.post(recaptcha_verify_url, data=recaptcha_data).json()
+
+        if not recaptcha_result.get("success"):
+            error = "Verificación de reCAPTCHA fallida. Inténtalo de nuevo."
+
+        elif username == Config.ADMIN_USERNAME and password == Config.ADMIN_PASSWORD:
             session['logged_in'] = True
             return redirect(url_for('routes.admin'))
         else:
             error = 'Usuario o contraseña incorrectos'
+
     return render_template('login.html', error=error)
 
 @routes.route('/logout')
