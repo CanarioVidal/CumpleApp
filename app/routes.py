@@ -11,6 +11,7 @@ import logging
 import requests
 from app.tasks import enviar_correos_recordatorio, enviar_correos_cumpleaños
 from settings import Config
+from app.email_utils import enviar_correo_bienvenida  # Importamos la nueva función
 
 # Crear el Blueprint
 routes = Blueprint('routes', __name__)
@@ -131,33 +132,27 @@ def buscar_usuarios():
 def agregar_usuario():
     if request.method == 'POST':
         try:
-            # Obtener datos del formulario
             nombre = request.form.get('name')
             apodo = request.form.get('nickname')
             email = request.form.get('email')
             fecha_nacimiento = request.form.get('birthday')
 
-            # Validar campos obligatorios
             if not nombre or not email or not fecha_nacimiento:
                 return jsonify({'success': False, 'message': 'Todos los campos obligatorios deben estar completos.'}), 400
 
-            # Validar formato de fecha
             try:
                 fecha_nacimiento = datetime.strptime(fecha_nacimiento, '%Y-%m-%d').date()
             except ValueError:
                 return jsonify({'success': False, 'message': 'Formato de fecha no válido.'}), 400
 
-            # Validar que el usuario sea mayor de 18 años
             hoy = datetime.today().date()
             edad = hoy.year - fecha_nacimiento.year - ((hoy.month, hoy.day) < (fecha_nacimiento.month, fecha_nacimiento.day))
             if edad < 18:
                 return jsonify({'success': False, 'message': 'El usuario debe ser mayor de 18 años.'}), 400
 
-            # Validar que el correo no esté duplicado
             if User.query.filter_by(email=email).first():
                 return jsonify({'success': False, 'message': 'El correo electrónico ya está registrado.'}), 400
 
-            # Crear nuevo usuario
             nuevo_usuario = User(
                 name=nombre,
                 nickname=apodo if apodo else None,
@@ -167,16 +162,8 @@ def agregar_usuario():
             db.session.add(nuevo_usuario)
             db.session.commit()
 
-            # Enviar correo de registro exitoso
-            try:
-                msg = Message(
-                    subject="¡Tu registro fue exitoso!",
-                    recipients=[email],
-                    html=render_template('emails/registrook.html', name=nombre)
-                )
-                mail.send(msg)
-            except Exception as e:
-                return jsonify({'success': True, 'message': 'Usuario registrado, pero el correo no pudo ser enviado.', 'error': str(e)}), 200
+            # 🔹 Llamar a la nueva función en email_utils.py
+            enviar_correo_bienvenida(email, nombre)
 
             return jsonify({'success': True, 'message': 'Cumpleaños agregado con éxito.'}), 200
         except Exception as e:

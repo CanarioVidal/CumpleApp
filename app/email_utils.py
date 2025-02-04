@@ -5,6 +5,7 @@ from app import mail, db
 from app.models import User
 from datetime import datetime, timedelta
 import logging
+import os
 
 # Configurar logs para correos
 logging.basicConfig(
@@ -143,3 +144,36 @@ def enviar_correos_cumpleaños(email_prueba=None):
     except Exception as general_error:
         print(f"Error general en enviar_correos_cumpleaños: {str(general_error)}")
         current_app.logger.error(f"Error general en enviar_correos_cumpleaños: {str(general_error)}")
+
+
+
+def agregar_imagen_a_correo(msg, imagen_id, ruta_relativa):
+    """
+    Agrega una imagen como contenido embebido en un correo utilizando Content ID.
+    """
+    try:
+        with current_app.open_resource(os.path.join("static", "images", ruta_relativa)) as img:
+            msg.attach(imagen_id, "image/png", img.read(), "inline", headers={"Content-ID": f"<{imagen_id}>"})
+    except FileNotFoundError:
+        logging.error(f"Error: No se encontró la imagen {ruta_relativa}")
+
+def enviar_correo_bienvenida(email, nombre):
+    """
+    Envía un correo de bienvenida cuando un usuario se registra, con imagen en Content ID.
+    """
+    try:
+        msg = Message(
+            subject="¡Tu registro fue exitoso!",
+            recipients=[email],
+            sender=current_app.config['MAIL_DEFAULT_SENDER']
+        )
+        msg.html = render_template('emails/registrook.html', name=nombre)
+
+        # 🔹 Agregar imágenes con Content ID
+        agregar_imagen_a_correo(msg, "logo_cid", "logo.png")  # ✅ Ahora busca en static/images/logo.png
+        agregar_imagen_a_correo(msg, "hero_cid", "hero.jpg")  # ✅ Asegúrate de que hero.jpg esté en static/images
+
+        mail.send(msg)
+        logging.info(f"Correo de bienvenida enviado a {email}")
+    except Exception as e:
+        logging.error(f"Error al enviar correo de bienvenida a {email}: {str(e)}")

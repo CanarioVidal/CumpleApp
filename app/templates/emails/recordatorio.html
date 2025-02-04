@@ -1,12 +1,40 @@
-<!-- Plantilla email recordatorio v.1.0 -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>¡Tu cumpleaños se acerca!</title>
 </head>
-<body>
-    <h1>Hola {{ name }}!</h1>
-    <p>Tu cumpleaños está a la vuelta de la esquina. 🎉</p>
-    <p>Queremos recordarte que puedes redimir tu obsequio con nosotros. ¡No te lo pierdas!</p>
+<body style="margin:0; padding:0; background-color:#f4f4f4; text-align:center;">
+    <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="center">
+                <table width="600" cellpadding="0" cellspacing="0" style="background-color:#000000;">
+                    <tr>
+                        <td style="height:300px; background:url('cid:hero.jpg') no-repeat center; background-size:cover;">
+                            <img src="cid:logo.png" alt="The End" width="120" style="margin-top:20px;">
+                            <h1 style="color:#fff; font-size:36px;">HOLA, {Nombre}</h1>
+                        </td>
+                    </tr>
+                </table>
+                <table width="600" cellpadding="20" cellspacing="0" style="background-color:#ffffff;">
+                    <tr>
+                        <td>
+                            <h2 style="color:#000;">Se acerca tu cumple y queremos celebrarlo contigo</h2>
+                            <p style="color:#333;">Si ya sabés cuántos van a ser, reservá tu lugar ahora.</p>
+                            <a href="https://wa.me/123456789" style="display:inline-block; padding:10px 20px; background:#02cf6f; color:white; text-decoration:none; border-radius:5px;">Reservá Ahora</a>
+                        </td>
+                    </tr>
+                </table>
+                <table width="600" cellpadding="10" cellspacing="0" style="background-color:#111111; color:#fff;">
+                    <tr>
+                        <td>
+                            <p>The End | Craft Beer, Santiago de Chile 1270, MVD - UY</p>
+                            <p>Diseño y desarrollo UMO CC - umo.uy - 2025</p>
+                            <p><a href="#" style="color:#01c58a;">Política de privacidad de datos</a> | <a href="#" style="color:#01c58a;">Términos y condiciones</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
