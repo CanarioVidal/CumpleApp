@@ -27,7 +27,7 @@ def iniciar_tareas(app):
         scheduler.add_job(
             tarea_recordatorio,
             'cron',
-            hour=11, minute=00,  # Cambia según el horario que prefieras
+            hour=19, minute=55,  # Cambia según el horario que prefieras
             id='recordatorios_diarios',
             replace_existing=True
         )
@@ -36,7 +36,7 @@ def iniciar_tareas(app):
         scheduler.add_job(
             tarea_cumpleaños,
             'cron',
-            hour=11, minute=00,  # Cambia según el horario que prefieras
+            hour=19, minute=55,  # Cambia según el horario que prefieras
             id='saludos_diarios',
             replace_existing=True
         )

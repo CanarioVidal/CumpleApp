@@ -15,3 +15,7 @@ __pycache__/
 # Ignorar la carpeta de instancia (contiene datos locales, como la base de datos)
 instance/
 app/__pycache__/routes.cpython-313.pyc
+app/__pycache__/__init__.cpython-313.pyc
+app/__pycache__/email_utils.cpython-313.pyc
+app/__pycache__/routes.cpython-313.pyc
+__pycache__/settings.cpython-313.pyc

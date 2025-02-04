@@ -439,3 +439,5 @@ El módulo de correos (mC) está ahora completamente funcional. Todas las tareas
 
 **¡Hito logrado!** El sistema cumple con los requisitos funcionales del módulo de correos. Ahora estamos en condiciones de avanzar hacia la mejora de otros módulos o áreas del proyecto.
 
+**Hito conseguido** Se ajustó el campo de búsqueda en admin.html
+y el from de los correo en settings.py v1.5 y en "__init__.py" v1.8

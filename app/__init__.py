@@ -1,10 +1,14 @@
-# Configura la app Flask y conecta los módulos necesarios. v.1.7.2
+# Configura la app Flask y conecta los módulos necesarios. v.1.8
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
 from dotenv import load_dotenv, find_dotenv
 from settings import Config
 import os
+
+#Definir from
+MAIL_DEFAULT_SENDER = '"The End, un bar de amigos" <hola@theend.com.uy>'
+
 
 # Cargar variables de entorno
 if not load_dotenv(find_dotenv()):
@@ -21,8 +25,8 @@ def create_app():
     app = Flask(__name__)
     
     # Cargar configuración desde el archivo settings.py
-    app.config.from_object(Config)
-
+    app.config.from_object(Config) 
+    
     # Depuración: imprimir las configuraciones de correo cargadas
     print("=== Configuración de correo cargada ===")
     for key in ['MAIL_SERVER', 'MAIL_PORT', 'MAIL_USE_TLS', 'MAIL_USE_SSL', 'MAIL_USERNAME', 'MAIL_PASSWORD', 'MAIL_DEFAULT_SENDER']:

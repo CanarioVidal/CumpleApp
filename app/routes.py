@@ -1,4 +1,4 @@
-# Archivo de rutas v.2.6 (Corrección de búsqueda + Mantenimiento de correos)
+# Archivo de rutas v.2.8 
 
 from flask import render_template, Blueprint, request, redirect, url_for, jsonify, session, current_app
 from app import db, mail
@@ -8,7 +8,10 @@ from functools import wraps
 from flask_mail import Message
 from apscheduler.schedulers.background import BackgroundScheduler
 import logging
+import requests
 from app.tasks import enviar_correos_recordatorio, enviar_correos_cumpleaños
+from settings import Config
+from app.email_utils import enviar_correo_bienvenida  # Importamos la nueva función
 
 # Crear el Blueprint
 routes = Blueprint('routes', __name__)
@@ -20,9 +23,9 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-# Simular credenciales de administrador (esto debería cambiarse en el futuro a un sistema seguro)
-ADMIN_USERNAME = "admin"
-ADMIN_PASSWORD = "1234"
+# ✅ Usamos Config para obtener los valores
+ADMIN_USERNAME = Config.ADMIN_USERNAME
+ADMIN_PASSWORD = Config.ADMIN_PASSWORD
 
 # Decorador para proteger rutas de administración
 def login_required(f):
@@ -37,21 +40,32 @@ def login_required(f):
 
 @routes.route('/login', methods=['GET', 'POST'])
 def login():
-    """Maneja el inicio de sesión del administrador."""
+    """Maneja el inicio de sesión con reCAPTCHA."""
     error = None
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        if username == ADMIN_USERNAME and password == ADMIN_PASSWORD:
+        recaptcha_response = request.form.get('g-recaptcha-response')
+
+        # Validar reCAPTCHA con Google
+        recaptcha_secret = current_app.config['RECAPTCHA_SECRET_KEY']
+        recaptcha_verify_url = "https://www.google.com/recaptcha/api/siteverify"
+        recaptcha_data = {"secret": recaptcha_secret, "response": recaptcha_response}
+        recaptcha_result = requests.post(recaptcha_verify_url, data=recaptcha_data).json()
+
+        if not recaptcha_result.get("success"):
+            error = "Verificación de reCAPTCHA fallida. Inténtalo de nuevo."
+
+        elif username == Config.ADMIN_USERNAME and password == Config.ADMIN_PASSWORD:
             session['logged_in'] = True
             return redirect(url_for('routes.admin'))
         else:
             error = 'Usuario o contraseña incorrectos'
+
     return render_template('login.html', error=error)
 
 @routes.route('/logout')
 def logout():
-    """Cierra la sesión del administrador."""
     session.clear()
     return redirect(url_for('routes.login'))
 
@@ -59,13 +73,11 @@ def logout():
 
 @routes.route('/')
 def home():
-    """Página de inicio."""
     return render_template('index.html')
 
 @routes.route('/admin')
 @login_required
 def admin():
-    """Panel de administración."""
     hoy = datetime.today()
     cumpleanios_hoy = User.query.filter(
         db.extract('month', User.birthday) == hoy.month,
@@ -78,7 +90,6 @@ def admin():
 @routes.route('/cumpleanios-hoy', methods=['GET'])
 @login_required
 def cumpleanios_hoy():
-    """Devuelve la lista de usuarios que cumplen años hoy en formato JSON."""
     hoy = datetime.today()
     cumpleanios = User.query.filter(
         db.extract('month', User.birthday) == hoy.month,
@@ -113,6 +124,59 @@ def buscar_usuarios():
         "birthday": user.birthday.strftime('%Y-%m-%d'),
         "redeemed": user.redeemed
     } for user in resultados])
+
+### RESTAURACIÓN DE RUTAS ELIMINADAS ###
+
+# Ruta para agregar usuarios con soporte para GET y POST
+@routes.route('/agregar-cumple', methods=['GET', 'POST'])
+def agregar_usuario():
+    if request.method == 'POST':
+        try:
+            nombre = request.form.get('name')
+            apodo = request.form.get('nickname')
+            email = request.form.get('email')
+            fecha_nacimiento = request.form.get('birthday')
+
+            if not nombre or not email or not fecha_nacimiento:
+                return jsonify({'success': False, 'message': 'Todos los campos obligatorios deben estar completos.'}), 400
+
+            try:
+                fecha_nacimiento = datetime.strptime(fecha_nacimiento, '%Y-%m-%d').date()
+            except ValueError:
+                return jsonify({'success': False, 'message': 'Formato de fecha no válido.'}), 400
+
+            hoy = datetime.today().date()
+            edad = hoy.year - fecha_nacimiento.year - ((hoy.month, hoy.day) < (fecha_nacimiento.month, fecha_nacimiento.day))
+            if edad < 18:
+                return jsonify({'success': False, 'message': 'El usuario debe ser mayor de 18 años.'}), 400
+
+            if User.query.filter_by(email=email).first():
+                return jsonify({'success': False, 'message': 'El correo electrónico ya está registrado.'}), 400
+
+            nuevo_usuario = User(
+                name=nombre,
+                nickname=apodo if apodo else None,
+                email=email,
+                birthday=fecha_nacimiento
+            )
+            db.session.add(nuevo_usuario)
+            db.session.commit()
+
+            # 🔹 Llamar a la nueva función en email_utils.py
+            enviar_correo_bienvenida(email, nombre)
+
+            return jsonify({'success': True, 'message': 'Cumpleaños agregado con éxito.'}), 200
+        except Exception as e:
+            return jsonify({'success': False, 'message': f'Error inesperado: {str(e)}'}), 500
+
+    return render_template('registro-cumples.html')
+
+@routes.route('/ver-usuarios')
+@login_required
+def ver_usuarios():
+    """Vista de usuarios registrados."""
+    usuarios = User.query.all()
+    return render_template('ver_usuarios.html', usuarios=usuarios)
 
 ### ENVÍO DE CORREOS (IMPORTANTE: NO BORRAR) ###
 
@@ -152,8 +216,95 @@ def test_email():
         return jsonify({"success": True, "message": "Correo enviado exitosamente."}), 200
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
+    
+# Ruta de la plantilla Ver-usuarios
+@routes.route('/usuarios', methods=['GET'])
+@login_required
+def usuarios():
+    """Devuelve la lista de usuarios en JSON."""
+    orden = request.args.get('orden', 'desc')
+
+    if orden == 'asc':
+        usuarios = User.query.order_by(User.fecha_registro.asc()).all()
+    else:
+        usuarios = User.query.order_by(User.fecha_registro.desc()).all()
+
+    resultado = [
+        {
+            'id': usuario.id,
+            'name': usuario.name,
+            'email': usuario.email,
+            'nickname': usuario.nickname,
+            'birthday': usuario.birthday.strftime('%Y-%m-%d'),
+            'fecha_registro': usuario.fecha_registro.strftime('%Y-%m-%d %H:%M:%S')
+        }
+        for usuario in usuarios
+    ]
+    return jsonify({'success': True, 'data': resultado})
+
+@routes.route('/registros-recientes', methods=['GET'])
+@login_required
+def registros_recientes():
+    """Devuelve los registros recientes según el rango solicitado."""
+    rango = request.args.get('rango', 'dia')
+    hoy = datetime.now(timezone.utc).date()
+
+    if rango == 'semana':
+        inicio = hoy - timedelta(days=7)
+    elif rango == 'mes':
+        inicio = hoy - timedelta(days=30)
+    elif rango == 'dia':
+        inicio = hoy
+    else:
+        return jsonify({'success': False, 'message': 'Rango no válido'}), 400
+
+    registros = User.query.filter(User.fecha_registro >= inicio).order_by(User.fecha_registro.desc()).all()
+
+    resultado = [
+        {
+            'id': user.id,
+            'name': user.name,
+            'email': user.email,
+            'nickname': user.nickname,
+            'birthday': user.birthday.strftime('%Y-%m-%d'),
+            'fecha_registro': user.fecha_registro.strftime('%Y-%m-%d %H:%M:%S')
+        }
+        for user in registros
+    ]
+    return jsonify({'success': True, 'data': resultado})
+
+# Ruta para borrar un usuario por ID
+@routes.route('/borrar-usuario/<int:id>', methods=['DELETE'])
+@login_required
+def borrar_usuario(id):
+    try:
+        usuario = User.query.get_or_404(id)
+        db.session.delete(usuario)
+        db.session.commit()
+        return jsonify({'success': True})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+
+# Ruta para borrar usuarios por batch
+@routes.route('/borrar-usuarios', methods=['POST'])
+@login_required
+def borrar_usuarios():
+    try:
+        data = request.get_json()  # Recibe JSON
+        ids = data.get('ids', [])  # Lista de IDs a borrar
+
+        if not ids:
+            return jsonify({'success': False, 'error': 'No se proporcionaron IDs para borrar.'}), 400
+
+        # Borrar los usuarios con los IDs especificados
+        User.query.filter(User.id.in_(ids)).delete(synchronize_session=False)
+        db.session.commit()
+        return jsonify({'success': True}), 200
+    except Exception as e:
+        return jsonify({'success': False, 'error': f'Error al borrar usuarios: {str(e)}'}), 500
 
 ### CONCLUSIÓN ###
 # - Se corrigió la ruta de búsqueda de usuarios.
+# - Se restauraron las rutas eliminadas: "agregar-cumple" y "ver-usuarios".
 # - Se marcaron claramente las rutas de envío de correos con "IMPORTANTE: NO BORRAR".
 # - Se verificó que todas las funciones esenciales estén presentes y funcionando correctamente.

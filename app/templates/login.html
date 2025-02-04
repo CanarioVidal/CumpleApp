@@ -47,17 +47,22 @@
                 <input type="text" id="username" name="username" class="form-control" required />
                 <label class="form-label" for="username">Usuario</label>
             </div>
-
+        
             <div class="form-outline mb-4">
                 <input type="password" id="password" name="password" class="form-control" required />
                 <label class="form-label" for="password">Contraseña</label>
             </div>
-
+        
+            <!-- Google reCAPTCHA -->
+            <div class="g-recaptcha mb-4" data-sitekey="{{ config.RECAPTCHA_SITE_KEY }}"></div>
+        
             <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
-        </form>
+        </form>       
     </div>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
+    <!-- Agregar el script de Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
