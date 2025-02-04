@@ -126,31 +126,57 @@ def buscar_usuarios():
 
 ### RESTAURACIÓN DE RUTAS ELIMINADAS ###
 
+# Ruta para agregar usuarios con soporte para GET y POST
 @routes.route('/agregar-cumple', methods=['GET', 'POST'])
 def agregar_usuario():
-    """Formulario para agregar cumpleaños."""
     if request.method == 'POST':
         try:
-            data = request.form
-            nombre = data.get('name')
-            apodo = data.get('nickname')
-            email = data.get('email')
-            fecha_nacimiento = data.get('birthday')
+            # Obtener datos del formulario
+            nombre = request.form.get('name')
+            apodo = request.form.get('nickname')
+            email = request.form.get('email')
+            fecha_nacimiento = request.form.get('birthday')
 
+            # Validar campos obligatorios
             if not nombre or not email or not fecha_nacimiento:
                 return jsonify({'success': False, 'message': 'Todos los campos obligatorios deben estar completos.'}), 400
 
-            fecha_nacimiento = datetime.strptime(fecha_nacimiento, '%Y-%m-%d').date()
-            edad = (datetime.today().date() - fecha_nacimiento).days // 365
+            # Validar formato de fecha
+            try:
+                fecha_nacimiento = datetime.strptime(fecha_nacimiento, '%Y-%m-%d').date()
+            except ValueError:
+                return jsonify({'success': False, 'message': 'Formato de fecha no válido.'}), 400
+
+            # Validar que el usuario sea mayor de 18 años
+            hoy = datetime.today().date()
+            edad = hoy.year - fecha_nacimiento.year - ((hoy.month, hoy.day) < (fecha_nacimiento.month, fecha_nacimiento.day))
             if edad < 18:
                 return jsonify({'success': False, 'message': 'El usuario debe ser mayor de 18 años.'}), 400
 
+            # Validar que el correo no esté duplicado
             if User.query.filter_by(email=email).first():
                 return jsonify({'success': False, 'message': 'El correo electrónico ya está registrado.'}), 400
 
-            nuevo_usuario = User(name=nombre, nickname=apodo, email=email, birthday=fecha_nacimiento)
+            # Crear nuevo usuario
+            nuevo_usuario = User(
+                name=nombre,
+                nickname=apodo if apodo else None,
+                email=email,
+                birthday=fecha_nacimiento
+            )
             db.session.add(nuevo_usuario)
             db.session.commit()
+
+            # Enviar correo de registro exitoso
+            try:
+                msg = Message(
+                    subject="¡Tu registro fue exitoso!",
+                    recipients=[email],
+                    html=render_template('emails/registrook.html', name=nombre)
+                )
+                mail.send(msg)
+            except Exception as e:
+                return jsonify({'success': True, 'message': 'Usuario registrado, pero el correo no pudo ser enviado.', 'error': str(e)}), 200
 
             return jsonify({'success': True, 'message': 'Cumpleaños agregado con éxito.'}), 200
         except Exception as e:
@@ -203,6 +229,92 @@ def test_email():
         return jsonify({"success": True, "message": "Correo enviado exitosamente."}), 200
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
+    
+# Ruta de la plantilla Ver-usuarios
+@routes.route('/usuarios', methods=['GET'])
+@login_required
+def usuarios():
+    """Devuelve la lista de usuarios en JSON."""
+    orden = request.args.get('orden', 'desc')
+
+    if orden == 'asc':
+        usuarios = User.query.order_by(User.fecha_registro.asc()).all()
+    else:
+        usuarios = User.query.order_by(User.fecha_registro.desc()).all()
+
+    resultado = [
+        {
+            'id': usuario.id,
+            'name': usuario.name,
+            'email': usuario.email,
+            'nickname': usuario.nickname,
+            'birthday': usuario.birthday.strftime('%Y-%m-%d'),
+            'fecha_registro': usuario.fecha_registro.strftime('%Y-%m-%d %H:%M:%S')
+        }
+        for usuario in usuarios
+    ]
+    return jsonify({'success': True, 'data': resultado})
+
+@routes.route('/registros-recientes', methods=['GET'])
+@login_required
+def registros_recientes():
+    """Devuelve los registros recientes según el rango solicitado."""
+    rango = request.args.get('rango', 'dia')
+    hoy = datetime.now(timezone.utc).date()
+
+    if rango == 'semana':
+        inicio = hoy - timedelta(days=7)
+    elif rango == 'mes':
+        inicio = hoy - timedelta(days=30)
+    elif rango == 'dia':
+        inicio = hoy
+    else:
+        return jsonify({'success': False, 'message': 'Rango no válido'}), 400
+
+    registros = User.query.filter(User.fecha_registro >= inicio).order_by(User.fecha_registro.desc()).all()
+
+    resultado = [
+        {
+            'id': user.id,
+            'name': user.name,
+            'email': user.email,
+            'nickname': user.nickname,
+            'birthday': user.birthday.strftime('%Y-%m-%d'),
+            'fecha_registro': user.fecha_registro.strftime('%Y-%m-%d %H:%M:%S')
+        }
+        for user in registros
+    ]
+    return jsonify({'success': True, 'data': resultado})
+
+# Ruta para borrar un usuario por ID
+@routes.route('/borrar-usuario/<int:id>', methods=['DELETE'])
+@login_required
+def borrar_usuario(id):
+    try:
+        usuario = User.query.get_or_404(id)
+        db.session.delete(usuario)
+        db.session.commit()
+        return jsonify({'success': True})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+
+# Ruta para borrar usuarios por batch
+@routes.route('/borrar-usuarios', methods=['POST'])
+@login_required
+def borrar_usuarios():
+    try:
+        data = request.get_json()  # Recibe JSON
+        ids = data.get('ids', [])  # Lista de IDs a borrar
+
+        if not ids:
+            return jsonify({'success': False, 'error': 'No se proporcionaron IDs para borrar.'}), 400
+
+        # Borrar los usuarios con los IDs especificados
+        User.query.filter(User.id.in_(ids)).delete(synchronize_session=False)
+        db.session.commit()
+        return jsonify({'success': True}), 200
+    except Exception as e:
+        return jsonify({'success': False, 'error': f'Error al borrar usuarios: {str(e)}'}), 500
 
 ### CONCLUSIÓN ###
 # - Se corrigió la ruta de búsqueda de usuarios.
