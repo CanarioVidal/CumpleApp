@@ -1,4 +1,4 @@
-# Define las tareas programadas con APScheduler v.1.8 (Ajustado para producción)
+# Define las tareas programadas con APScheduler v.1.8 (Ajustado para producción time zone arreglado)
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.jobstores.base import ConflictingIdError
 from pytz import timezone
