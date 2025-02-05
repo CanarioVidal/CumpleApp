@@ -1,5 +1,7 @@
-# Define las tareas programadas con APScheduler v.1.7
+# Define las tareas programadas con APScheduler v.1.8 (Ajustado para producción)
 from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.jobstores.base import ConflictingIdError
+from pytz import timezone
 from app.email_utils import enviar_correos_recordatorio, enviar_correos_cumpleaños
 import logging
 
@@ -10,44 +12,58 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
+# Definir la zona horaria de Uruguay (-03:00)
+TZ_URUGUAY = timezone('America/Montevideo')
+
 def iniciar_tareas(app):
-    """Inicializa las tareas programadas con APScheduler."""
+    """Inicializa las tareas programadas con APScheduler en la zona horaria correcta."""
     try:
-        scheduler = BackgroundScheduler()
+        # Configurar el scheduler con la zona horaria correcta
+        scheduler = BackgroundScheduler(timezone=TZ_URUGUAY)
 
         def tarea_recordatorio():
+            """Ejecuta la función de envío de recordatorios en el contexto de Flask."""
             with app.app_context():
                 enviar_correos_recordatorio()
 
         def tarea_cumpleaños():
+            """Ejecuta la función de envío de saludos en el contexto de Flask."""
             with app.app_context():
                 enviar_correos_cumpleaños()
 
-        # Programar recordatorios de cumpleaños (1 semana antes)
-        scheduler.add_job(
-            tarea_recordatorio,
-            'cron',
-            hour=19, minute=55,  # Cambia según el horario que prefieras
-            id='recordatorios_diarios',
-            replace_existing=True
-        )
+        # Verificar si las tareas ya están programadas antes de agregarlas
+        jobs = {job.id for job in scheduler.get_jobs()}
 
-        # Programar saludos de cumpleaños (en el día)
-        scheduler.add_job(
-            tarea_cumpleaños,
-            'cron',
-            hour=19, minute=55,  # Cambia según el horario que prefieras
-            id='saludos_diarios',
-            replace_existing=True
-        )
+        if 'recordatorios_diarios' not in jobs:
+            scheduler.add_job(
+                tarea_recordatorio,
+                'cron',
+                hour=22, minute=9,  # Se ejecuta a las 11:00 AM (-03:00)
+                id='recordatorios_diarios',
+                replace_existing=True
+            )
 
-        # Iniciar el scheduler
-        scheduler.start()
+        if 'saludos_diarios' not in jobs:
+            scheduler.add_job(
+                tarea_cumpleaños,
+                'cron',
+                hour=22, minute=9,  # Se ejecuta a las 07:00 AM (-03:00)
+                id='saludos_diarios',
+                replace_existing=True
+            )
 
-        # Imprimir próxima ejecución de las tareas programadas
+        # Iniciar el scheduler solo si no está ya en ejecución
+        if not scheduler.running:
+            scheduler.start()
+
+        # Imprimir próximas ejecuciones en los logs
         for job in scheduler.get_jobs():
             logging.info(f"Tarea programada: {job.id} - Siguiente ejecución: {job.next_run_time}")
-        
+
         logging.info('Tareas programadas iniciadas correctamente.')
+
+    except ConflictingIdError as e:
+        logging.warning(f'Intento de duplicar tareas programadas: {str(e)}')
+
     except Exception as e:
         logging.error(f'Error al iniciar tareas programadas: {str(e)}')
